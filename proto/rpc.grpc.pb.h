@@ -370,7 +370,7 @@ class KV final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Range() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_Range() override {
       BaseClassMustBeDerivedFromService(this);
@@ -390,7 +390,7 @@ class KV final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Put() {
-      ::grpc::Service::MarkMethodRaw(1);
+      BaseClass::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_Put() override {
       BaseClassMustBeDerivedFromService(this);
@@ -410,7 +410,7 @@ class KV final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_DeleteRange() {
-      ::grpc::Service::MarkMethodRaw(2);
+      BaseClass::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_DeleteRange() override {
       BaseClassMustBeDerivedFromService(this);
@@ -430,7 +430,7 @@ class KV final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Txn() {
-      ::grpc::Service::MarkMethodRaw(3);
+      BaseClass::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_Txn() override {
       BaseClassMustBeDerivedFromService(this);
@@ -450,7 +450,7 @@ class KV final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Compact() {
-      ::grpc::Service::MarkMethodRaw(4);
+      BaseClass::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_Compact() override {
       BaseClassMustBeDerivedFromService(this);
@@ -673,7 +673,7 @@ class Watch final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Watch() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_Watch() override {
       BaseClassMustBeDerivedFromService(this);
@@ -912,7 +912,7 @@ class Lease final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_LeaseGrant() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_LeaseGrant() override {
       BaseClassMustBeDerivedFromService(this);
@@ -932,7 +932,7 @@ class Lease final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_LeaseRevoke() {
-      ::grpc::Service::MarkMethodRaw(1);
+      BaseClass::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_LeaseRevoke() override {
       BaseClassMustBeDerivedFromService(this);
@@ -952,7 +952,7 @@ class Lease final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_LeaseKeepAlive() {
-      ::grpc::Service::MarkMethodRaw(2);
+      BaseClass::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_LeaseKeepAlive() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1278,7 +1278,7 @@ class Cluster final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_MemberAdd() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_MemberAdd() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1298,7 +1298,7 @@ class Cluster final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_MemberRemove() {
-      ::grpc::Service::MarkMethodRaw(1);
+      BaseClass::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_MemberRemove() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1318,7 +1318,7 @@ class Cluster final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_MemberUpdate() {
-      ::grpc::Service::MarkMethodRaw(2);
+      BaseClass::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_MemberUpdate() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1338,7 +1338,7 @@ class Cluster final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_MemberList() {
-      ::grpc::Service::MarkMethodRaw(3);
+      BaseClass::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_MemberList() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1773,7 +1773,7 @@ class Maintenance final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Alarm() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_Alarm() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1793,7 +1793,7 @@ class Maintenance final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Status() {
-      ::grpc::Service::MarkMethodRaw(1);
+      BaseClass::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_Status() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1813,7 +1813,7 @@ class Maintenance final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Defragment() {
-      ::grpc::Service::MarkMethodRaw(2);
+      BaseClass::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_Defragment() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1833,7 +1833,7 @@ class Maintenance final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Hash() {
-      ::grpc::Service::MarkMethodRaw(3);
+      BaseClass::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_Hash() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1853,7 +1853,7 @@ class Maintenance final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Snapshot() {
-      ::grpc::Service::MarkMethodRaw(4);
+      BaseClass::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_Snapshot() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2947,7 +2947,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_AuthEnable() {
-      ::grpc::Service::MarkMethodRaw(0);
+      BaseClass::grpc::Service::MarkMethodRaw(0);
     }
     ~WithRawMethod_AuthEnable() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2967,7 +2967,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_AuthDisable() {
-      ::grpc::Service::MarkMethodRaw(1);
+      BaseClass::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_AuthDisable() override {
       BaseClassMustBeDerivedFromService(this);
@@ -2987,7 +2987,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_Authenticate() {
-      ::grpc::Service::MarkMethodRaw(2);
+      BaseClass::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_Authenticate() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3007,7 +3007,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserAdd() {
-      ::grpc::Service::MarkMethodRaw(3);
+      BaseClass::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_UserAdd() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3027,7 +3027,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserGet() {
-      ::grpc::Service::MarkMethodRaw(4);
+      BaseClass::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_UserGet() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3047,7 +3047,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserList() {
-      ::grpc::Service::MarkMethodRaw(5);
+      BaseClass::grpc::Service::MarkMethodRaw(5);
     }
     ~WithRawMethod_UserList() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3067,7 +3067,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserDelete() {
-      ::grpc::Service::MarkMethodRaw(6);
+      BaseClass::grpc::Service::MarkMethodRaw(6);
     }
     ~WithRawMethod_UserDelete() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3087,7 +3087,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserChangePassword() {
-      ::grpc::Service::MarkMethodRaw(7);
+      BaseClass::grpc::Service::MarkMethodRaw(7);
     }
     ~WithRawMethod_UserChangePassword() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3107,7 +3107,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserGrantRole() {
-      ::grpc::Service::MarkMethodRaw(8);
+      BaseClass::grpc::Service::MarkMethodRaw(8);
     }
     ~WithRawMethod_UserGrantRole() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3127,7 +3127,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_UserRevokeRole() {
-      ::grpc::Service::MarkMethodRaw(9);
+      BaseClass::grpc::Service::MarkMethodRaw(9);
     }
     ~WithRawMethod_UserRevokeRole() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3147,7 +3147,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleAdd() {
-      ::grpc::Service::MarkMethodRaw(10);
+      BaseClass::grpc::Service::MarkMethodRaw(10);
     }
     ~WithRawMethod_RoleAdd() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3167,7 +3167,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleGet() {
-      ::grpc::Service::MarkMethodRaw(11);
+      BaseClass::grpc::Service::MarkMethodRaw(11);
     }
     ~WithRawMethod_RoleGet() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3187,7 +3187,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleList() {
-      ::grpc::Service::MarkMethodRaw(12);
+      BaseClass::grpc::Service::MarkMethodRaw(12);
     }
     ~WithRawMethod_RoleList() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3207,7 +3207,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleDelete() {
-      ::grpc::Service::MarkMethodRaw(13);
+      BaseClass::grpc::Service::MarkMethodRaw(13);
     }
     ~WithRawMethod_RoleDelete() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3227,7 +3227,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleGrantPermission() {
-      ::grpc::Service::MarkMethodRaw(14);
+      BaseClass::grpc::Service::MarkMethodRaw(14);
     }
     ~WithRawMethod_RoleGrantPermission() override {
       BaseClassMustBeDerivedFromService(this);
@@ -3247,7 +3247,7 @@ class Auth final {
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithRawMethod_RoleRevokePermission() {
-      ::grpc::Service::MarkMethodRaw(15);
+      BaseClass::grpc::Service::MarkMethodRaw(15);
     }
     ~WithRawMethod_RoleRevokePermission() override {
       BaseClassMustBeDerivedFromService(this);
