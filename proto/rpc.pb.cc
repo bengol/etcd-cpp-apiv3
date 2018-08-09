@@ -7,7 +7,6 @@
 
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
@@ -19,6 +18,30 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
+
+namespace protobuf_auth_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_auth_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Permission;
+}  // namespace protobuf_auth_2eproto
+namespace protobuf_kv_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_kv_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_KeyValue;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_kv_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Event;
+}  // namespace protobuf_kv_2eproto
+namespace protobuf_rpc_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_AlarmMember;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Compare;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_DeleteRangeRequest;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Member;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_PutRequest;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_RangeRequest;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ResponseHeader;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_WatchCancelRequest;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_WatchCreateRequest;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_DeleteRangeResponse;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_PutResponse;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_RangeResponse;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_RequestOp;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_rpc_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_ResponseOp;
+}  // namespace protobuf_rpc_2eproto
 namespace etcdserverpb {
 class ResponseHeaderDefaultTypeInternal {
  public:
@@ -414,14 +437,9 @@ class AuthRoleRevokePermissionResponseDefaultTypeInternal {
 } _AuthRoleRevokePermissionResponse_default_instance_;
 }  // namespace etcdserverpb
 namespace protobuf_rpc_2eproto {
-void InitDefaultsResponseHeaderImpl() {
+static void InitDefaultsResponseHeader() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_ResponseHeader_default_instance_;
     new (ptr) ::etcdserverpb::ResponseHeader();
@@ -430,19 +448,12 @@ void InitDefaultsResponseHeaderImpl() {
   ::etcdserverpb::ResponseHeader::InitAsDefaultInstance();
 }
 
-void InitDefaultsResponseHeader() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsResponseHeaderImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_ResponseHeader =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsResponseHeader}, {}};
 
-void InitDefaultsRangeRequestImpl() {
+static void InitDefaultsRangeRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_RangeRequest_default_instance_;
     new (ptr) ::etcdserverpb::RangeRequest();
@@ -451,21 +462,12 @@ void InitDefaultsRangeRequestImpl() {
   ::etcdserverpb::RangeRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsRangeRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRangeRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_RangeRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRangeRequest}, {}};
 
-void InitDefaultsRangeResponseImpl() {
+static void InitDefaultsRangeResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_kv_2eproto::InitDefaultsKeyValue();
   {
     void* ptr = &::etcdserverpb::_RangeResponse_default_instance_;
     new (ptr) ::etcdserverpb::RangeResponse();
@@ -474,19 +476,14 @@ void InitDefaultsRangeResponseImpl() {
   ::etcdserverpb::RangeResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsRangeResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRangeResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_RangeResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsRangeResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_kv_2eproto::scc_info_KeyValue.base,}};
 
-void InitDefaultsPutRequestImpl() {
+static void InitDefaultsPutRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_PutRequest_default_instance_;
     new (ptr) ::etcdserverpb::PutRequest();
@@ -495,21 +492,12 @@ void InitDefaultsPutRequestImpl() {
   ::etcdserverpb::PutRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsPutRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPutRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_PutRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPutRequest}, {}};
 
-void InitDefaultsPutResponseImpl() {
+static void InitDefaultsPutResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_kv_2eproto::InitDefaultsKeyValue();
   {
     void* ptr = &::etcdserverpb::_PutResponse_default_instance_;
     new (ptr) ::etcdserverpb::PutResponse();
@@ -518,19 +506,14 @@ void InitDefaultsPutResponseImpl() {
   ::etcdserverpb::PutResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsPutResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPutResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_PutResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPutResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_kv_2eproto::scc_info_KeyValue.base,}};
 
-void InitDefaultsDeleteRangeRequestImpl() {
+static void InitDefaultsDeleteRangeRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_DeleteRangeRequest_default_instance_;
     new (ptr) ::etcdserverpb::DeleteRangeRequest();
@@ -539,21 +522,12 @@ void InitDefaultsDeleteRangeRequestImpl() {
   ::etcdserverpb::DeleteRangeRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsDeleteRangeRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDeleteRangeRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_DeleteRangeRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDeleteRangeRequest}, {}};
 
-void InitDefaultsDeleteRangeResponseImpl() {
+static void InitDefaultsDeleteRangeResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_kv_2eproto::InitDefaultsKeyValue();
   {
     void* ptr = &::etcdserverpb::_DeleteRangeResponse_default_instance_;
     new (ptr) ::etcdserverpb::DeleteRangeResponse();
@@ -562,22 +536,14 @@ void InitDefaultsDeleteRangeResponseImpl() {
   ::etcdserverpb::DeleteRangeResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsDeleteRangeResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDeleteRangeResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_DeleteRangeResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsDeleteRangeResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_kv_2eproto::scc_info_KeyValue.base,}};
 
-void InitDefaultsRequestOpImpl() {
+static void InitDefaultsRequestOp() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsRangeRequest();
-  protobuf_rpc_2eproto::InitDefaultsPutRequest();
-  protobuf_rpc_2eproto::InitDefaultsDeleteRangeRequest();
   {
     void* ptr = &::etcdserverpb::_RequestOp_default_instance_;
     new (ptr) ::etcdserverpb::RequestOp();
@@ -586,22 +552,15 @@ void InitDefaultsRequestOpImpl() {
   ::etcdserverpb::RequestOp::InitAsDefaultInstance();
 }
 
-void InitDefaultsRequestOp() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRequestOpImpl);
-}
+::google::protobuf::internal::SCCInfo<3> scc_info_RequestOp =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsRequestOp}, {
+      &protobuf_rpc_2eproto::scc_info_RangeRequest.base,
+      &protobuf_rpc_2eproto::scc_info_PutRequest.base,
+      &protobuf_rpc_2eproto::scc_info_DeleteRangeRequest.base,}};
 
-void InitDefaultsResponseOpImpl() {
+static void InitDefaultsResponseOp() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsRangeResponse();
-  protobuf_rpc_2eproto::InitDefaultsPutResponse();
-  protobuf_rpc_2eproto::InitDefaultsDeleteRangeResponse();
   {
     void* ptr = &::etcdserverpb::_ResponseOp_default_instance_;
     new (ptr) ::etcdserverpb::ResponseOp();
@@ -610,19 +569,15 @@ void InitDefaultsResponseOpImpl() {
   ::etcdserverpb::ResponseOp::InitAsDefaultInstance();
 }
 
-void InitDefaultsResponseOp() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsResponseOpImpl);
-}
+::google::protobuf::internal::SCCInfo<3> scc_info_ResponseOp =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsResponseOp}, {
+      &protobuf_rpc_2eproto::scc_info_RangeResponse.base,
+      &protobuf_rpc_2eproto::scc_info_PutResponse.base,
+      &protobuf_rpc_2eproto::scc_info_DeleteRangeResponse.base,}};
 
-void InitDefaultsCompareImpl() {
+static void InitDefaultsCompare() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_Compare_default_instance_;
     new (ptr) ::etcdserverpb::Compare();
@@ -631,21 +586,12 @@ void InitDefaultsCompareImpl() {
   ::etcdserverpb::Compare::InitAsDefaultInstance();
 }
 
-void InitDefaultsCompare() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsCompareImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_Compare =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCompare}, {}};
 
-void InitDefaultsTxnRequestImpl() {
+static void InitDefaultsTxnRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsCompare();
-  protobuf_rpc_2eproto::InitDefaultsRequestOp();
   {
     void* ptr = &::etcdserverpb::_TxnRequest_default_instance_;
     new (ptr) ::etcdserverpb::TxnRequest();
@@ -654,21 +600,14 @@ void InitDefaultsTxnRequestImpl() {
   ::etcdserverpb::TxnRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsTxnRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTxnRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_TxnRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsTxnRequest}, {
+      &protobuf_rpc_2eproto::scc_info_Compare.base,
+      &protobuf_rpc_2eproto::scc_info_RequestOp.base,}};
 
-void InitDefaultsTxnResponseImpl() {
+static void InitDefaultsTxnResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_rpc_2eproto::InitDefaultsResponseOp();
   {
     void* ptr = &::etcdserverpb::_TxnResponse_default_instance_;
     new (ptr) ::etcdserverpb::TxnResponse();
@@ -677,19 +616,14 @@ void InitDefaultsTxnResponseImpl() {
   ::etcdserverpb::TxnResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsTxnResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTxnResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_TxnResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsTxnResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_rpc_2eproto::scc_info_ResponseOp.base,}};
 
-void InitDefaultsCompactionRequestImpl() {
+static void InitDefaultsCompactionRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_CompactionRequest_default_instance_;
     new (ptr) ::etcdserverpb::CompactionRequest();
@@ -698,20 +632,12 @@ void InitDefaultsCompactionRequestImpl() {
   ::etcdserverpb::CompactionRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsCompactionRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsCompactionRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_CompactionRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCompactionRequest}, {}};
 
-void InitDefaultsCompactionResponseImpl() {
+static void InitDefaultsCompactionResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_CompactionResponse_default_instance_;
     new (ptr) ::etcdserverpb::CompactionResponse();
@@ -720,19 +646,13 @@ void InitDefaultsCompactionResponseImpl() {
   ::etcdserverpb::CompactionResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsCompactionResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsCompactionResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_CompactionResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCompactionResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsHashRequestImpl() {
+static void InitDefaultsHashRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_HashRequest_default_instance_;
     new (ptr) ::etcdserverpb::HashRequest();
@@ -741,20 +661,12 @@ void InitDefaultsHashRequestImpl() {
   ::etcdserverpb::HashRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsHashRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsHashRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_HashRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsHashRequest}, {}};
 
-void InitDefaultsHashResponseImpl() {
+static void InitDefaultsHashResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_HashResponse_default_instance_;
     new (ptr) ::etcdserverpb::HashResponse();
@@ -763,19 +675,13 @@ void InitDefaultsHashResponseImpl() {
   ::etcdserverpb::HashResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsHashResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsHashResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_HashResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsHashResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsSnapshotRequestImpl() {
+static void InitDefaultsSnapshotRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_SnapshotRequest_default_instance_;
     new (ptr) ::etcdserverpb::SnapshotRequest();
@@ -784,20 +690,12 @@ void InitDefaultsSnapshotRequestImpl() {
   ::etcdserverpb::SnapshotRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsSnapshotRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsSnapshotRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_SnapshotRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsSnapshotRequest}, {}};
 
-void InitDefaultsSnapshotResponseImpl() {
+static void InitDefaultsSnapshotResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_SnapshotResponse_default_instance_;
     new (ptr) ::etcdserverpb::SnapshotResponse();
@@ -806,21 +704,13 @@ void InitDefaultsSnapshotResponseImpl() {
   ::etcdserverpb::SnapshotResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsSnapshotResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsSnapshotResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_SnapshotResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSnapshotResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsWatchRequestImpl() {
+static void InitDefaultsWatchRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsWatchCreateRequest();
-  protobuf_rpc_2eproto::InitDefaultsWatchCancelRequest();
   {
     void* ptr = &::etcdserverpb::_WatchRequest_default_instance_;
     new (ptr) ::etcdserverpb::WatchRequest();
@@ -829,19 +719,14 @@ void InitDefaultsWatchRequestImpl() {
   ::etcdserverpb::WatchRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsWatchRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWatchRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_WatchRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsWatchRequest}, {
+      &protobuf_rpc_2eproto::scc_info_WatchCreateRequest.base,
+      &protobuf_rpc_2eproto::scc_info_WatchCancelRequest.base,}};
 
-void InitDefaultsWatchCreateRequestImpl() {
+static void InitDefaultsWatchCreateRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_WatchCreateRequest_default_instance_;
     new (ptr) ::etcdserverpb::WatchCreateRequest();
@@ -850,19 +735,12 @@ void InitDefaultsWatchCreateRequestImpl() {
   ::etcdserverpb::WatchCreateRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsWatchCreateRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWatchCreateRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_WatchCreateRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsWatchCreateRequest}, {}};
 
-void InitDefaultsWatchCancelRequestImpl() {
+static void InitDefaultsWatchCancelRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_WatchCancelRequest_default_instance_;
     new (ptr) ::etcdserverpb::WatchCancelRequest();
@@ -871,21 +749,12 @@ void InitDefaultsWatchCancelRequestImpl() {
   ::etcdserverpb::WatchCancelRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsWatchCancelRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWatchCancelRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_WatchCancelRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsWatchCancelRequest}, {}};
 
-void InitDefaultsWatchResponseImpl() {
+static void InitDefaultsWatchResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_kv_2eproto::InitDefaultsEvent();
   {
     void* ptr = &::etcdserverpb::_WatchResponse_default_instance_;
     new (ptr) ::etcdserverpb::WatchResponse();
@@ -894,19 +763,14 @@ void InitDefaultsWatchResponseImpl() {
   ::etcdserverpb::WatchResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsWatchResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWatchResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_WatchResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsWatchResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_kv_2eproto::scc_info_Event.base,}};
 
-void InitDefaultsLeaseGrantRequestImpl() {
+static void InitDefaultsLeaseGrantRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_LeaseGrantRequest_default_instance_;
     new (ptr) ::etcdserverpb::LeaseGrantRequest();
@@ -915,20 +779,12 @@ void InitDefaultsLeaseGrantRequestImpl() {
   ::etcdserverpb::LeaseGrantRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseGrantRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseGrantRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_LeaseGrantRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLeaseGrantRequest}, {}};
 
-void InitDefaultsLeaseGrantResponseImpl() {
+static void InitDefaultsLeaseGrantResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_LeaseGrantResponse_default_instance_;
     new (ptr) ::etcdserverpb::LeaseGrantResponse();
@@ -937,19 +793,13 @@ void InitDefaultsLeaseGrantResponseImpl() {
   ::etcdserverpb::LeaseGrantResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseGrantResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseGrantResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_LeaseGrantResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsLeaseGrantResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsLeaseRevokeRequestImpl() {
+static void InitDefaultsLeaseRevokeRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_LeaseRevokeRequest_default_instance_;
     new (ptr) ::etcdserverpb::LeaseRevokeRequest();
@@ -958,20 +808,12 @@ void InitDefaultsLeaseRevokeRequestImpl() {
   ::etcdserverpb::LeaseRevokeRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseRevokeRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseRevokeRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_LeaseRevokeRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLeaseRevokeRequest}, {}};
 
-void InitDefaultsLeaseRevokeResponseImpl() {
+static void InitDefaultsLeaseRevokeResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_LeaseRevokeResponse_default_instance_;
     new (ptr) ::etcdserverpb::LeaseRevokeResponse();
@@ -980,19 +822,13 @@ void InitDefaultsLeaseRevokeResponseImpl() {
   ::etcdserverpb::LeaseRevokeResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseRevokeResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseRevokeResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_LeaseRevokeResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsLeaseRevokeResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsLeaseKeepAliveRequestImpl() {
+static void InitDefaultsLeaseKeepAliveRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_LeaseKeepAliveRequest_default_instance_;
     new (ptr) ::etcdserverpb::LeaseKeepAliveRequest();
@@ -1001,20 +837,12 @@ void InitDefaultsLeaseKeepAliveRequestImpl() {
   ::etcdserverpb::LeaseKeepAliveRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseKeepAliveRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseKeepAliveRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_LeaseKeepAliveRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsLeaseKeepAliveRequest}, {}};
 
-void InitDefaultsLeaseKeepAliveResponseImpl() {
+static void InitDefaultsLeaseKeepAliveResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_LeaseKeepAliveResponse_default_instance_;
     new (ptr) ::etcdserverpb::LeaseKeepAliveResponse();
@@ -1023,19 +851,13 @@ void InitDefaultsLeaseKeepAliveResponseImpl() {
   ::etcdserverpb::LeaseKeepAliveResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsLeaseKeepAliveResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsLeaseKeepAliveResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_LeaseKeepAliveResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsLeaseKeepAliveResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsMemberImpl() {
+static void InitDefaultsMember() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_Member_default_instance_;
     new (ptr) ::etcdserverpb::Member();
@@ -1044,19 +866,12 @@ void InitDefaultsMemberImpl() {
   ::etcdserverpb::Member::InitAsDefaultInstance();
 }
 
-void InitDefaultsMember() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_Member =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMember}, {}};
 
-void InitDefaultsMemberAddRequestImpl() {
+static void InitDefaultsMemberAddRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_MemberAddRequest_default_instance_;
     new (ptr) ::etcdserverpb::MemberAddRequest();
@@ -1065,21 +880,12 @@ void InitDefaultsMemberAddRequestImpl() {
   ::etcdserverpb::MemberAddRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberAddRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberAddRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_MemberAddRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMemberAddRequest}, {}};
 
-void InitDefaultsMemberAddResponseImpl() {
+static void InitDefaultsMemberAddResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_rpc_2eproto::InitDefaultsMember();
   {
     void* ptr = &::etcdserverpb::_MemberAddResponse_default_instance_;
     new (ptr) ::etcdserverpb::MemberAddResponse();
@@ -1088,19 +894,14 @@ void InitDefaultsMemberAddResponseImpl() {
   ::etcdserverpb::MemberAddResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberAddResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberAddResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_MemberAddResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsMemberAddResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_rpc_2eproto::scc_info_Member.base,}};
 
-void InitDefaultsMemberRemoveRequestImpl() {
+static void InitDefaultsMemberRemoveRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_MemberRemoveRequest_default_instance_;
     new (ptr) ::etcdserverpb::MemberRemoveRequest();
@@ -1109,20 +910,12 @@ void InitDefaultsMemberRemoveRequestImpl() {
   ::etcdserverpb::MemberRemoveRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberRemoveRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberRemoveRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_MemberRemoveRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMemberRemoveRequest}, {}};
 
-void InitDefaultsMemberRemoveResponseImpl() {
+static void InitDefaultsMemberRemoveResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_MemberRemoveResponse_default_instance_;
     new (ptr) ::etcdserverpb::MemberRemoveResponse();
@@ -1131,19 +924,13 @@ void InitDefaultsMemberRemoveResponseImpl() {
   ::etcdserverpb::MemberRemoveResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberRemoveResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberRemoveResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_MemberRemoveResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsMemberRemoveResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsMemberUpdateRequestImpl() {
+static void InitDefaultsMemberUpdateRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_MemberUpdateRequest_default_instance_;
     new (ptr) ::etcdserverpb::MemberUpdateRequest();
@@ -1152,20 +939,12 @@ void InitDefaultsMemberUpdateRequestImpl() {
   ::etcdserverpb::MemberUpdateRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberUpdateRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberUpdateRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_MemberUpdateRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMemberUpdateRequest}, {}};
 
-void InitDefaultsMemberUpdateResponseImpl() {
+static void InitDefaultsMemberUpdateResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_MemberUpdateResponse_default_instance_;
     new (ptr) ::etcdserverpb::MemberUpdateResponse();
@@ -1174,19 +953,13 @@ void InitDefaultsMemberUpdateResponseImpl() {
   ::etcdserverpb::MemberUpdateResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberUpdateResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberUpdateResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_MemberUpdateResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsMemberUpdateResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsMemberListRequestImpl() {
+static void InitDefaultsMemberListRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_MemberListRequest_default_instance_;
     new (ptr) ::etcdserverpb::MemberListRequest();
@@ -1195,21 +968,12 @@ void InitDefaultsMemberListRequestImpl() {
   ::etcdserverpb::MemberListRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberListRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberListRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_MemberListRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMemberListRequest}, {}};
 
-void InitDefaultsMemberListResponseImpl() {
+static void InitDefaultsMemberListResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_rpc_2eproto::InitDefaultsMember();
   {
     void* ptr = &::etcdserverpb::_MemberListResponse_default_instance_;
     new (ptr) ::etcdserverpb::MemberListResponse();
@@ -1218,19 +982,14 @@ void InitDefaultsMemberListResponseImpl() {
   ::etcdserverpb::MemberListResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsMemberListResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMemberListResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_MemberListResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsMemberListResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_rpc_2eproto::scc_info_Member.base,}};
 
-void InitDefaultsDefragmentRequestImpl() {
+static void InitDefaultsDefragmentRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_DefragmentRequest_default_instance_;
     new (ptr) ::etcdserverpb::DefragmentRequest();
@@ -1239,20 +998,12 @@ void InitDefaultsDefragmentRequestImpl() {
   ::etcdserverpb::DefragmentRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsDefragmentRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDefragmentRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_DefragmentRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsDefragmentRequest}, {}};
 
-void InitDefaultsDefragmentResponseImpl() {
+static void InitDefaultsDefragmentResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_DefragmentResponse_default_instance_;
     new (ptr) ::etcdserverpb::DefragmentResponse();
@@ -1261,19 +1012,13 @@ void InitDefaultsDefragmentResponseImpl() {
   ::etcdserverpb::DefragmentResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsDefragmentResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDefragmentResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DefragmentResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDefragmentResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAlarmRequestImpl() {
+static void InitDefaultsAlarmRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AlarmRequest_default_instance_;
     new (ptr) ::etcdserverpb::AlarmRequest();
@@ -1282,19 +1027,12 @@ void InitDefaultsAlarmRequestImpl() {
   ::etcdserverpb::AlarmRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAlarmRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAlarmRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AlarmRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAlarmRequest}, {}};
 
-void InitDefaultsAlarmMemberImpl() {
+static void InitDefaultsAlarmMember() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AlarmMember_default_instance_;
     new (ptr) ::etcdserverpb::AlarmMember();
@@ -1303,21 +1041,12 @@ void InitDefaultsAlarmMemberImpl() {
   ::etcdserverpb::AlarmMember::InitAsDefaultInstance();
 }
 
-void InitDefaultsAlarmMember() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAlarmMemberImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AlarmMember =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAlarmMember}, {}};
 
-void InitDefaultsAlarmResponseImpl() {
+static void InitDefaultsAlarmResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_rpc_2eproto::InitDefaultsAlarmMember();
   {
     void* ptr = &::etcdserverpb::_AlarmResponse_default_instance_;
     new (ptr) ::etcdserverpb::AlarmResponse();
@@ -1326,19 +1055,14 @@ void InitDefaultsAlarmResponseImpl() {
   ::etcdserverpb::AlarmResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAlarmResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAlarmResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_AlarmResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsAlarmResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_rpc_2eproto::scc_info_AlarmMember.base,}};
 
-void InitDefaultsStatusRequestImpl() {
+static void InitDefaultsStatusRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_StatusRequest_default_instance_;
     new (ptr) ::etcdserverpb::StatusRequest();
@@ -1347,20 +1071,12 @@ void InitDefaultsStatusRequestImpl() {
   ::etcdserverpb::StatusRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsStatusRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsStatusRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_StatusRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsStatusRequest}, {}};
 
-void InitDefaultsStatusResponseImpl() {
+static void InitDefaultsStatusResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_StatusResponse_default_instance_;
     new (ptr) ::etcdserverpb::StatusResponse();
@@ -1369,19 +1085,13 @@ void InitDefaultsStatusResponseImpl() {
   ::etcdserverpb::StatusResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsStatusResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsStatusResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_StatusResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsStatusResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthEnableRequestImpl() {
+static void InitDefaultsAuthEnableRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthEnableRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthEnableRequest();
@@ -1390,19 +1100,12 @@ void InitDefaultsAuthEnableRequestImpl() {
   ::etcdserverpb::AuthEnableRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthEnableRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthEnableRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthEnableRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthEnableRequest}, {}};
 
-void InitDefaultsAuthDisableRequestImpl() {
+static void InitDefaultsAuthDisableRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthDisableRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthDisableRequest();
@@ -1411,19 +1114,12 @@ void InitDefaultsAuthDisableRequestImpl() {
   ::etcdserverpb::AuthDisableRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthDisableRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthDisableRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthDisableRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthDisableRequest}, {}};
 
-void InitDefaultsAuthenticateRequestImpl() {
+static void InitDefaultsAuthenticateRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthenticateRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthenticateRequest();
@@ -1432,19 +1128,12 @@ void InitDefaultsAuthenticateRequestImpl() {
   ::etcdserverpb::AuthenticateRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthenticateRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthenticateRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthenticateRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthenticateRequest}, {}};
 
-void InitDefaultsAuthUserAddRequestImpl() {
+static void InitDefaultsAuthUserAddRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserAddRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserAddRequest();
@@ -1453,19 +1142,12 @@ void InitDefaultsAuthUserAddRequestImpl() {
   ::etcdserverpb::AuthUserAddRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserAddRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserAddRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserAddRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserAddRequest}, {}};
 
-void InitDefaultsAuthUserGetRequestImpl() {
+static void InitDefaultsAuthUserGetRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserGetRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserGetRequest();
@@ -1474,19 +1156,12 @@ void InitDefaultsAuthUserGetRequestImpl() {
   ::etcdserverpb::AuthUserGetRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserGetRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserGetRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserGetRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserGetRequest}, {}};
 
-void InitDefaultsAuthUserDeleteRequestImpl() {
+static void InitDefaultsAuthUserDeleteRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserDeleteRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserDeleteRequest();
@@ -1495,19 +1170,12 @@ void InitDefaultsAuthUserDeleteRequestImpl() {
   ::etcdserverpb::AuthUserDeleteRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserDeleteRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserDeleteRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserDeleteRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserDeleteRequest}, {}};
 
-void InitDefaultsAuthUserChangePasswordRequestImpl() {
+static void InitDefaultsAuthUserChangePasswordRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserChangePasswordRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserChangePasswordRequest();
@@ -1516,19 +1184,12 @@ void InitDefaultsAuthUserChangePasswordRequestImpl() {
   ::etcdserverpb::AuthUserChangePasswordRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserChangePasswordRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserChangePasswordRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserChangePasswordRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserChangePasswordRequest}, {}};
 
-void InitDefaultsAuthUserGrantRoleRequestImpl() {
+static void InitDefaultsAuthUserGrantRoleRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserGrantRoleRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserGrantRoleRequest();
@@ -1537,19 +1198,12 @@ void InitDefaultsAuthUserGrantRoleRequestImpl() {
   ::etcdserverpb::AuthUserGrantRoleRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserGrantRoleRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserGrantRoleRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserGrantRoleRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserGrantRoleRequest}, {}};
 
-void InitDefaultsAuthUserRevokeRoleRequestImpl() {
+static void InitDefaultsAuthUserRevokeRoleRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserRevokeRoleRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserRevokeRoleRequest();
@@ -1558,19 +1212,12 @@ void InitDefaultsAuthUserRevokeRoleRequestImpl() {
   ::etcdserverpb::AuthUserRevokeRoleRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserRevokeRoleRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserRevokeRoleRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserRevokeRoleRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserRevokeRoleRequest}, {}};
 
-void InitDefaultsAuthRoleAddRequestImpl() {
+static void InitDefaultsAuthRoleAddRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthRoleAddRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleAddRequest();
@@ -1579,19 +1226,12 @@ void InitDefaultsAuthRoleAddRequestImpl() {
   ::etcdserverpb::AuthRoleAddRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleAddRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleAddRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthRoleAddRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthRoleAddRequest}, {}};
 
-void InitDefaultsAuthRoleGetRequestImpl() {
+static void InitDefaultsAuthRoleGetRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthRoleGetRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleGetRequest();
@@ -1600,19 +1240,12 @@ void InitDefaultsAuthRoleGetRequestImpl() {
   ::etcdserverpb::AuthRoleGetRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleGetRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleGetRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthRoleGetRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthRoleGetRequest}, {}};
 
-void InitDefaultsAuthUserListRequestImpl() {
+static void InitDefaultsAuthUserListRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthUserListRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserListRequest();
@@ -1621,19 +1254,12 @@ void InitDefaultsAuthUserListRequestImpl() {
   ::etcdserverpb::AuthUserListRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserListRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserListRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthUserListRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthUserListRequest}, {}};
 
-void InitDefaultsAuthRoleListRequestImpl() {
+static void InitDefaultsAuthRoleListRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthRoleListRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleListRequest();
@@ -1642,19 +1268,12 @@ void InitDefaultsAuthRoleListRequestImpl() {
   ::etcdserverpb::AuthRoleListRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleListRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleListRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthRoleListRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthRoleListRequest}, {}};
 
-void InitDefaultsAuthRoleDeleteRequestImpl() {
+static void InitDefaultsAuthRoleDeleteRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthRoleDeleteRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleDeleteRequest();
@@ -1663,20 +1282,12 @@ void InitDefaultsAuthRoleDeleteRequestImpl() {
   ::etcdserverpb::AuthRoleDeleteRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleDeleteRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleDeleteRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthRoleDeleteRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthRoleDeleteRequest}, {}};
 
-void InitDefaultsAuthRoleGrantPermissionRequestImpl() {
+static void InitDefaultsAuthRoleGrantPermissionRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_auth_2eproto::InitDefaultsPermission();
   {
     void* ptr = &::etcdserverpb::_AuthRoleGrantPermissionRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleGrantPermissionRequest();
@@ -1685,19 +1296,13 @@ void InitDefaultsAuthRoleGrantPermissionRequestImpl() {
   ::etcdserverpb::AuthRoleGrantPermissionRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleGrantPermissionRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleGrantPermissionRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleGrantPermissionRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleGrantPermissionRequest}, {
+      &protobuf_auth_2eproto::scc_info_Permission.base,}};
 
-void InitDefaultsAuthRoleRevokePermissionRequestImpl() {
+static void InitDefaultsAuthRoleRevokePermissionRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_AuthRoleRevokePermissionRequest_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleRevokePermissionRequest();
@@ -1706,20 +1311,12 @@ void InitDefaultsAuthRoleRevokePermissionRequestImpl() {
   ::etcdserverpb::AuthRoleRevokePermissionRequest::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleRevokePermissionRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleRevokePermissionRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_AuthRoleRevokePermissionRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsAuthRoleRevokePermissionRequest}, {}};
 
-void InitDefaultsAuthEnableResponseImpl() {
+static void InitDefaultsAuthEnableResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthEnableResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthEnableResponse();
@@ -1728,20 +1325,13 @@ void InitDefaultsAuthEnableResponseImpl() {
   ::etcdserverpb::AuthEnableResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthEnableResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthEnableResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthEnableResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthEnableResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthDisableResponseImpl() {
+static void InitDefaultsAuthDisableResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthDisableResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthDisableResponse();
@@ -1750,20 +1340,13 @@ void InitDefaultsAuthDisableResponseImpl() {
   ::etcdserverpb::AuthDisableResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthDisableResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthDisableResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthDisableResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthDisableResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthenticateResponseImpl() {
+static void InitDefaultsAuthenticateResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthenticateResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthenticateResponse();
@@ -1772,20 +1355,13 @@ void InitDefaultsAuthenticateResponseImpl() {
   ::etcdserverpb::AuthenticateResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthenticateResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthenticateResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthenticateResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthenticateResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserAddResponseImpl() {
+static void InitDefaultsAuthUserAddResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserAddResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserAddResponse();
@@ -1794,20 +1370,13 @@ void InitDefaultsAuthUserAddResponseImpl() {
   ::etcdserverpb::AuthUserAddResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserAddResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserAddResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserAddResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserAddResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserGetResponseImpl() {
+static void InitDefaultsAuthUserGetResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserGetResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserGetResponse();
@@ -1816,20 +1385,13 @@ void InitDefaultsAuthUserGetResponseImpl() {
   ::etcdserverpb::AuthUserGetResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserGetResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserGetResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserGetResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserGetResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserDeleteResponseImpl() {
+static void InitDefaultsAuthUserDeleteResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserDeleteResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserDeleteResponse();
@@ -1838,20 +1400,13 @@ void InitDefaultsAuthUserDeleteResponseImpl() {
   ::etcdserverpb::AuthUserDeleteResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserDeleteResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserDeleteResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserDeleteResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserDeleteResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserChangePasswordResponseImpl() {
+static void InitDefaultsAuthUserChangePasswordResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserChangePasswordResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserChangePasswordResponse();
@@ -1860,20 +1415,13 @@ void InitDefaultsAuthUserChangePasswordResponseImpl() {
   ::etcdserverpb::AuthUserChangePasswordResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserChangePasswordResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserChangePasswordResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserChangePasswordResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserChangePasswordResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserGrantRoleResponseImpl() {
+static void InitDefaultsAuthUserGrantRoleResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserGrantRoleResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserGrantRoleResponse();
@@ -1882,20 +1430,13 @@ void InitDefaultsAuthUserGrantRoleResponseImpl() {
   ::etcdserverpb::AuthUserGrantRoleResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserGrantRoleResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserGrantRoleResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserGrantRoleResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserGrantRoleResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserRevokeRoleResponseImpl() {
+static void InitDefaultsAuthUserRevokeRoleResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserRevokeRoleResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserRevokeRoleResponse();
@@ -1904,20 +1445,13 @@ void InitDefaultsAuthUserRevokeRoleResponseImpl() {
   ::etcdserverpb::AuthUserRevokeRoleResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserRevokeRoleResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserRevokeRoleResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserRevokeRoleResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserRevokeRoleResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthRoleAddResponseImpl() {
+static void InitDefaultsAuthRoleAddResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthRoleAddResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleAddResponse();
@@ -1926,21 +1460,13 @@ void InitDefaultsAuthRoleAddResponseImpl() {
   ::etcdserverpb::AuthRoleAddResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleAddResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleAddResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleAddResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleAddResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthRoleGetResponseImpl() {
+static void InitDefaultsAuthRoleGetResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  protobuf_auth_2eproto::InitDefaultsPermission();
   {
     void* ptr = &::etcdserverpb::_AuthRoleGetResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleGetResponse();
@@ -1949,20 +1475,14 @@ void InitDefaultsAuthRoleGetResponseImpl() {
   ::etcdserverpb::AuthRoleGetResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleGetResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleGetResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_AuthRoleGetResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsAuthRoleGetResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,
+      &protobuf_auth_2eproto::scc_info_Permission.base,}};
 
-void InitDefaultsAuthRoleListResponseImpl() {
+static void InitDefaultsAuthRoleListResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthRoleListResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleListResponse();
@@ -1971,20 +1491,13 @@ void InitDefaultsAuthRoleListResponseImpl() {
   ::etcdserverpb::AuthRoleListResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleListResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleListResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleListResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleListResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthUserListResponseImpl() {
+static void InitDefaultsAuthUserListResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthUserListResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthUserListResponse();
@@ -1993,20 +1506,13 @@ void InitDefaultsAuthUserListResponseImpl() {
   ::etcdserverpb::AuthUserListResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthUserListResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthUserListResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthUserListResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthUserListResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthRoleDeleteResponseImpl() {
+static void InitDefaultsAuthRoleDeleteResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthRoleDeleteResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleDeleteResponse();
@@ -2015,20 +1521,13 @@ void InitDefaultsAuthRoleDeleteResponseImpl() {
   ::etcdserverpb::AuthRoleDeleteResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleDeleteResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleDeleteResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleDeleteResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleDeleteResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthRoleGrantPermissionResponseImpl() {
+static void InitDefaultsAuthRoleGrantPermissionResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthRoleGrantPermissionResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleGrantPermissionResponse();
@@ -2037,20 +1536,13 @@ void InitDefaultsAuthRoleGrantPermissionResponseImpl() {
   ::etcdserverpb::AuthRoleGrantPermissionResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleGrantPermissionResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleGrantPermissionResponseImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleGrantPermissionResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleGrantPermissionResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
 
-void InitDefaultsAuthRoleRevokePermissionResponseImpl() {
+static void InitDefaultsAuthRoleRevokePermissionResponse() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_rpc_2eproto::InitDefaultsResponseHeader();
   {
     void* ptr = &::etcdserverpb::_AuthRoleRevokePermissionResponse_default_instance_;
     new (ptr) ::etcdserverpb::AuthRoleRevokePermissionResponse();
@@ -2059,9 +1551,87 @@ void InitDefaultsAuthRoleRevokePermissionResponseImpl() {
   ::etcdserverpb::AuthRoleRevokePermissionResponse::InitAsDefaultInstance();
 }
 
-void InitDefaultsAuthRoleRevokePermissionResponse() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsAuthRoleRevokePermissionResponseImpl);
+::google::protobuf::internal::SCCInfo<1> scc_info_AuthRoleRevokePermissionResponse =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsAuthRoleRevokePermissionResponse}, {
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base,}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_ResponseHeader.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RangeRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RangeResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PutRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PutResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DeleteRangeRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DeleteRangeResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RequestOp.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ResponseOp.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Compare.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TxnRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TxnResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CompactionRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CompactionResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_HashRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_HashResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SnapshotRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_SnapshotResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WatchRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WatchCreateRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WatchCancelRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WatchResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseGrantRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseGrantResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseRevokeRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseRevokeResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseKeepAliveRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_LeaseKeepAliveResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Member.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberAddRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberAddResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberRemoveRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberRemoveResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberUpdateRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberUpdateResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberListRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MemberListResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DefragmentRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DefragmentResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AlarmRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AlarmMember.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AlarmResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_StatusRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_StatusResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthEnableRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthDisableRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthenticateRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserAddRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserGetRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserDeleteRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserChangePasswordRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserGrantRoleRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserRevokeRoleRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleAddRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleGetRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserListRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleListRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleDeleteRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleGrantPermissionRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleRevokePermissionRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthEnableResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthDisableResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthenticateResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserAddResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserGetResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserDeleteResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserChangePasswordResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserGrantRoleResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserRevokeRoleResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleAddResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleGetResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleListResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthUserListResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleDeleteResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleGrantPermissionResponse.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_AuthRoleRevokePermissionResponse.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata[76];
@@ -2765,15 +2335,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 void protobuf_AssignDescriptors() {
   AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
-      "rpc.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      "rpc.proto", schemas, file_default_instances, TableStruct::offsets,
       file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
@@ -3033,8 +2602,8 @@ void AddDescriptorsImpl() {
 }
 
 void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
@@ -3214,16 +2783,14 @@ const int ResponseHeader::kRaftTermFieldNumber;
 
 ResponseHeader::ResponseHeader()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsResponseHeader();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_ResponseHeader.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.ResponseHeader)
 }
 ResponseHeader::ResponseHeader(const ResponseHeader& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&cluster_id_, &from.cluster_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&raft_term_) -
@@ -3235,7 +2802,6 @@ void ResponseHeader::SharedCtor() {
   ::memset(&cluster_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&raft_term_) -
       reinterpret_cast<char*>(&cluster_id_)) + sizeof(raft_term_));
-  _cached_size_ = 0;
 }
 
 ResponseHeader::~ResponseHeader() {
@@ -3247,9 +2813,7 @@ void ResponseHeader::SharedDtor() {
 }
 
 void ResponseHeader::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* ResponseHeader::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -3257,17 +2821,10 @@ const ::google::protobuf::Descriptor* ResponseHeader::descriptor() {
 }
 
 const ResponseHeader& ResponseHeader::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsResponseHeader();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_ResponseHeader.base);
   return *internal_default_instance();
 }
 
-ResponseHeader* ResponseHeader::New(::google::protobuf::Arena* arena) const {
-  ResponseHeader* n = new ResponseHeader;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void ResponseHeader::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.ResponseHeader)
@@ -3287,7 +2844,7 @@ bool ResponseHeader::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.ResponseHeader)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -3473,9 +3030,7 @@ size_t ResponseHeader::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -3544,7 +3099,6 @@ void ResponseHeader::InternalSwap(ResponseHeader* other) {
   swap(revision_, other->revision_);
   swap(raft_term_, other->raft_term_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ResponseHeader::GetMetadata() const {
@@ -3571,16 +3125,14 @@ const int RangeRequest::kCountOnlyFieldNumber;
 
 RangeRequest::RangeRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsRangeRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_RangeRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.RangeRequest)
 }
 RangeRequest::RangeRequest(const RangeRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -3602,7 +3154,6 @@ void RangeRequest::SharedCtor() {
   ::memset(&limit_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&count_only_) -
       reinterpret_cast<char*>(&limit_)) + sizeof(count_only_));
-  _cached_size_ = 0;
 }
 
 RangeRequest::~RangeRequest() {
@@ -3616,9 +3167,7 @@ void RangeRequest::SharedDtor() {
 }
 
 void RangeRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* RangeRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -3626,17 +3175,10 @@ const ::google::protobuf::Descriptor* RangeRequest::descriptor() {
 }
 
 const RangeRequest& RangeRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsRangeRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_RangeRequest.base);
   return *internal_default_instance();
 }
 
-RangeRequest* RangeRequest::New(::google::protobuf::Arena* arena) const {
-  RangeRequest* n = new RangeRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void RangeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.RangeRequest)
@@ -3658,7 +3200,7 @@ bool RangeRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.RangeRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -3999,9 +3541,7 @@ size_t RangeRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -4082,8 +3622,10 @@ void RangeRequest::Swap(RangeRequest* other) {
 }
 void RangeRequest::InternalSwap(RangeRequest* other) {
   using std::swap;
-  key_.Swap(&other->key_);
-  range_end_.Swap(&other->range_end_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  range_end_.Swap(&other->range_end_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(limit_, other->limit_);
   swap(revision_, other->revision_);
   swap(sort_order_, other->sort_order_);
@@ -4092,7 +3634,6 @@ void RangeRequest::InternalSwap(RangeRequest* other) {
   swap(keys_only_, other->keys_only_);
   swap(count_only_, other->count_only_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RangeRequest::GetMetadata() const {
@@ -4119,17 +3660,15 @@ const int RangeResponse::kCountFieldNumber;
 
 RangeResponse::RangeResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsRangeResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_RangeResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.RangeResponse)
 }
 RangeResponse::RangeResponse(const RangeResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      kvs_(from.kvs_),
-      _cached_size_(0) {
+      kvs_(from.kvs_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -4146,7 +3685,6 @@ void RangeResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&more_) -
       reinterpret_cast<char*>(&header_)) + sizeof(more_));
-  _cached_size_ = 0;
 }
 
 RangeResponse::~RangeResponse() {
@@ -4159,9 +3697,7 @@ void RangeResponse::SharedDtor() {
 }
 
 void RangeResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* RangeResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -4169,17 +3705,10 @@ const ::google::protobuf::Descriptor* RangeResponse::descriptor() {
 }
 
 const RangeResponse& RangeResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsRangeResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_RangeResponse.base);
   return *internal_default_instance();
 }
 
-RangeResponse* RangeResponse::New(::google::protobuf::Arena* arena) const {
-  RangeResponse* n = new RangeResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void RangeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.RangeResponse)
@@ -4204,7 +3733,7 @@ bool RangeResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.RangeResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -4224,7 +3753,8 @@ bool RangeResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_kvs()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_kvs()));
         } else {
           goto handle_unusual;
         }
@@ -4288,14 +3818,16 @@ void RangeResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated .mvccpb.KeyValue kvs = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->kvs_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->kvs(static_cast<int>(i)), output);
+      2,
+      this->kvs(static_cast<int>(i)),
+      output);
   }
 
   // bool more = 3;
@@ -4326,7 +3858,7 @@ void RangeResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated .mvccpb.KeyValue kvs = 2;
@@ -4379,7 +3911,7 @@ size_t RangeResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 count = 4;
@@ -4395,9 +3927,7 @@ size_t RangeResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -4459,12 +3989,11 @@ void RangeResponse::Swap(RangeResponse* other) {
 }
 void RangeResponse::InternalSwap(RangeResponse* other) {
   using std::swap;
-  kvs_.InternalSwap(&other->kvs_);
+  CastToBase(&kvs_)->InternalSwap(CastToBase(&other->kvs_));
   swap(header_, other->header_);
   swap(count_, other->count_);
   swap(more_, other->more_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RangeResponse::GetMetadata() const {
@@ -4486,16 +4015,14 @@ const int PutRequest::kPrevKvFieldNumber;
 
 PutRequest::PutRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsPutRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_PutRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.PutRequest)
 }
 PutRequest::PutRequest(const PutRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -4517,7 +4044,6 @@ void PutRequest::SharedCtor() {
   ::memset(&lease_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&prev_kv_) -
       reinterpret_cast<char*>(&lease_)) + sizeof(prev_kv_));
-  _cached_size_ = 0;
 }
 
 PutRequest::~PutRequest() {
@@ -4531,9 +4057,7 @@ void PutRequest::SharedDtor() {
 }
 
 void PutRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* PutRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -4541,17 +4065,10 @@ const ::google::protobuf::Descriptor* PutRequest::descriptor() {
 }
 
 const PutRequest& PutRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsPutRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_PutRequest.base);
   return *internal_default_instance();
 }
 
-PutRequest* PutRequest::New(::google::protobuf::Arena* arena) const {
-  PutRequest* n = new PutRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void PutRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.PutRequest)
@@ -4573,7 +4090,7 @@ bool PutRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.PutRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -4759,9 +4276,7 @@ size_t PutRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -4827,12 +4342,13 @@ void PutRequest::Swap(PutRequest* other) {
 }
 void PutRequest::InternalSwap(PutRequest* other) {
   using std::swap;
-  key_.Swap(&other->key_);
-  value_.Swap(&other->value_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  value_.Swap(&other->value_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(lease_, other->lease_);
   swap(prev_kv_, other->prev_kv_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PutRequest::GetMetadata() const {
@@ -4862,16 +4378,14 @@ const int PutResponse::kPrevKvFieldNumber;
 
 PutResponse::PutResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsPutResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_PutResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.PutResponse)
 }
 PutResponse::PutResponse(const PutResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -4890,7 +4404,6 @@ void PutResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&prev_kv_) -
       reinterpret_cast<char*>(&header_)) + sizeof(prev_kv_));
-  _cached_size_ = 0;
 }
 
 PutResponse::~PutResponse() {
@@ -4904,9 +4417,7 @@ void PutResponse::SharedDtor() {
 }
 
 void PutResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* PutResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -4914,17 +4425,10 @@ const ::google::protobuf::Descriptor* PutResponse::descriptor() {
 }
 
 const PutResponse& PutResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsPutResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_PutResponse.base);
   return *internal_default_instance();
 }
 
-PutResponse* PutResponse::New(::google::protobuf::Arena* arena) const {
-  PutResponse* n = new PutResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void PutResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.PutResponse)
@@ -4949,7 +4453,7 @@ bool PutResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.PutResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -5006,13 +4510,13 @@ void PutResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // .mvccpb.KeyValue prev_kv = 2;
   if (this->has_prev_kv()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->prev_kv_, output);
+      2, this->_internal_prev_kv(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5033,14 +4537,14 @@ void PutResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // .mvccpb.KeyValue prev_kv = 2;
   if (this->has_prev_kv()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->prev_kv_, deterministic, target);
+        2, this->_internal_prev_kv(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5064,20 +4568,18 @@ size_t PutResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // .mvccpb.KeyValue prev_kv = 2;
   if (this->has_prev_kv()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->prev_kv_);
+        *prev_kv_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -5138,7 +4640,6 @@ void PutResponse::InternalSwap(PutResponse* other) {
   swap(header_, other->header_);
   swap(prev_kv_, other->prev_kv_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PutResponse::GetMetadata() const {
@@ -5159,16 +4660,14 @@ const int DeleteRangeRequest::kPrevKvFieldNumber;
 
 DeleteRangeRequest::DeleteRangeRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsDeleteRangeRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_DeleteRangeRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.DeleteRangeRequest)
 }
 DeleteRangeRequest::DeleteRangeRequest(const DeleteRangeRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -5186,7 +4685,6 @@ void DeleteRangeRequest::SharedCtor() {
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   range_end_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   prev_kv_ = false;
-  _cached_size_ = 0;
 }
 
 DeleteRangeRequest::~DeleteRangeRequest() {
@@ -5200,9 +4698,7 @@ void DeleteRangeRequest::SharedDtor() {
 }
 
 void DeleteRangeRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* DeleteRangeRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -5210,17 +4706,10 @@ const ::google::protobuf::Descriptor* DeleteRangeRequest::descriptor() {
 }
 
 const DeleteRangeRequest& DeleteRangeRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsDeleteRangeRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_DeleteRangeRequest.base);
   return *internal_default_instance();
 }
 
-DeleteRangeRequest* DeleteRangeRequest::New(::google::protobuf::Arena* arena) const {
-  DeleteRangeRequest* n = new DeleteRangeRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DeleteRangeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.DeleteRangeRequest)
@@ -5240,7 +4729,7 @@ bool DeleteRangeRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.DeleteRangeRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -5395,9 +4884,7 @@ size_t DeleteRangeRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -5460,11 +4947,12 @@ void DeleteRangeRequest::Swap(DeleteRangeRequest* other) {
 }
 void DeleteRangeRequest::InternalSwap(DeleteRangeRequest* other) {
   using std::swap;
-  key_.Swap(&other->key_);
-  range_end_.Swap(&other->range_end_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  range_end_.Swap(&other->range_end_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(prev_kv_, other->prev_kv_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DeleteRangeRequest::GetMetadata() const {
@@ -5490,17 +4978,15 @@ const int DeleteRangeResponse::kPrevKvsFieldNumber;
 
 DeleteRangeResponse::DeleteRangeResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsDeleteRangeResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_DeleteRangeResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.DeleteRangeResponse)
 }
 DeleteRangeResponse::DeleteRangeResponse(const DeleteRangeResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      prev_kvs_(from.prev_kvs_),
-      _cached_size_(0) {
+      prev_kvs_(from.prev_kvs_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -5515,7 +5001,6 @@ void DeleteRangeResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&deleted_) -
       reinterpret_cast<char*>(&header_)) + sizeof(deleted_));
-  _cached_size_ = 0;
 }
 
 DeleteRangeResponse::~DeleteRangeResponse() {
@@ -5528,9 +5013,7 @@ void DeleteRangeResponse::SharedDtor() {
 }
 
 void DeleteRangeResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* DeleteRangeResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -5538,17 +5021,10 @@ const ::google::protobuf::Descriptor* DeleteRangeResponse::descriptor() {
 }
 
 const DeleteRangeResponse& DeleteRangeResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsDeleteRangeResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_DeleteRangeResponse.base);
   return *internal_default_instance();
 }
 
-DeleteRangeResponse* DeleteRangeResponse::New(::google::protobuf::Arena* arena) const {
-  DeleteRangeResponse* n = new DeleteRangeResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DeleteRangeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.DeleteRangeResponse)
@@ -5571,7 +5047,7 @@ bool DeleteRangeResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.DeleteRangeResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -5605,7 +5081,8 @@ bool DeleteRangeResponse::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_prev_kvs()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_prev_kvs()));
         } else {
           goto handle_unusual;
         }
@@ -5641,7 +5118,7 @@ void DeleteRangeResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // int64 deleted = 2;
@@ -5653,7 +5130,9 @@ void DeleteRangeResponse::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->prev_kvs_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->prev_kvs(static_cast<int>(i)), output);
+      3,
+      this->prev_kvs(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -5674,7 +5153,7 @@ void DeleteRangeResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // int64 deleted = 2;
@@ -5722,7 +5201,7 @@ size_t DeleteRangeResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 deleted = 2;
@@ -5733,9 +5212,7 @@ size_t DeleteRangeResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -5794,11 +5271,10 @@ void DeleteRangeResponse::Swap(DeleteRangeResponse* other) {
 }
 void DeleteRangeResponse::InternalSwap(DeleteRangeResponse* other) {
   using std::swap;
-  prev_kvs_.InternalSwap(&other->prev_kvs_);
+  CastToBase(&prev_kvs_)->InternalSwap(CastToBase(&other->prev_kvs_));
   swap(header_, other->header_);
   swap(deleted_, other->deleted_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DeleteRangeResponse::GetMetadata() const {
@@ -5867,16 +5343,14 @@ const int RequestOp::kRequestDeleteRangeFieldNumber;
 
 RequestOp::RequestOp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsRequestOp();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_RequestOp.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.RequestOp)
 }
 RequestOp::RequestOp(const RequestOp& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   clear_has_request();
   switch (from.request_case()) {
@@ -5901,7 +5375,6 @@ RequestOp::RequestOp(const RequestOp& from)
 
 void RequestOp::SharedCtor() {
   clear_has_request();
-  _cached_size_ = 0;
 }
 
 RequestOp::~RequestOp() {
@@ -5916,9 +5389,7 @@ void RequestOp::SharedDtor() {
 }
 
 void RequestOp::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* RequestOp::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -5926,17 +5397,10 @@ const ::google::protobuf::Descriptor* RequestOp::descriptor() {
 }
 
 const RequestOp& RequestOp::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsRequestOp();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_RequestOp.base);
   return *internal_default_instance();
 }
 
-RequestOp* RequestOp::New(::google::protobuf::Arena* arena) const {
-  RequestOp* n = new RequestOp;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void RequestOp::clear_request() {
 // @@protoc_insertion_point(one_of_clear_start:etcdserverpb.RequestOp)
@@ -5977,7 +5441,7 @@ bool RequestOp::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.RequestOp)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -6046,19 +5510,19 @@ void RequestOp::SerializeWithCachedSizes(
   // .etcdserverpb.RangeRequest request_range = 1;
   if (has_request_range()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *request_.request_range_, output);
+      1, this->_internal_request_range(), output);
   }
 
   // .etcdserverpb.PutRequest request_put = 2;
   if (has_request_put()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *request_.request_put_, output);
+      2, this->_internal_request_put(), output);
   }
 
   // .etcdserverpb.DeleteRangeRequest request_delete_range = 3;
   if (has_request_delete_range()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *request_.request_delete_range_, output);
+      3, this->_internal_request_delete_range(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6079,21 +5543,21 @@ void RequestOp::SerializeWithCachedSizes(
   if (has_request_range()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *request_.request_range_, deterministic, target);
+        1, this->_internal_request_range(), deterministic, target);
   }
 
   // .etcdserverpb.PutRequest request_put = 2;
   if (has_request_put()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *request_.request_put_, deterministic, target);
+        2, this->_internal_request_put(), deterministic, target);
   }
 
   // .etcdserverpb.DeleteRangeRequest request_delete_range = 3;
   if (has_request_delete_range()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *request_.request_delete_range_, deterministic, target);
+        3, this->_internal_request_delete_range(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6140,9 +5604,7 @@ size_t RequestOp::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -6214,7 +5676,6 @@ void RequestOp::InternalSwap(RequestOp* other) {
   swap(request_, other->request_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RequestOp::GetMetadata() const {
@@ -6283,16 +5744,14 @@ const int ResponseOp::kResponseDeleteRangeFieldNumber;
 
 ResponseOp::ResponseOp()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsResponseOp();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_ResponseOp.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.ResponseOp)
 }
 ResponseOp::ResponseOp(const ResponseOp& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   clear_has_response();
   switch (from.response_case()) {
@@ -6317,7 +5776,6 @@ ResponseOp::ResponseOp(const ResponseOp& from)
 
 void ResponseOp::SharedCtor() {
   clear_has_response();
-  _cached_size_ = 0;
 }
 
 ResponseOp::~ResponseOp() {
@@ -6332,9 +5790,7 @@ void ResponseOp::SharedDtor() {
 }
 
 void ResponseOp::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* ResponseOp::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -6342,17 +5798,10 @@ const ::google::protobuf::Descriptor* ResponseOp::descriptor() {
 }
 
 const ResponseOp& ResponseOp::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsResponseOp();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_ResponseOp.base);
   return *internal_default_instance();
 }
 
-ResponseOp* ResponseOp::New(::google::protobuf::Arena* arena) const {
-  ResponseOp* n = new ResponseOp;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void ResponseOp::clear_response() {
 // @@protoc_insertion_point(one_of_clear_start:etcdserverpb.ResponseOp)
@@ -6393,7 +5842,7 @@ bool ResponseOp::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.ResponseOp)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -6462,19 +5911,19 @@ void ResponseOp::SerializeWithCachedSizes(
   // .etcdserverpb.RangeResponse response_range = 1;
   if (has_response_range()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *response_.response_range_, output);
+      1, this->_internal_response_range(), output);
   }
 
   // .etcdserverpb.PutResponse response_put = 2;
   if (has_response_put()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *response_.response_put_, output);
+      2, this->_internal_response_put(), output);
   }
 
   // .etcdserverpb.DeleteRangeResponse response_delete_range = 3;
   if (has_response_delete_range()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *response_.response_delete_range_, output);
+      3, this->_internal_response_delete_range(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6495,21 +5944,21 @@ void ResponseOp::SerializeWithCachedSizes(
   if (has_response_range()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *response_.response_range_, deterministic, target);
+        1, this->_internal_response_range(), deterministic, target);
   }
 
   // .etcdserverpb.PutResponse response_put = 2;
   if (has_response_put()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *response_.response_put_, deterministic, target);
+        2, this->_internal_response_put(), deterministic, target);
   }
 
   // .etcdserverpb.DeleteRangeResponse response_delete_range = 3;
   if (has_response_delete_range()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *response_.response_delete_range_, deterministic, target);
+        3, this->_internal_response_delete_range(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6556,9 +6005,7 @@ size_t ResponseOp::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -6630,7 +6077,6 @@ void ResponseOp::InternalSwap(ResponseOp* other) {
   swap(response_, other->response_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ResponseOp::GetMetadata() const {
@@ -6660,16 +6106,14 @@ const int Compare::kValueFieldNumber;
 
 Compare::Compare()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsCompare();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_Compare.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.Compare)
 }
 Compare::Compare(const Compare& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -6709,7 +6153,6 @@ void Compare::SharedCtor() {
       reinterpret_cast<char*>(&target_) -
       reinterpret_cast<char*>(&result_)) + sizeof(target_));
   clear_has_target_union();
-  _cached_size_ = 0;
 }
 
 Compare::~Compare() {
@@ -6725,9 +6168,7 @@ void Compare::SharedDtor() {
 }
 
 void Compare::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Compare::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -6735,17 +6176,10 @@ const ::google::protobuf::Descriptor* Compare::descriptor() {
 }
 
 const Compare& Compare::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsCompare();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_Compare.base);
   return *internal_default_instance();
 }
 
-Compare* Compare::New(::google::protobuf::Arena* arena) const {
-  Compare* n = new Compare;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Compare::clear_target_union() {
 // @@protoc_insertion_point(one_of_clear_start:etcdserverpb.Compare)
@@ -6794,7 +6228,7 @@ bool Compare::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.Compare)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -7087,9 +6521,7 @@ size_t Compare::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -7172,13 +6604,13 @@ void Compare::Swap(Compare* other) {
 }
 void Compare::InternalSwap(Compare* other) {
   using std::swap;
-  key_.Swap(&other->key_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(result_, other->result_);
   swap(target_, other->target_);
   swap(target_union_, other->target_union_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Compare::GetMetadata() const {
@@ -7199,9 +6631,8 @@ const int TxnRequest::kFailureFieldNumber;
 
 TxnRequest::TxnRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsTxnRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_TxnRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.TxnRequest)
 }
@@ -7210,14 +6641,12 @@ TxnRequest::TxnRequest(const TxnRequest& from)
       _internal_metadata_(NULL),
       compare_(from.compare_),
       success_(from.success_),
-      failure_(from.failure_),
-      _cached_size_(0) {
+      failure_(from.failure_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.TxnRequest)
 }
 
 void TxnRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 TxnRequest::~TxnRequest() {
@@ -7229,9 +6658,7 @@ void TxnRequest::SharedDtor() {
 }
 
 void TxnRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* TxnRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -7239,17 +6666,10 @@ const ::google::protobuf::Descriptor* TxnRequest::descriptor() {
 }
 
 const TxnRequest& TxnRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsTxnRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_TxnRequest.base);
   return *internal_default_instance();
 }
 
-TxnRequest* TxnRequest::New(::google::protobuf::Arena* arena) const {
-  TxnRequest* n = new TxnRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void TxnRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.TxnRequest)
@@ -7269,7 +6689,7 @@ bool TxnRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.TxnRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -7277,7 +6697,8 @@ bool TxnRequest::MergePartialFromCodedStream(
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_compare()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_compare()));
         } else {
           goto handle_unusual;
         }
@@ -7288,7 +6709,8 @@ bool TxnRequest::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_success()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_success()));
         } else {
           goto handle_unusual;
         }
@@ -7299,7 +6721,8 @@ bool TxnRequest::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_failure()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_failure()));
         } else {
           goto handle_unusual;
         }
@@ -7336,21 +6759,27 @@ void TxnRequest::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->compare_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->compare(static_cast<int>(i)), output);
+      1,
+      this->compare(static_cast<int>(i)),
+      output);
   }
 
   // repeated .etcdserverpb.RequestOp success = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->success_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->success(static_cast<int>(i)), output);
+      2,
+      this->success(static_cast<int>(i)),
+      output);
   }
 
   // repeated .etcdserverpb.RequestOp failure = 3;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->failure_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->failure(static_cast<int>(i)), output);
+      3,
+      this->failure(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7442,9 +6871,7 @@ size_t TxnRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -7499,11 +6926,10 @@ void TxnRequest::Swap(TxnRequest* other) {
 }
 void TxnRequest::InternalSwap(TxnRequest* other) {
   using std::swap;
-  compare_.InternalSwap(&other->compare_);
-  success_.InternalSwap(&other->success_);
-  failure_.InternalSwap(&other->failure_);
+  CastToBase(&compare_)->InternalSwap(CastToBase(&other->compare_));
+  CastToBase(&success_)->InternalSwap(CastToBase(&other->success_));
+  CastToBase(&failure_)->InternalSwap(CastToBase(&other->failure_));
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata TxnRequest::GetMetadata() const {
@@ -7526,17 +6952,15 @@ const int TxnResponse::kResponsesFieldNumber;
 
 TxnResponse::TxnResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsTxnResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_TxnResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.TxnResponse)
 }
 TxnResponse::TxnResponse(const TxnResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      responses_(from.responses_),
-      _cached_size_(0) {
+      responses_(from.responses_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -7551,7 +6975,6 @@ void TxnResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&succeeded_) -
       reinterpret_cast<char*>(&header_)) + sizeof(succeeded_));
-  _cached_size_ = 0;
 }
 
 TxnResponse::~TxnResponse() {
@@ -7564,9 +6987,7 @@ void TxnResponse::SharedDtor() {
 }
 
 void TxnResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* TxnResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -7574,17 +6995,10 @@ const ::google::protobuf::Descriptor* TxnResponse::descriptor() {
 }
 
 const TxnResponse& TxnResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsTxnResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_TxnResponse.base);
   return *internal_default_instance();
 }
 
-TxnResponse* TxnResponse::New(::google::protobuf::Arena* arena) const {
-  TxnResponse* n = new TxnResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void TxnResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.TxnResponse)
@@ -7607,7 +7021,7 @@ bool TxnResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.TxnResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -7641,7 +7055,8 @@ bool TxnResponse::MergePartialFromCodedStream(
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_responses()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_responses()));
         } else {
           goto handle_unusual;
         }
@@ -7677,7 +7092,7 @@ void TxnResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // bool succeeded = 2;
@@ -7689,7 +7104,9 @@ void TxnResponse::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->responses_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->responses(static_cast<int>(i)), output);
+      3,
+      this->responses(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -7710,7 +7127,7 @@ void TxnResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // bool succeeded = 2;
@@ -7758,7 +7175,7 @@ size_t TxnResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // bool succeeded = 2;
@@ -7767,9 +7184,7 @@ size_t TxnResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -7828,11 +7243,10 @@ void TxnResponse::Swap(TxnResponse* other) {
 }
 void TxnResponse::InternalSwap(TxnResponse* other) {
   using std::swap;
-  responses_.InternalSwap(&other->responses_);
+  CastToBase(&responses_)->InternalSwap(CastToBase(&other->responses_));
   swap(header_, other->header_);
   swap(succeeded_, other->succeeded_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata TxnResponse::GetMetadata() const {
@@ -7852,16 +7266,14 @@ const int CompactionRequest::kPhysicalFieldNumber;
 
 CompactionRequest::CompactionRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsCompactionRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_CompactionRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.CompactionRequest)
 }
 CompactionRequest::CompactionRequest(const CompactionRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&revision_, &from.revision_,
     static_cast<size_t>(reinterpret_cast<char*>(&physical_) -
@@ -7873,7 +7285,6 @@ void CompactionRequest::SharedCtor() {
   ::memset(&revision_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&physical_) -
       reinterpret_cast<char*>(&revision_)) + sizeof(physical_));
-  _cached_size_ = 0;
 }
 
 CompactionRequest::~CompactionRequest() {
@@ -7885,9 +7296,7 @@ void CompactionRequest::SharedDtor() {
 }
 
 void CompactionRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* CompactionRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -7895,17 +7304,10 @@ const ::google::protobuf::Descriptor* CompactionRequest::descriptor() {
 }
 
 const CompactionRequest& CompactionRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsCompactionRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_CompactionRequest.base);
   return *internal_default_instance();
 }
 
-CompactionRequest* CompactionRequest::New(::google::protobuf::Arena* arena) const {
-  CompactionRequest* n = new CompactionRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void CompactionRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.CompactionRequest)
@@ -7925,7 +7327,7 @@ bool CompactionRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.CompactionRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -8047,9 +7449,7 @@ size_t CompactionRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -8110,7 +7510,6 @@ void CompactionRequest::InternalSwap(CompactionRequest* other) {
   swap(revision_, other->revision_);
   swap(physical_, other->physical_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompactionRequest::GetMetadata() const {
@@ -8131,16 +7530,14 @@ const int CompactionResponse::kHeaderFieldNumber;
 
 CompactionResponse::CompactionResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsCompactionResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_CompactionResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.CompactionResponse)
 }
 CompactionResponse::CompactionResponse(const CompactionResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -8152,7 +7549,6 @@ CompactionResponse::CompactionResponse(const CompactionResponse& from)
 
 void CompactionResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 CompactionResponse::~CompactionResponse() {
@@ -8165,9 +7561,7 @@ void CompactionResponse::SharedDtor() {
 }
 
 void CompactionResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* CompactionResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -8175,17 +7569,10 @@ const ::google::protobuf::Descriptor* CompactionResponse::descriptor() {
 }
 
 const CompactionResponse& CompactionResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsCompactionResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_CompactionResponse.base);
   return *internal_default_instance();
 }
 
-CompactionResponse* CompactionResponse::New(::google::protobuf::Arena* arena) const {
-  CompactionResponse* n = new CompactionResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void CompactionResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.CompactionResponse)
@@ -8206,7 +7593,7 @@ bool CompactionResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.CompactionResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -8251,7 +7638,7 @@ void CompactionResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -8272,7 +7659,7 @@ void CompactionResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -8296,13 +7683,11 @@ size_t CompactionResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -8359,7 +7744,6 @@ void CompactionResponse::InternalSwap(CompactionResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CompactionResponse::GetMetadata() const {
@@ -8377,22 +7761,19 @@ void HashRequest::InitAsDefaultInstance() {
 
 HashRequest::HashRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsHashRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_HashRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.HashRequest)
 }
 HashRequest::HashRequest(const HashRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.HashRequest)
 }
 
 void HashRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 HashRequest::~HashRequest() {
@@ -8404,9 +7785,7 @@ void HashRequest::SharedDtor() {
 }
 
 void HashRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* HashRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -8414,17 +7793,10 @@ const ::google::protobuf::Descriptor* HashRequest::descriptor() {
 }
 
 const HashRequest& HashRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsHashRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_HashRequest.base);
   return *internal_default_instance();
 }
 
-HashRequest* HashRequest::New(::google::protobuf::Arena* arena) const {
-  HashRequest* n = new HashRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void HashRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.HashRequest)
@@ -8441,7 +7813,7 @@ bool HashRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.HashRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -8498,9 +7870,7 @@ size_t HashRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -8553,7 +7923,6 @@ void HashRequest::Swap(HashRequest* other) {
 void HashRequest::InternalSwap(HashRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata HashRequest::GetMetadata() const {
@@ -8575,16 +7944,14 @@ const int HashResponse::kHashFieldNumber;
 
 HashResponse::HashResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsHashResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_HashResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.HashResponse)
 }
 HashResponse::HashResponse(const HashResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -8599,7 +7966,6 @@ void HashResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&hash_) -
       reinterpret_cast<char*>(&header_)) + sizeof(hash_));
-  _cached_size_ = 0;
 }
 
 HashResponse::~HashResponse() {
@@ -8612,9 +7978,7 @@ void HashResponse::SharedDtor() {
 }
 
 void HashResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* HashResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -8622,17 +7986,10 @@ const ::google::protobuf::Descriptor* HashResponse::descriptor() {
 }
 
 const HashResponse& HashResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsHashResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_HashResponse.base);
   return *internal_default_instance();
 }
 
-HashResponse* HashResponse::New(::google::protobuf::Arena* arena) const {
-  HashResponse* n = new HashResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void HashResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.HashResponse)
@@ -8654,7 +8011,7 @@ bool HashResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.HashResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -8713,7 +8070,7 @@ void HashResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // uint32 hash = 2;
@@ -8739,7 +8096,7 @@ void HashResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // uint32 hash = 2;
@@ -8768,7 +8125,7 @@ size_t HashResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // uint32 hash = 2;
@@ -8779,9 +8136,7 @@ size_t HashResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -8842,7 +8197,6 @@ void HashResponse::InternalSwap(HashResponse* other) {
   swap(header_, other->header_);
   swap(hash_, other->hash_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata HashResponse::GetMetadata() const {
@@ -8860,22 +8214,19 @@ void SnapshotRequest::InitAsDefaultInstance() {
 
 SnapshotRequest::SnapshotRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsSnapshotRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_SnapshotRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.SnapshotRequest)
 }
 SnapshotRequest::SnapshotRequest(const SnapshotRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.SnapshotRequest)
 }
 
 void SnapshotRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 SnapshotRequest::~SnapshotRequest() {
@@ -8887,9 +8238,7 @@ void SnapshotRequest::SharedDtor() {
 }
 
 void SnapshotRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* SnapshotRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -8897,17 +8246,10 @@ const ::google::protobuf::Descriptor* SnapshotRequest::descriptor() {
 }
 
 const SnapshotRequest& SnapshotRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsSnapshotRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_SnapshotRequest.base);
   return *internal_default_instance();
 }
 
-SnapshotRequest* SnapshotRequest::New(::google::protobuf::Arena* arena) const {
-  SnapshotRequest* n = new SnapshotRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void SnapshotRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.SnapshotRequest)
@@ -8924,7 +8266,7 @@ bool SnapshotRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.SnapshotRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -8981,9 +8323,7 @@ size_t SnapshotRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -9036,7 +8376,6 @@ void SnapshotRequest::Swap(SnapshotRequest* other) {
 void SnapshotRequest::InternalSwap(SnapshotRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SnapshotRequest::GetMetadata() const {
@@ -9059,16 +8398,14 @@ const int SnapshotResponse::kBlobFieldNumber;
 
 SnapshotResponse::SnapshotResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsSnapshotResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_SnapshotResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.SnapshotResponse)
 }
 SnapshotResponse::SnapshotResponse(const SnapshotResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   blob_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.blob().size() > 0) {
@@ -9088,7 +8425,6 @@ void SnapshotResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&remaining_bytes_) -
       reinterpret_cast<char*>(&header_)) + sizeof(remaining_bytes_));
-  _cached_size_ = 0;
 }
 
 SnapshotResponse::~SnapshotResponse() {
@@ -9102,9 +8438,7 @@ void SnapshotResponse::SharedDtor() {
 }
 
 void SnapshotResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* SnapshotResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -9112,17 +8446,10 @@ const ::google::protobuf::Descriptor* SnapshotResponse::descriptor() {
 }
 
 const SnapshotResponse& SnapshotResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsSnapshotResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_SnapshotResponse.base);
   return *internal_default_instance();
 }
 
-SnapshotResponse* SnapshotResponse::New(::google::protobuf::Arena* arena) const {
-  SnapshotResponse* n = new SnapshotResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void SnapshotResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.SnapshotResponse)
@@ -9145,7 +8472,7 @@ bool SnapshotResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.SnapshotResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -9216,7 +8543,7 @@ void SnapshotResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // uint64 remaining_bytes = 2;
@@ -9248,7 +8575,7 @@ void SnapshotResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // uint64 remaining_bytes = 2;
@@ -9291,7 +8618,7 @@ size_t SnapshotResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // uint64 remaining_bytes = 2;
@@ -9302,9 +8629,7 @@ size_t SnapshotResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -9366,11 +8691,11 @@ void SnapshotResponse::Swap(SnapshotResponse* other) {
 }
 void SnapshotResponse::InternalSwap(SnapshotResponse* other) {
   using std::swap;
-  blob_.Swap(&other->blob_);
+  blob_.Swap(&other->blob_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(header_, other->header_);
   swap(remaining_bytes_, other->remaining_bytes_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SnapshotResponse::GetMetadata() const {
@@ -9422,16 +8747,14 @@ const int WatchRequest::kCancelRequestFieldNumber;
 
 WatchRequest::WatchRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsWatchRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_WatchRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.WatchRequest)
 }
 WatchRequest::WatchRequest(const WatchRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   clear_has_request_union();
   switch (from.request_union_case()) {
@@ -9452,7 +8775,6 @@ WatchRequest::WatchRequest(const WatchRequest& from)
 
 void WatchRequest::SharedCtor() {
   clear_has_request_union();
-  _cached_size_ = 0;
 }
 
 WatchRequest::~WatchRequest() {
@@ -9467,9 +8789,7 @@ void WatchRequest::SharedDtor() {
 }
 
 void WatchRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* WatchRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -9477,17 +8797,10 @@ const ::google::protobuf::Descriptor* WatchRequest::descriptor() {
 }
 
 const WatchRequest& WatchRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsWatchRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_WatchRequest.base);
   return *internal_default_instance();
 }
 
-WatchRequest* WatchRequest::New(::google::protobuf::Arena* arena) const {
-  WatchRequest* n = new WatchRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void WatchRequest::clear_request_union() {
 // @@protoc_insertion_point(one_of_clear_start:etcdserverpb.WatchRequest)
@@ -9524,7 +8837,7 @@ bool WatchRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.WatchRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -9581,13 +8894,13 @@ void WatchRequest::SerializeWithCachedSizes(
   // .etcdserverpb.WatchCreateRequest create_request = 1;
   if (has_create_request()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *request_union_.create_request_, output);
+      1, this->_internal_create_request(), output);
   }
 
   // .etcdserverpb.WatchCancelRequest cancel_request = 2;
   if (has_cancel_request()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *request_union_.cancel_request_, output);
+      2, this->_internal_cancel_request(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -9608,14 +8921,14 @@ void WatchRequest::SerializeWithCachedSizes(
   if (has_create_request()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *request_union_.create_request_, deterministic, target);
+        1, this->_internal_create_request(), deterministic, target);
   }
 
   // .etcdserverpb.WatchCancelRequest cancel_request = 2;
   if (has_cancel_request()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *request_union_.cancel_request_, deterministic, target);
+        2, this->_internal_cancel_request(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -9655,9 +8968,7 @@ size_t WatchRequest::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -9725,7 +9036,6 @@ void WatchRequest::InternalSwap(WatchRequest* other) {
   swap(request_union_, other->request_union_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata WatchRequest::GetMetadata() const {
@@ -9749,17 +9059,15 @@ const int WatchCreateRequest::kPrevKvFieldNumber;
 
 WatchCreateRequest::WatchCreateRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsWatchCreateRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_WatchCreateRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.WatchCreateRequest)
 }
 WatchCreateRequest::WatchCreateRequest(const WatchCreateRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      filters_(from.filters_),
-      _cached_size_(0) {
+      filters_(from.filters_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -9781,7 +9089,6 @@ void WatchCreateRequest::SharedCtor() {
   ::memset(&start_revision_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&prev_kv_) -
       reinterpret_cast<char*>(&start_revision_)) + sizeof(prev_kv_));
-  _cached_size_ = 0;
 }
 
 WatchCreateRequest::~WatchCreateRequest() {
@@ -9795,9 +9102,7 @@ void WatchCreateRequest::SharedDtor() {
 }
 
 void WatchCreateRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* WatchCreateRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -9805,17 +9110,10 @@ const ::google::protobuf::Descriptor* WatchCreateRequest::descriptor() {
 }
 
 const WatchCreateRequest& WatchCreateRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsWatchCreateRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_WatchCreateRequest.base);
   return *internal_default_instance();
 }
 
-WatchCreateRequest* WatchCreateRequest::New(::google::protobuf::Arena* arena) const {
-  WatchCreateRequest* n = new WatchCreateRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void WatchCreateRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.WatchCreateRequest)
@@ -9838,7 +9136,7 @@ bool WatchCreateRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.WatchCreateRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -10127,9 +9425,7 @@ size_t WatchCreateRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -10200,13 +9496,14 @@ void WatchCreateRequest::Swap(WatchCreateRequest* other) {
 void WatchCreateRequest::InternalSwap(WatchCreateRequest* other) {
   using std::swap;
   filters_.InternalSwap(&other->filters_);
-  key_.Swap(&other->key_);
-  range_end_.Swap(&other->range_end_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  range_end_.Swap(&other->range_end_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(start_revision_, other->start_revision_);
   swap(progress_notify_, other->progress_notify_);
   swap(prev_kv_, other->prev_kv_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata WatchCreateRequest::GetMetadata() const {
@@ -10225,16 +9522,14 @@ const int WatchCancelRequest::kWatchIdFieldNumber;
 
 WatchCancelRequest::WatchCancelRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsWatchCancelRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_WatchCancelRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.WatchCancelRequest)
 }
 WatchCancelRequest::WatchCancelRequest(const WatchCancelRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   watch_id_ = from.watch_id_;
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.WatchCancelRequest)
@@ -10242,7 +9537,6 @@ WatchCancelRequest::WatchCancelRequest(const WatchCancelRequest& from)
 
 void WatchCancelRequest::SharedCtor() {
   watch_id_ = GOOGLE_LONGLONG(0);
-  _cached_size_ = 0;
 }
 
 WatchCancelRequest::~WatchCancelRequest() {
@@ -10254,9 +9548,7 @@ void WatchCancelRequest::SharedDtor() {
 }
 
 void WatchCancelRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* WatchCancelRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -10264,17 +9556,10 @@ const ::google::protobuf::Descriptor* WatchCancelRequest::descriptor() {
 }
 
 const WatchCancelRequest& WatchCancelRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsWatchCancelRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_WatchCancelRequest.base);
   return *internal_default_instance();
 }
 
-WatchCancelRequest* WatchCancelRequest::New(::google::protobuf::Arena* arena) const {
-  WatchCancelRequest* n = new WatchCancelRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void WatchCancelRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.WatchCancelRequest)
@@ -10292,7 +9577,7 @@ bool WatchCancelRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.WatchCancelRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -10385,9 +9670,7 @@ size_t WatchCancelRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -10444,7 +9727,6 @@ void WatchCancelRequest::InternalSwap(WatchCancelRequest* other) {
   using std::swap;
   swap(watch_id_, other->watch_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata WatchCancelRequest::GetMetadata() const {
@@ -10473,17 +9755,15 @@ const int WatchResponse::kEventsFieldNumber;
 
 WatchResponse::WatchResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsWatchResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_WatchResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.WatchResponse)
 }
 WatchResponse::WatchResponse(const WatchResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      events_(from.events_),
-      _cached_size_(0) {
+      events_(from.events_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -10500,7 +9780,6 @@ void WatchResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&canceled_) -
       reinterpret_cast<char*>(&header_)) + sizeof(canceled_));
-  _cached_size_ = 0;
 }
 
 WatchResponse::~WatchResponse() {
@@ -10513,9 +9792,7 @@ void WatchResponse::SharedDtor() {
 }
 
 void WatchResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* WatchResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -10523,17 +9800,10 @@ const ::google::protobuf::Descriptor* WatchResponse::descriptor() {
 }
 
 const WatchResponse& WatchResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsWatchResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_WatchResponse.base);
   return *internal_default_instance();
 }
 
-WatchResponse* WatchResponse::New(::google::protobuf::Arena* arena) const {
-  WatchResponse* n = new WatchResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void WatchResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.WatchResponse)
@@ -10558,7 +9828,7 @@ bool WatchResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.WatchResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -10634,7 +9904,8 @@ bool WatchResponse::MergePartialFromCodedStream(
       case 11: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_events()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_events()));
         } else {
           goto handle_unusual;
         }
@@ -10670,7 +9941,7 @@ void WatchResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // int64 watch_id = 2;
@@ -10697,7 +9968,9 @@ void WatchResponse::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->events_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, this->events(static_cast<int>(i)), output);
+      11,
+      this->events(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -10718,7 +9991,7 @@ void WatchResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // int64 watch_id = 2;
@@ -10781,7 +10054,7 @@ size_t WatchResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 watch_id = 2;
@@ -10809,9 +10082,7 @@ size_t WatchResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -10879,14 +10150,13 @@ void WatchResponse::Swap(WatchResponse* other) {
 }
 void WatchResponse::InternalSwap(WatchResponse* other) {
   using std::swap;
-  events_.InternalSwap(&other->events_);
+  CastToBase(&events_)->InternalSwap(CastToBase(&other->events_));
   swap(header_, other->header_);
   swap(watch_id_, other->watch_id_);
   swap(compact_revision_, other->compact_revision_);
   swap(created_, other->created_);
   swap(canceled_, other->canceled_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata WatchResponse::GetMetadata() const {
@@ -10906,16 +10176,14 @@ const int LeaseGrantRequest::kIDFieldNumber;
 
 LeaseGrantRequest::LeaseGrantRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseGrantRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseGrantRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseGrantRequest)
 }
 LeaseGrantRequest::LeaseGrantRequest(const LeaseGrantRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&ttl_, &from.ttl_,
     static_cast<size_t>(reinterpret_cast<char*>(&id_) -
@@ -10927,7 +10195,6 @@ void LeaseGrantRequest::SharedCtor() {
   ::memset(&ttl_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&id_) -
       reinterpret_cast<char*>(&ttl_)) + sizeof(id_));
-  _cached_size_ = 0;
 }
 
 LeaseGrantRequest::~LeaseGrantRequest() {
@@ -10939,9 +10206,7 @@ void LeaseGrantRequest::SharedDtor() {
 }
 
 void LeaseGrantRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseGrantRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -10949,17 +10214,10 @@ const ::google::protobuf::Descriptor* LeaseGrantRequest::descriptor() {
 }
 
 const LeaseGrantRequest& LeaseGrantRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseGrantRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseGrantRequest.base);
   return *internal_default_instance();
 }
 
-LeaseGrantRequest* LeaseGrantRequest::New(::google::protobuf::Arena* arena) const {
-  LeaseGrantRequest* n = new LeaseGrantRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseGrantRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseGrantRequest)
@@ -10979,7 +10237,7 @@ bool LeaseGrantRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseGrantRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -11103,9 +10361,7 @@ size_t LeaseGrantRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -11166,7 +10422,6 @@ void LeaseGrantRequest::InternalSwap(LeaseGrantRequest* other) {
   swap(ttl_, other->ttl_);
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseGrantRequest::GetMetadata() const {
@@ -11190,16 +10445,14 @@ const int LeaseGrantResponse::kErrorFieldNumber;
 
 LeaseGrantResponse::LeaseGrantResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseGrantResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseGrantResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseGrantResponse)
 }
 LeaseGrantResponse::LeaseGrantResponse(const LeaseGrantResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   error_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.error().size() > 0) {
@@ -11221,7 +10474,6 @@ void LeaseGrantResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&ttl_) -
       reinterpret_cast<char*>(&header_)) + sizeof(ttl_));
-  _cached_size_ = 0;
 }
 
 LeaseGrantResponse::~LeaseGrantResponse() {
@@ -11235,9 +10487,7 @@ void LeaseGrantResponse::SharedDtor() {
 }
 
 void LeaseGrantResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseGrantResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -11245,17 +10495,10 @@ const ::google::protobuf::Descriptor* LeaseGrantResponse::descriptor() {
 }
 
 const LeaseGrantResponse& LeaseGrantResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseGrantResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseGrantResponse.base);
   return *internal_default_instance();
 }
 
-LeaseGrantResponse* LeaseGrantResponse::New(::google::protobuf::Arena* arena) const {
-  LeaseGrantResponse* n = new LeaseGrantResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseGrantResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseGrantResponse)
@@ -11280,7 +10523,7 @@ bool LeaseGrantResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseGrantResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -11369,7 +10612,7 @@ void LeaseGrantResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // int64 ID = 2;
@@ -11410,7 +10653,7 @@ void LeaseGrantResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // int64 ID = 2;
@@ -11462,7 +10705,7 @@ size_t LeaseGrantResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 ID = 2;
@@ -11480,9 +10723,7 @@ size_t LeaseGrantResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -11547,12 +10788,12 @@ void LeaseGrantResponse::Swap(LeaseGrantResponse* other) {
 }
 void LeaseGrantResponse::InternalSwap(LeaseGrantResponse* other) {
   using std::swap;
-  error_.Swap(&other->error_);
+  error_.Swap(&other->error_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(header_, other->header_);
   swap(id_, other->id_);
   swap(ttl_, other->ttl_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseGrantResponse::GetMetadata() const {
@@ -11571,16 +10812,14 @@ const int LeaseRevokeRequest::kIDFieldNumber;
 
 LeaseRevokeRequest::LeaseRevokeRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseRevokeRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseRevokeRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseRevokeRequest)
 }
 LeaseRevokeRequest::LeaseRevokeRequest(const LeaseRevokeRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.LeaseRevokeRequest)
@@ -11588,7 +10827,6 @@ LeaseRevokeRequest::LeaseRevokeRequest(const LeaseRevokeRequest& from)
 
 void LeaseRevokeRequest::SharedCtor() {
   id_ = GOOGLE_LONGLONG(0);
-  _cached_size_ = 0;
 }
 
 LeaseRevokeRequest::~LeaseRevokeRequest() {
@@ -11600,9 +10838,7 @@ void LeaseRevokeRequest::SharedDtor() {
 }
 
 void LeaseRevokeRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseRevokeRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -11610,17 +10846,10 @@ const ::google::protobuf::Descriptor* LeaseRevokeRequest::descriptor() {
 }
 
 const LeaseRevokeRequest& LeaseRevokeRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseRevokeRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseRevokeRequest.base);
   return *internal_default_instance();
 }
 
-LeaseRevokeRequest* LeaseRevokeRequest::New(::google::protobuf::Arena* arena) const {
-  LeaseRevokeRequest* n = new LeaseRevokeRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseRevokeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseRevokeRequest)
@@ -11638,7 +10867,7 @@ bool LeaseRevokeRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseRevokeRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -11731,9 +10960,7 @@ size_t LeaseRevokeRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -11790,7 +11017,6 @@ void LeaseRevokeRequest::InternalSwap(LeaseRevokeRequest* other) {
   using std::swap;
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseRevokeRequest::GetMetadata() const {
@@ -11811,16 +11037,14 @@ const int LeaseRevokeResponse::kHeaderFieldNumber;
 
 LeaseRevokeResponse::LeaseRevokeResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseRevokeResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseRevokeResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseRevokeResponse)
 }
 LeaseRevokeResponse::LeaseRevokeResponse(const LeaseRevokeResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -11832,7 +11056,6 @@ LeaseRevokeResponse::LeaseRevokeResponse(const LeaseRevokeResponse& from)
 
 void LeaseRevokeResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 LeaseRevokeResponse::~LeaseRevokeResponse() {
@@ -11845,9 +11068,7 @@ void LeaseRevokeResponse::SharedDtor() {
 }
 
 void LeaseRevokeResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseRevokeResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -11855,17 +11076,10 @@ const ::google::protobuf::Descriptor* LeaseRevokeResponse::descriptor() {
 }
 
 const LeaseRevokeResponse& LeaseRevokeResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseRevokeResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseRevokeResponse.base);
   return *internal_default_instance();
 }
 
-LeaseRevokeResponse* LeaseRevokeResponse::New(::google::protobuf::Arena* arena) const {
-  LeaseRevokeResponse* n = new LeaseRevokeResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseRevokeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseRevokeResponse)
@@ -11886,7 +11100,7 @@ bool LeaseRevokeResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseRevokeResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -11931,7 +11145,7 @@ void LeaseRevokeResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -11952,7 +11166,7 @@ void LeaseRevokeResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -11976,13 +11190,11 @@ size_t LeaseRevokeResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -12039,7 +11251,6 @@ void LeaseRevokeResponse::InternalSwap(LeaseRevokeResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseRevokeResponse::GetMetadata() const {
@@ -12058,16 +11269,14 @@ const int LeaseKeepAliveRequest::kIDFieldNumber;
 
 LeaseKeepAliveRequest::LeaseKeepAliveRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseKeepAliveRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseKeepAliveRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseKeepAliveRequest)
 }
 LeaseKeepAliveRequest::LeaseKeepAliveRequest(const LeaseKeepAliveRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.LeaseKeepAliveRequest)
@@ -12075,7 +11284,6 @@ LeaseKeepAliveRequest::LeaseKeepAliveRequest(const LeaseKeepAliveRequest& from)
 
 void LeaseKeepAliveRequest::SharedCtor() {
   id_ = GOOGLE_LONGLONG(0);
-  _cached_size_ = 0;
 }
 
 LeaseKeepAliveRequest::~LeaseKeepAliveRequest() {
@@ -12087,9 +11295,7 @@ void LeaseKeepAliveRequest::SharedDtor() {
 }
 
 void LeaseKeepAliveRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseKeepAliveRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -12097,17 +11303,10 @@ const ::google::protobuf::Descriptor* LeaseKeepAliveRequest::descriptor() {
 }
 
 const LeaseKeepAliveRequest& LeaseKeepAliveRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseKeepAliveRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseKeepAliveRequest.base);
   return *internal_default_instance();
 }
 
-LeaseKeepAliveRequest* LeaseKeepAliveRequest::New(::google::protobuf::Arena* arena) const {
-  LeaseKeepAliveRequest* n = new LeaseKeepAliveRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseKeepAliveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseKeepAliveRequest)
@@ -12125,7 +11324,7 @@ bool LeaseKeepAliveRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseKeepAliveRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -12218,9 +11417,7 @@ size_t LeaseKeepAliveRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -12277,7 +11474,6 @@ void LeaseKeepAliveRequest::InternalSwap(LeaseKeepAliveRequest* other) {
   using std::swap;
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseKeepAliveRequest::GetMetadata() const {
@@ -12300,16 +11496,14 @@ const int LeaseKeepAliveResponse::kTTLFieldNumber;
 
 LeaseKeepAliveResponse::LeaseKeepAliveResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsLeaseKeepAliveResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_LeaseKeepAliveResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.LeaseKeepAliveResponse)
 }
 LeaseKeepAliveResponse::LeaseKeepAliveResponse(const LeaseKeepAliveResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -12326,7 +11520,6 @@ void LeaseKeepAliveResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&ttl_) -
       reinterpret_cast<char*>(&header_)) + sizeof(ttl_));
-  _cached_size_ = 0;
 }
 
 LeaseKeepAliveResponse::~LeaseKeepAliveResponse() {
@@ -12339,9 +11532,7 @@ void LeaseKeepAliveResponse::SharedDtor() {
 }
 
 void LeaseKeepAliveResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* LeaseKeepAliveResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -12349,17 +11540,10 @@ const ::google::protobuf::Descriptor* LeaseKeepAliveResponse::descriptor() {
 }
 
 const LeaseKeepAliveResponse& LeaseKeepAliveResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsLeaseKeepAliveResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_LeaseKeepAliveResponse.base);
   return *internal_default_instance();
 }
 
-LeaseKeepAliveResponse* LeaseKeepAliveResponse::New(::google::protobuf::Arena* arena) const {
-  LeaseKeepAliveResponse* n = new LeaseKeepAliveResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void LeaseKeepAliveResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.LeaseKeepAliveResponse)
@@ -12383,7 +11567,7 @@ bool LeaseKeepAliveResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.LeaseKeepAliveResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -12456,7 +11640,7 @@ void LeaseKeepAliveResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // int64 ID = 2;
@@ -12487,7 +11671,7 @@ void LeaseKeepAliveResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // int64 ID = 2;
@@ -12521,7 +11705,7 @@ size_t LeaseKeepAliveResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 ID = 2;
@@ -12539,9 +11723,7 @@ size_t LeaseKeepAliveResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -12606,7 +11788,6 @@ void LeaseKeepAliveResponse::InternalSwap(LeaseKeepAliveResponse* other) {
   swap(id_, other->id_);
   swap(ttl_, other->ttl_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata LeaseKeepAliveResponse::GetMetadata() const {
@@ -12628,9 +11809,8 @@ const int Member::kClientURLsFieldNumber;
 
 Member::Member()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMember();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_Member.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.Member)
 }
@@ -12638,8 +11818,7 @@ Member::Member(const Member& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       peerurls_(from.peerurls_),
-      clienturls_(from.clienturls_),
-      _cached_size_(0) {
+      clienturls_(from.clienturls_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -12652,7 +11831,6 @@ Member::Member(const Member& from)
 void Member::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   id_ = GOOGLE_ULONGLONG(0);
-  _cached_size_ = 0;
 }
 
 Member::~Member() {
@@ -12665,9 +11843,7 @@ void Member::SharedDtor() {
 }
 
 void Member::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Member::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -12675,17 +11851,10 @@ const ::google::protobuf::Descriptor* Member::descriptor() {
 }
 
 const Member& Member::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMember();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_Member.base);
   return *internal_default_instance();
 }
 
-Member* Member::New(::google::protobuf::Arena* arena) const {
-  Member* n = new Member;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Member::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.Member)
@@ -12706,7 +11875,7 @@ bool Member::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.Member)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -12933,9 +12102,7 @@ size_t Member::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -12996,12 +12163,12 @@ void Member::Swap(Member* other) {
 }
 void Member::InternalSwap(Member* other) {
   using std::swap;
-  peerurls_.InternalSwap(&other->peerurls_);
-  clienturls_.InternalSwap(&other->clienturls_);
-  name_.Swap(&other->name_);
+  peerurls_.InternalSwap(CastToBase(&other->peerurls_));
+  clienturls_.InternalSwap(CastToBase(&other->clienturls_));
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Member::GetMetadata() const {
@@ -13020,23 +12187,20 @@ const int MemberAddRequest::kPeerURLsFieldNumber;
 
 MemberAddRequest::MemberAddRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberAddRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberAddRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberAddRequest)
 }
 MemberAddRequest::MemberAddRequest(const MemberAddRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      peerurls_(from.peerurls_),
-      _cached_size_(0) {
+      peerurls_(from.peerurls_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.MemberAddRequest)
 }
 
 void MemberAddRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 MemberAddRequest::~MemberAddRequest() {
@@ -13048,9 +12212,7 @@ void MemberAddRequest::SharedDtor() {
 }
 
 void MemberAddRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberAddRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -13058,17 +12220,10 @@ const ::google::protobuf::Descriptor* MemberAddRequest::descriptor() {
 }
 
 const MemberAddRequest& MemberAddRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberAddRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberAddRequest.base);
   return *internal_default_instance();
 }
 
-MemberAddRequest* MemberAddRequest::New(::google::protobuf::Arena* arena) const {
-  MemberAddRequest* n = new MemberAddRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberAddRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberAddRequest)
@@ -13086,7 +12241,7 @@ bool MemberAddRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberAddRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -13193,9 +12348,7 @@ size_t MemberAddRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -13248,9 +12401,8 @@ void MemberAddRequest::Swap(MemberAddRequest* other) {
 }
 void MemberAddRequest::InternalSwap(MemberAddRequest* other) {
   using std::swap;
-  peerurls_.InternalSwap(&other->peerurls_);
+  peerurls_.InternalSwap(CastToBase(&other->peerurls_));
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberAddRequest::GetMetadata() const {
@@ -13274,16 +12426,14 @@ const int MemberAddResponse::kMemberFieldNumber;
 
 MemberAddResponse::MemberAddResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberAddResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberAddResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberAddResponse)
 }
 MemberAddResponse::MemberAddResponse(const MemberAddResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -13302,7 +12452,6 @@ void MemberAddResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&member_) -
       reinterpret_cast<char*>(&header_)) + sizeof(member_));
-  _cached_size_ = 0;
 }
 
 MemberAddResponse::~MemberAddResponse() {
@@ -13316,9 +12465,7 @@ void MemberAddResponse::SharedDtor() {
 }
 
 void MemberAddResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberAddResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -13326,17 +12473,10 @@ const ::google::protobuf::Descriptor* MemberAddResponse::descriptor() {
 }
 
 const MemberAddResponse& MemberAddResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberAddResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberAddResponse.base);
   return *internal_default_instance();
 }
 
-MemberAddResponse* MemberAddResponse::New(::google::protobuf::Arena* arena) const {
-  MemberAddResponse* n = new MemberAddResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberAddResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberAddResponse)
@@ -13361,7 +12501,7 @@ bool MemberAddResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberAddResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -13418,13 +12558,13 @@ void MemberAddResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // .etcdserverpb.Member member = 2;
   if (this->has_member()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->member_, output);
+      2, this->_internal_member(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -13445,14 +12585,14 @@ void MemberAddResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // .etcdserverpb.Member member = 2;
   if (this->has_member()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->member_, deterministic, target);
+        2, this->_internal_member(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -13476,20 +12616,18 @@ size_t MemberAddResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // .etcdserverpb.Member member = 2;
   if (this->has_member()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->member_);
+        *member_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -13550,7 +12688,6 @@ void MemberAddResponse::InternalSwap(MemberAddResponse* other) {
   swap(header_, other->header_);
   swap(member_, other->member_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberAddResponse::GetMetadata() const {
@@ -13569,16 +12706,14 @@ const int MemberRemoveRequest::kIDFieldNumber;
 
 MemberRemoveRequest::MemberRemoveRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberRemoveRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberRemoveRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberRemoveRequest)
 }
 MemberRemoveRequest::MemberRemoveRequest(const MemberRemoveRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.MemberRemoveRequest)
@@ -13586,7 +12721,6 @@ MemberRemoveRequest::MemberRemoveRequest(const MemberRemoveRequest& from)
 
 void MemberRemoveRequest::SharedCtor() {
   id_ = GOOGLE_ULONGLONG(0);
-  _cached_size_ = 0;
 }
 
 MemberRemoveRequest::~MemberRemoveRequest() {
@@ -13598,9 +12732,7 @@ void MemberRemoveRequest::SharedDtor() {
 }
 
 void MemberRemoveRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberRemoveRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -13608,17 +12740,10 @@ const ::google::protobuf::Descriptor* MemberRemoveRequest::descriptor() {
 }
 
 const MemberRemoveRequest& MemberRemoveRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberRemoveRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberRemoveRequest.base);
   return *internal_default_instance();
 }
 
-MemberRemoveRequest* MemberRemoveRequest::New(::google::protobuf::Arena* arena) const {
-  MemberRemoveRequest* n = new MemberRemoveRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberRemoveRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberRemoveRequest)
@@ -13636,7 +12761,7 @@ bool MemberRemoveRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberRemoveRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -13729,9 +12854,7 @@ size_t MemberRemoveRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -13788,7 +12911,6 @@ void MemberRemoveRequest::InternalSwap(MemberRemoveRequest* other) {
   using std::swap;
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberRemoveRequest::GetMetadata() const {
@@ -13809,16 +12931,14 @@ const int MemberRemoveResponse::kHeaderFieldNumber;
 
 MemberRemoveResponse::MemberRemoveResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberRemoveResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberRemoveResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberRemoveResponse)
 }
 MemberRemoveResponse::MemberRemoveResponse(const MemberRemoveResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -13830,7 +12950,6 @@ MemberRemoveResponse::MemberRemoveResponse(const MemberRemoveResponse& from)
 
 void MemberRemoveResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 MemberRemoveResponse::~MemberRemoveResponse() {
@@ -13843,9 +12962,7 @@ void MemberRemoveResponse::SharedDtor() {
 }
 
 void MemberRemoveResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberRemoveResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -13853,17 +12970,10 @@ const ::google::protobuf::Descriptor* MemberRemoveResponse::descriptor() {
 }
 
 const MemberRemoveResponse& MemberRemoveResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberRemoveResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberRemoveResponse.base);
   return *internal_default_instance();
 }
 
-MemberRemoveResponse* MemberRemoveResponse::New(::google::protobuf::Arena* arena) const {
-  MemberRemoveResponse* n = new MemberRemoveResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberRemoveResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberRemoveResponse)
@@ -13884,7 +12994,7 @@ bool MemberRemoveResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberRemoveResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -13929,7 +13039,7 @@ void MemberRemoveResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -13950,7 +13060,7 @@ void MemberRemoveResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -13974,13 +13084,11 @@ size_t MemberRemoveResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -14037,7 +13145,6 @@ void MemberRemoveResponse::InternalSwap(MemberRemoveResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberRemoveResponse::GetMetadata() const {
@@ -14057,17 +13164,15 @@ const int MemberUpdateRequest::kPeerURLsFieldNumber;
 
 MemberUpdateRequest::MemberUpdateRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberUpdateRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberUpdateRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberUpdateRequest)
 }
 MemberUpdateRequest::MemberUpdateRequest(const MemberUpdateRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      peerurls_(from.peerurls_),
-      _cached_size_(0) {
+      peerurls_(from.peerurls_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.MemberUpdateRequest)
@@ -14075,7 +13180,6 @@ MemberUpdateRequest::MemberUpdateRequest(const MemberUpdateRequest& from)
 
 void MemberUpdateRequest::SharedCtor() {
   id_ = GOOGLE_ULONGLONG(0);
-  _cached_size_ = 0;
 }
 
 MemberUpdateRequest::~MemberUpdateRequest() {
@@ -14087,9 +13191,7 @@ void MemberUpdateRequest::SharedDtor() {
 }
 
 void MemberUpdateRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberUpdateRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -14097,17 +13199,10 @@ const ::google::protobuf::Descriptor* MemberUpdateRequest::descriptor() {
 }
 
 const MemberUpdateRequest& MemberUpdateRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberUpdateRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberUpdateRequest.base);
   return *internal_default_instance();
 }
 
-MemberUpdateRequest* MemberUpdateRequest::New(::google::protobuf::Arena* arena) const {
-  MemberUpdateRequest* n = new MemberUpdateRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberUpdateRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberUpdateRequest)
@@ -14126,7 +13221,7 @@ bool MemberUpdateRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberUpdateRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -14264,9 +13359,7 @@ size_t MemberUpdateRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -14322,10 +13415,9 @@ void MemberUpdateRequest::Swap(MemberUpdateRequest* other) {
 }
 void MemberUpdateRequest::InternalSwap(MemberUpdateRequest* other) {
   using std::swap;
-  peerurls_.InternalSwap(&other->peerurls_);
+  peerurls_.InternalSwap(CastToBase(&other->peerurls_));
   swap(id_, other->id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberUpdateRequest::GetMetadata() const {
@@ -14346,16 +13438,14 @@ const int MemberUpdateResponse::kHeaderFieldNumber;
 
 MemberUpdateResponse::MemberUpdateResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberUpdateResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberUpdateResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberUpdateResponse)
 }
 MemberUpdateResponse::MemberUpdateResponse(const MemberUpdateResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -14367,7 +13457,6 @@ MemberUpdateResponse::MemberUpdateResponse(const MemberUpdateResponse& from)
 
 void MemberUpdateResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 MemberUpdateResponse::~MemberUpdateResponse() {
@@ -14380,9 +13469,7 @@ void MemberUpdateResponse::SharedDtor() {
 }
 
 void MemberUpdateResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberUpdateResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -14390,17 +13477,10 @@ const ::google::protobuf::Descriptor* MemberUpdateResponse::descriptor() {
 }
 
 const MemberUpdateResponse& MemberUpdateResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberUpdateResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberUpdateResponse.base);
   return *internal_default_instance();
 }
 
-MemberUpdateResponse* MemberUpdateResponse::New(::google::protobuf::Arena* arena) const {
-  MemberUpdateResponse* n = new MemberUpdateResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberUpdateResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberUpdateResponse)
@@ -14421,7 +13501,7 @@ bool MemberUpdateResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberUpdateResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -14466,7 +13546,7 @@ void MemberUpdateResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -14487,7 +13567,7 @@ void MemberUpdateResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -14511,13 +13591,11 @@ size_t MemberUpdateResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -14574,7 +13652,6 @@ void MemberUpdateResponse::InternalSwap(MemberUpdateResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberUpdateResponse::GetMetadata() const {
@@ -14592,22 +13669,19 @@ void MemberListRequest::InitAsDefaultInstance() {
 
 MemberListRequest::MemberListRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberListRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberListRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberListRequest)
 }
 MemberListRequest::MemberListRequest(const MemberListRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.MemberListRequest)
 }
 
 void MemberListRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 MemberListRequest::~MemberListRequest() {
@@ -14619,9 +13693,7 @@ void MemberListRequest::SharedDtor() {
 }
 
 void MemberListRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberListRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -14629,17 +13701,10 @@ const ::google::protobuf::Descriptor* MemberListRequest::descriptor() {
 }
 
 const MemberListRequest& MemberListRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberListRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberListRequest.base);
   return *internal_default_instance();
 }
 
-MemberListRequest* MemberListRequest::New(::google::protobuf::Arena* arena) const {
-  MemberListRequest* n = new MemberListRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberListRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberListRequest)
@@ -14656,7 +13721,7 @@ bool MemberListRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberListRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -14713,9 +13778,7 @@ size_t MemberListRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -14768,7 +13831,6 @@ void MemberListRequest::Swap(MemberListRequest* other) {
 void MemberListRequest::InternalSwap(MemberListRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberListRequest::GetMetadata() const {
@@ -14790,17 +13852,15 @@ const int MemberListResponse::kMembersFieldNumber;
 
 MemberListResponse::MemberListResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsMemberListResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_MemberListResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.MemberListResponse)
 }
 MemberListResponse::MemberListResponse(const MemberListResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      members_(from.members_),
-      _cached_size_(0) {
+      members_(from.members_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -14812,7 +13872,6 @@ MemberListResponse::MemberListResponse(const MemberListResponse& from)
 
 void MemberListResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 MemberListResponse::~MemberListResponse() {
@@ -14825,9 +13884,7 @@ void MemberListResponse::SharedDtor() {
 }
 
 void MemberListResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* MemberListResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -14835,17 +13892,10 @@ const ::google::protobuf::Descriptor* MemberListResponse::descriptor() {
 }
 
 const MemberListResponse& MemberListResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsMemberListResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_MemberListResponse.base);
   return *internal_default_instance();
 }
 
-MemberListResponse* MemberListResponse::New(::google::protobuf::Arena* arena) const {
-  MemberListResponse* n = new MemberListResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void MemberListResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.MemberListResponse)
@@ -14867,7 +13917,7 @@ bool MemberListResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.MemberListResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -14887,7 +13937,8 @@ bool MemberListResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_members()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_members()));
         } else {
           goto handle_unusual;
         }
@@ -14923,14 +13974,16 @@ void MemberListResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated .etcdserverpb.Member members = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->members_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->members(static_cast<int>(i)), output);
+      2,
+      this->members(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -14951,7 +14004,7 @@ void MemberListResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated .etcdserverpb.Member members = 2;
@@ -14994,13 +14047,11 @@ size_t MemberListResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -15056,10 +14107,9 @@ void MemberListResponse::Swap(MemberListResponse* other) {
 }
 void MemberListResponse::InternalSwap(MemberListResponse* other) {
   using std::swap;
-  members_.InternalSwap(&other->members_);
+  CastToBase(&members_)->InternalSwap(CastToBase(&other->members_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemberListResponse::GetMetadata() const {
@@ -15077,22 +14127,19 @@ void DefragmentRequest::InitAsDefaultInstance() {
 
 DefragmentRequest::DefragmentRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsDefragmentRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_DefragmentRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.DefragmentRequest)
 }
 DefragmentRequest::DefragmentRequest(const DefragmentRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.DefragmentRequest)
 }
 
 void DefragmentRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 DefragmentRequest::~DefragmentRequest() {
@@ -15104,9 +14151,7 @@ void DefragmentRequest::SharedDtor() {
 }
 
 void DefragmentRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* DefragmentRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -15114,17 +14159,10 @@ const ::google::protobuf::Descriptor* DefragmentRequest::descriptor() {
 }
 
 const DefragmentRequest& DefragmentRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsDefragmentRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_DefragmentRequest.base);
   return *internal_default_instance();
 }
 
-DefragmentRequest* DefragmentRequest::New(::google::protobuf::Arena* arena) const {
-  DefragmentRequest* n = new DefragmentRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DefragmentRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.DefragmentRequest)
@@ -15141,7 +14179,7 @@ bool DefragmentRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.DefragmentRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -15198,9 +14236,7 @@ size_t DefragmentRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -15253,7 +14289,6 @@ void DefragmentRequest::Swap(DefragmentRequest* other) {
 void DefragmentRequest::InternalSwap(DefragmentRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DefragmentRequest::GetMetadata() const {
@@ -15274,16 +14309,14 @@ const int DefragmentResponse::kHeaderFieldNumber;
 
 DefragmentResponse::DefragmentResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsDefragmentResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_DefragmentResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.DefragmentResponse)
 }
 DefragmentResponse::DefragmentResponse(const DefragmentResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -15295,7 +14328,6 @@ DefragmentResponse::DefragmentResponse(const DefragmentResponse& from)
 
 void DefragmentResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 DefragmentResponse::~DefragmentResponse() {
@@ -15308,9 +14340,7 @@ void DefragmentResponse::SharedDtor() {
 }
 
 void DefragmentResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* DefragmentResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -15318,17 +14348,10 @@ const ::google::protobuf::Descriptor* DefragmentResponse::descriptor() {
 }
 
 const DefragmentResponse& DefragmentResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsDefragmentResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_DefragmentResponse.base);
   return *internal_default_instance();
 }
 
-DefragmentResponse* DefragmentResponse::New(::google::protobuf::Arena* arena) const {
-  DefragmentResponse* n = new DefragmentResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DefragmentResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.DefragmentResponse)
@@ -15349,7 +14372,7 @@ bool DefragmentResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.DefragmentResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -15394,7 +14417,7 @@ void DefragmentResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -15415,7 +14438,7 @@ void DefragmentResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -15439,13 +14462,11 @@ size_t DefragmentResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -15502,7 +14523,6 @@ void DefragmentResponse::InternalSwap(DefragmentResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DefragmentResponse::GetMetadata() const {
@@ -15523,16 +14543,14 @@ const int AlarmRequest::kAlarmFieldNumber;
 
 AlarmRequest::AlarmRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAlarmRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AlarmRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AlarmRequest)
 }
 AlarmRequest::AlarmRequest(const AlarmRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&memberid_, &from.memberid_,
     static_cast<size_t>(reinterpret_cast<char*>(&alarm_) -
@@ -15544,7 +14562,6 @@ void AlarmRequest::SharedCtor() {
   ::memset(&memberid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&alarm_) -
       reinterpret_cast<char*>(&memberid_)) + sizeof(alarm_));
-  _cached_size_ = 0;
 }
 
 AlarmRequest::~AlarmRequest() {
@@ -15556,9 +14573,7 @@ void AlarmRequest::SharedDtor() {
 }
 
 void AlarmRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AlarmRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -15566,17 +14581,10 @@ const ::google::protobuf::Descriptor* AlarmRequest::descriptor() {
 }
 
 const AlarmRequest& AlarmRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAlarmRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AlarmRequest.base);
   return *internal_default_instance();
 }
 
-AlarmRequest* AlarmRequest::New(::google::protobuf::Arena* arena) const {
-  AlarmRequest* n = new AlarmRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AlarmRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AlarmRequest)
@@ -15596,7 +14604,7 @@ bool AlarmRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AlarmRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -15755,9 +14763,7 @@ size_t AlarmRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -15822,7 +14828,6 @@ void AlarmRequest::InternalSwap(AlarmRequest* other) {
   swap(action_, other->action_);
   swap(alarm_, other->alarm_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AlarmRequest::GetMetadata() const {
@@ -15842,16 +14847,14 @@ const int AlarmMember::kAlarmFieldNumber;
 
 AlarmMember::AlarmMember()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAlarmMember();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AlarmMember.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AlarmMember)
 }
 AlarmMember::AlarmMember(const AlarmMember& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&memberid_, &from.memberid_,
     static_cast<size_t>(reinterpret_cast<char*>(&alarm_) -
@@ -15863,7 +14866,6 @@ void AlarmMember::SharedCtor() {
   ::memset(&memberid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&alarm_) -
       reinterpret_cast<char*>(&memberid_)) + sizeof(alarm_));
-  _cached_size_ = 0;
 }
 
 AlarmMember::~AlarmMember() {
@@ -15875,9 +14877,7 @@ void AlarmMember::SharedDtor() {
 }
 
 void AlarmMember::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AlarmMember::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -15885,17 +14885,10 @@ const ::google::protobuf::Descriptor* AlarmMember::descriptor() {
 }
 
 const AlarmMember& AlarmMember::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAlarmMember();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AlarmMember.base);
   return *internal_default_instance();
 }
 
-AlarmMember* AlarmMember::New(::google::protobuf::Arena* arena) const {
-  AlarmMember* n = new AlarmMember;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AlarmMember::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AlarmMember)
@@ -15915,7 +14908,7 @@ bool AlarmMember::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AlarmMember)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -16041,9 +15034,7 @@ size_t AlarmMember::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -16104,7 +15095,6 @@ void AlarmMember::InternalSwap(AlarmMember* other) {
   swap(memberid_, other->memberid_);
   swap(alarm_, other->alarm_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AlarmMember::GetMetadata() const {
@@ -16126,17 +15116,15 @@ const int AlarmResponse::kAlarmsFieldNumber;
 
 AlarmResponse::AlarmResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAlarmResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AlarmResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AlarmResponse)
 }
 AlarmResponse::AlarmResponse(const AlarmResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      alarms_(from.alarms_),
-      _cached_size_(0) {
+      alarms_(from.alarms_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -16148,7 +15136,6 @@ AlarmResponse::AlarmResponse(const AlarmResponse& from)
 
 void AlarmResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AlarmResponse::~AlarmResponse() {
@@ -16161,9 +15148,7 @@ void AlarmResponse::SharedDtor() {
 }
 
 void AlarmResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AlarmResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -16171,17 +15156,10 @@ const ::google::protobuf::Descriptor* AlarmResponse::descriptor() {
 }
 
 const AlarmResponse& AlarmResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAlarmResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AlarmResponse.base);
   return *internal_default_instance();
 }
 
-AlarmResponse* AlarmResponse::New(::google::protobuf::Arena* arena) const {
-  AlarmResponse* n = new AlarmResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AlarmResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AlarmResponse)
@@ -16203,7 +15181,7 @@ bool AlarmResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AlarmResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -16223,7 +15201,8 @@ bool AlarmResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_alarms()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_alarms()));
         } else {
           goto handle_unusual;
         }
@@ -16259,14 +15238,16 @@ void AlarmResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated .etcdserverpb.AlarmMember alarms = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->alarms_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->alarms(static_cast<int>(i)), output);
+      2,
+      this->alarms(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -16287,7 +15268,7 @@ void AlarmResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated .etcdserverpb.AlarmMember alarms = 2;
@@ -16330,13 +15311,11 @@ size_t AlarmResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -16392,10 +15371,9 @@ void AlarmResponse::Swap(AlarmResponse* other) {
 }
 void AlarmResponse::InternalSwap(AlarmResponse* other) {
   using std::swap;
-  alarms_.InternalSwap(&other->alarms_);
+  CastToBase(&alarms_)->InternalSwap(CastToBase(&other->alarms_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AlarmResponse::GetMetadata() const {
@@ -16413,22 +15391,19 @@ void StatusRequest::InitAsDefaultInstance() {
 
 StatusRequest::StatusRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsStatusRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_StatusRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.StatusRequest)
 }
 StatusRequest::StatusRequest(const StatusRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.StatusRequest)
 }
 
 void StatusRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 StatusRequest::~StatusRequest() {
@@ -16440,9 +15415,7 @@ void StatusRequest::SharedDtor() {
 }
 
 void StatusRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* StatusRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -16450,17 +15423,10 @@ const ::google::protobuf::Descriptor* StatusRequest::descriptor() {
 }
 
 const StatusRequest& StatusRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsStatusRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_StatusRequest.base);
   return *internal_default_instance();
 }
 
-StatusRequest* StatusRequest::New(::google::protobuf::Arena* arena) const {
-  StatusRequest* n = new StatusRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void StatusRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.StatusRequest)
@@ -16477,7 +15443,7 @@ bool StatusRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.StatusRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -16534,9 +15500,7 @@ size_t StatusRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -16589,7 +15553,6 @@ void StatusRequest::Swap(StatusRequest* other) {
 void StatusRequest::InternalSwap(StatusRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata StatusRequest::GetMetadata() const {
@@ -16615,16 +15578,14 @@ const int StatusResponse::kRaftTermFieldNumber;
 
 StatusResponse::StatusResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsStatusResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_StatusResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.StatusResponse)
 }
 StatusResponse::StatusResponse(const StatusResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.version().size() > 0) {
@@ -16646,7 +15607,6 @@ void StatusResponse::SharedCtor() {
   ::memset(&header_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&raftterm_) -
       reinterpret_cast<char*>(&header_)) + sizeof(raftterm_));
-  _cached_size_ = 0;
 }
 
 StatusResponse::~StatusResponse() {
@@ -16660,9 +15620,7 @@ void StatusResponse::SharedDtor() {
 }
 
 void StatusResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* StatusResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -16670,17 +15628,10 @@ const ::google::protobuf::Descriptor* StatusResponse::descriptor() {
 }
 
 const StatusResponse& StatusResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsStatusResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_StatusResponse.base);
   return *internal_default_instance();
 }
 
-StatusResponse* StatusResponse::New(::google::protobuf::Arena* arena) const {
-  StatusResponse* n = new StatusResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void StatusResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.StatusResponse)
@@ -16705,7 +15656,7 @@ bool StatusResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.StatusResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -16822,7 +15773,7 @@ void StatusResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // string version = 2;
@@ -16873,7 +15824,7 @@ void StatusResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // string version = 2;
@@ -16935,7 +15886,7 @@ size_t StatusResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   // int64 dbSize = 3;
@@ -16967,9 +15918,7 @@ size_t StatusResponse::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -17040,14 +15989,14 @@ void StatusResponse::Swap(StatusResponse* other) {
 }
 void StatusResponse::InternalSwap(StatusResponse* other) {
   using std::swap;
-  version_.Swap(&other->version_);
+  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(header_, other->header_);
   swap(dbsize_, other->dbsize_);
   swap(leader_, other->leader_);
   swap(raftindex_, other->raftindex_);
   swap(raftterm_, other->raftterm_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata StatusResponse::GetMetadata() const {
@@ -17065,22 +16014,19 @@ void AuthEnableRequest::InitAsDefaultInstance() {
 
 AuthEnableRequest::AuthEnableRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthEnableRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthEnableRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthEnableRequest)
 }
 AuthEnableRequest::AuthEnableRequest(const AuthEnableRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.AuthEnableRequest)
 }
 
 void AuthEnableRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 AuthEnableRequest::~AuthEnableRequest() {
@@ -17092,9 +16038,7 @@ void AuthEnableRequest::SharedDtor() {
 }
 
 void AuthEnableRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthEnableRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -17102,17 +16046,10 @@ const ::google::protobuf::Descriptor* AuthEnableRequest::descriptor() {
 }
 
 const AuthEnableRequest& AuthEnableRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthEnableRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthEnableRequest.base);
   return *internal_default_instance();
 }
 
-AuthEnableRequest* AuthEnableRequest::New(::google::protobuf::Arena* arena) const {
-  AuthEnableRequest* n = new AuthEnableRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthEnableRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthEnableRequest)
@@ -17129,7 +16066,7 @@ bool AuthEnableRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthEnableRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -17186,9 +16123,7 @@ size_t AuthEnableRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -17241,7 +16176,6 @@ void AuthEnableRequest::Swap(AuthEnableRequest* other) {
 void AuthEnableRequest::InternalSwap(AuthEnableRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthEnableRequest::GetMetadata() const {
@@ -17259,22 +16193,19 @@ void AuthDisableRequest::InitAsDefaultInstance() {
 
 AuthDisableRequest::AuthDisableRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthDisableRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthDisableRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthDisableRequest)
 }
 AuthDisableRequest::AuthDisableRequest(const AuthDisableRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.AuthDisableRequest)
 }
 
 void AuthDisableRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 AuthDisableRequest::~AuthDisableRequest() {
@@ -17286,9 +16217,7 @@ void AuthDisableRequest::SharedDtor() {
 }
 
 void AuthDisableRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthDisableRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -17296,17 +16225,10 @@ const ::google::protobuf::Descriptor* AuthDisableRequest::descriptor() {
 }
 
 const AuthDisableRequest& AuthDisableRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthDisableRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthDisableRequest.base);
   return *internal_default_instance();
 }
 
-AuthDisableRequest* AuthDisableRequest::New(::google::protobuf::Arena* arena) const {
-  AuthDisableRequest* n = new AuthDisableRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthDisableRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthDisableRequest)
@@ -17323,7 +16245,7 @@ bool AuthDisableRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthDisableRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -17380,9 +16302,7 @@ size_t AuthDisableRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -17435,7 +16355,6 @@ void AuthDisableRequest::Swap(AuthDisableRequest* other) {
 void AuthDisableRequest::InternalSwap(AuthDisableRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthDisableRequest::GetMetadata() const {
@@ -17455,16 +16374,14 @@ const int AuthenticateRequest::kPasswordFieldNumber;
 
 AuthenticateRequest::AuthenticateRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthenticateRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthenticateRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthenticateRequest)
 }
 AuthenticateRequest::AuthenticateRequest(const AuthenticateRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -17480,7 +16397,6 @@ AuthenticateRequest::AuthenticateRequest(const AuthenticateRequest& from)
 void AuthenticateRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthenticateRequest::~AuthenticateRequest() {
@@ -17494,9 +16410,7 @@ void AuthenticateRequest::SharedDtor() {
 }
 
 void AuthenticateRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthenticateRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -17504,17 +16418,10 @@ const ::google::protobuf::Descriptor* AuthenticateRequest::descriptor() {
 }
 
 const AuthenticateRequest& AuthenticateRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthenticateRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthenticateRequest.base);
   return *internal_default_instance();
 }
 
-AuthenticateRequest* AuthenticateRequest::New(::google::protobuf::Arena* arena) const {
-  AuthenticateRequest* n = new AuthenticateRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthenticateRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthenticateRequest)
@@ -17533,7 +16440,7 @@ bool AuthenticateRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthenticateRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -17683,9 +16590,7 @@ size_t AuthenticateRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -17745,10 +16650,11 @@ void AuthenticateRequest::Swap(AuthenticateRequest* other) {
 }
 void AuthenticateRequest::InternalSwap(AuthenticateRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
-  password_.Swap(&other->password_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  password_.Swap(&other->password_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthenticateRequest::GetMetadata() const {
@@ -17768,16 +16674,14 @@ const int AuthUserAddRequest::kPasswordFieldNumber;
 
 AuthUserAddRequest::AuthUserAddRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserAddRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserAddRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserAddRequest)
 }
 AuthUserAddRequest::AuthUserAddRequest(const AuthUserAddRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -17793,7 +16697,6 @@ AuthUserAddRequest::AuthUserAddRequest(const AuthUserAddRequest& from)
 void AuthUserAddRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserAddRequest::~AuthUserAddRequest() {
@@ -17807,9 +16710,7 @@ void AuthUserAddRequest::SharedDtor() {
 }
 
 void AuthUserAddRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserAddRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -17817,17 +16718,10 @@ const ::google::protobuf::Descriptor* AuthUserAddRequest::descriptor() {
 }
 
 const AuthUserAddRequest& AuthUserAddRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserAddRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserAddRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserAddRequest* AuthUserAddRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserAddRequest* n = new AuthUserAddRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserAddRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserAddRequest)
@@ -17846,7 +16740,7 @@ bool AuthUserAddRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserAddRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -17996,9 +16890,7 @@ size_t AuthUserAddRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -18058,10 +16950,11 @@ void AuthUserAddRequest::Swap(AuthUserAddRequest* other) {
 }
 void AuthUserAddRequest::InternalSwap(AuthUserAddRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
-  password_.Swap(&other->password_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  password_.Swap(&other->password_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserAddRequest::GetMetadata() const {
@@ -18080,16 +16973,14 @@ const int AuthUserGetRequest::kNameFieldNumber;
 
 AuthUserGetRequest::AuthUserGetRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserGetRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserGetRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserGetRequest)
 }
 AuthUserGetRequest::AuthUserGetRequest(const AuthUserGetRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -18100,7 +16991,6 @@ AuthUserGetRequest::AuthUserGetRequest(const AuthUserGetRequest& from)
 
 void AuthUserGetRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserGetRequest::~AuthUserGetRequest() {
@@ -18113,9 +17003,7 @@ void AuthUserGetRequest::SharedDtor() {
 }
 
 void AuthUserGetRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserGetRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -18123,17 +17011,10 @@ const ::google::protobuf::Descriptor* AuthUserGetRequest::descriptor() {
 }
 
 const AuthUserGetRequest& AuthUserGetRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserGetRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserGetRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserGetRequest* AuthUserGetRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserGetRequest* n = new AuthUserGetRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserGetRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserGetRequest)
@@ -18151,7 +17032,7 @@ bool AuthUserGetRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserGetRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -18257,9 +17138,7 @@ size_t AuthUserGetRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -18315,9 +17194,9 @@ void AuthUserGetRequest::Swap(AuthUserGetRequest* other) {
 }
 void AuthUserGetRequest::InternalSwap(AuthUserGetRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserGetRequest::GetMetadata() const {
@@ -18336,16 +17215,14 @@ const int AuthUserDeleteRequest::kNameFieldNumber;
 
 AuthUserDeleteRequest::AuthUserDeleteRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserDeleteRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserDeleteRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserDeleteRequest)
 }
 AuthUserDeleteRequest::AuthUserDeleteRequest(const AuthUserDeleteRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -18356,7 +17233,6 @@ AuthUserDeleteRequest::AuthUserDeleteRequest(const AuthUserDeleteRequest& from)
 
 void AuthUserDeleteRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserDeleteRequest::~AuthUserDeleteRequest() {
@@ -18369,9 +17245,7 @@ void AuthUserDeleteRequest::SharedDtor() {
 }
 
 void AuthUserDeleteRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserDeleteRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -18379,17 +17253,10 @@ const ::google::protobuf::Descriptor* AuthUserDeleteRequest::descriptor() {
 }
 
 const AuthUserDeleteRequest& AuthUserDeleteRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserDeleteRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserDeleteRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserDeleteRequest* AuthUserDeleteRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserDeleteRequest* n = new AuthUserDeleteRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserDeleteRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserDeleteRequest)
@@ -18407,7 +17274,7 @@ bool AuthUserDeleteRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserDeleteRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -18513,9 +17380,7 @@ size_t AuthUserDeleteRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -18571,9 +17436,9 @@ void AuthUserDeleteRequest::Swap(AuthUserDeleteRequest* other) {
 }
 void AuthUserDeleteRequest::InternalSwap(AuthUserDeleteRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserDeleteRequest::GetMetadata() const {
@@ -18593,16 +17458,14 @@ const int AuthUserChangePasswordRequest::kPasswordFieldNumber;
 
 AuthUserChangePasswordRequest::AuthUserChangePasswordRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserChangePasswordRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserChangePasswordRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserChangePasswordRequest)
 }
 AuthUserChangePasswordRequest::AuthUserChangePasswordRequest(const AuthUserChangePasswordRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -18618,7 +17481,6 @@ AuthUserChangePasswordRequest::AuthUserChangePasswordRequest(const AuthUserChang
 void AuthUserChangePasswordRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserChangePasswordRequest::~AuthUserChangePasswordRequest() {
@@ -18632,9 +17494,7 @@ void AuthUserChangePasswordRequest::SharedDtor() {
 }
 
 void AuthUserChangePasswordRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserChangePasswordRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -18642,17 +17502,10 @@ const ::google::protobuf::Descriptor* AuthUserChangePasswordRequest::descriptor(
 }
 
 const AuthUserChangePasswordRequest& AuthUserChangePasswordRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserChangePasswordRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserChangePasswordRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserChangePasswordRequest* AuthUserChangePasswordRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserChangePasswordRequest* n = new AuthUserChangePasswordRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserChangePasswordRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserChangePasswordRequest)
@@ -18671,7 +17524,7 @@ bool AuthUserChangePasswordRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserChangePasswordRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -18821,9 +17674,7 @@ size_t AuthUserChangePasswordRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -18883,10 +17734,11 @@ void AuthUserChangePasswordRequest::Swap(AuthUserChangePasswordRequest* other) {
 }
 void AuthUserChangePasswordRequest::InternalSwap(AuthUserChangePasswordRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
-  password_.Swap(&other->password_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  password_.Swap(&other->password_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserChangePasswordRequest::GetMetadata() const {
@@ -18906,16 +17758,14 @@ const int AuthUserGrantRoleRequest::kRoleFieldNumber;
 
 AuthUserGrantRoleRequest::AuthUserGrantRoleRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserGrantRoleRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserGrantRoleRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserGrantRoleRequest)
 }
 AuthUserGrantRoleRequest::AuthUserGrantRoleRequest(const AuthUserGrantRoleRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   user_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.user().size() > 0) {
@@ -18931,7 +17781,6 @@ AuthUserGrantRoleRequest::AuthUserGrantRoleRequest(const AuthUserGrantRoleReques
 void AuthUserGrantRoleRequest::SharedCtor() {
   user_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserGrantRoleRequest::~AuthUserGrantRoleRequest() {
@@ -18945,9 +17794,7 @@ void AuthUserGrantRoleRequest::SharedDtor() {
 }
 
 void AuthUserGrantRoleRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserGrantRoleRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -18955,17 +17802,10 @@ const ::google::protobuf::Descriptor* AuthUserGrantRoleRequest::descriptor() {
 }
 
 const AuthUserGrantRoleRequest& AuthUserGrantRoleRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserGrantRoleRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserGrantRoleRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserGrantRoleRequest* AuthUserGrantRoleRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserGrantRoleRequest* n = new AuthUserGrantRoleRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserGrantRoleRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserGrantRoleRequest)
@@ -18984,7 +17824,7 @@ bool AuthUserGrantRoleRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserGrantRoleRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -19134,9 +17974,7 @@ size_t AuthUserGrantRoleRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -19196,10 +18034,11 @@ void AuthUserGrantRoleRequest::Swap(AuthUserGrantRoleRequest* other) {
 }
 void AuthUserGrantRoleRequest::InternalSwap(AuthUserGrantRoleRequest* other) {
   using std::swap;
-  user_.Swap(&other->user_);
-  role_.Swap(&other->role_);
+  user_.Swap(&other->user_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  role_.Swap(&other->role_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserGrantRoleRequest::GetMetadata() const {
@@ -19219,16 +18058,14 @@ const int AuthUserRevokeRoleRequest::kRoleFieldNumber;
 
 AuthUserRevokeRoleRequest::AuthUserRevokeRoleRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserRevokeRoleRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserRevokeRoleRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserRevokeRoleRequest)
 }
 AuthUserRevokeRoleRequest::AuthUserRevokeRoleRequest(const AuthUserRevokeRoleRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -19244,7 +18081,6 @@ AuthUserRevokeRoleRequest::AuthUserRevokeRoleRequest(const AuthUserRevokeRoleReq
 void AuthUserRevokeRoleRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthUserRevokeRoleRequest::~AuthUserRevokeRoleRequest() {
@@ -19258,9 +18094,7 @@ void AuthUserRevokeRoleRequest::SharedDtor() {
 }
 
 void AuthUserRevokeRoleRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserRevokeRoleRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -19268,17 +18102,10 @@ const ::google::protobuf::Descriptor* AuthUserRevokeRoleRequest::descriptor() {
 }
 
 const AuthUserRevokeRoleRequest& AuthUserRevokeRoleRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserRevokeRoleRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserRevokeRoleRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserRevokeRoleRequest* AuthUserRevokeRoleRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserRevokeRoleRequest* n = new AuthUserRevokeRoleRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserRevokeRoleRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserRevokeRoleRequest)
@@ -19297,7 +18124,7 @@ bool AuthUserRevokeRoleRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserRevokeRoleRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -19447,9 +18274,7 @@ size_t AuthUserRevokeRoleRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -19509,10 +18334,11 @@ void AuthUserRevokeRoleRequest::Swap(AuthUserRevokeRoleRequest* other) {
 }
 void AuthUserRevokeRoleRequest::InternalSwap(AuthUserRevokeRoleRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
-  role_.Swap(&other->role_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  role_.Swap(&other->role_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserRevokeRoleRequest::GetMetadata() const {
@@ -19531,16 +18357,14 @@ const int AuthRoleAddRequest::kNameFieldNumber;
 
 AuthRoleAddRequest::AuthRoleAddRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleAddRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleAddRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleAddRequest)
 }
 AuthRoleAddRequest::AuthRoleAddRequest(const AuthRoleAddRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -19551,7 +18375,6 @@ AuthRoleAddRequest::AuthRoleAddRequest(const AuthRoleAddRequest& from)
 
 void AuthRoleAddRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthRoleAddRequest::~AuthRoleAddRequest() {
@@ -19564,9 +18387,7 @@ void AuthRoleAddRequest::SharedDtor() {
 }
 
 void AuthRoleAddRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleAddRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -19574,17 +18395,10 @@ const ::google::protobuf::Descriptor* AuthRoleAddRequest::descriptor() {
 }
 
 const AuthRoleAddRequest& AuthRoleAddRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleAddRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleAddRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleAddRequest* AuthRoleAddRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleAddRequest* n = new AuthRoleAddRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleAddRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleAddRequest)
@@ -19602,7 +18416,7 @@ bool AuthRoleAddRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleAddRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -19708,9 +18522,7 @@ size_t AuthRoleAddRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -19766,9 +18578,9 @@ void AuthRoleAddRequest::Swap(AuthRoleAddRequest* other) {
 }
 void AuthRoleAddRequest::InternalSwap(AuthRoleAddRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleAddRequest::GetMetadata() const {
@@ -19787,16 +18599,14 @@ const int AuthRoleGetRequest::kRoleFieldNumber;
 
 AuthRoleGetRequest::AuthRoleGetRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGetRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleGetRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleGetRequest)
 }
 AuthRoleGetRequest::AuthRoleGetRequest(const AuthRoleGetRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.role().size() > 0) {
@@ -19807,7 +18617,6 @@ AuthRoleGetRequest::AuthRoleGetRequest(const AuthRoleGetRequest& from)
 
 void AuthRoleGetRequest::SharedCtor() {
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthRoleGetRequest::~AuthRoleGetRequest() {
@@ -19820,9 +18629,7 @@ void AuthRoleGetRequest::SharedDtor() {
 }
 
 void AuthRoleGetRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleGetRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -19830,17 +18637,10 @@ const ::google::protobuf::Descriptor* AuthRoleGetRequest::descriptor() {
 }
 
 const AuthRoleGetRequest& AuthRoleGetRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGetRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleGetRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleGetRequest* AuthRoleGetRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleGetRequest* n = new AuthRoleGetRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleGetRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleGetRequest)
@@ -19858,7 +18658,7 @@ bool AuthRoleGetRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleGetRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -19964,9 +18764,7 @@ size_t AuthRoleGetRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -20022,9 +18820,9 @@ void AuthRoleGetRequest::Swap(AuthRoleGetRequest* other) {
 }
 void AuthRoleGetRequest::InternalSwap(AuthRoleGetRequest* other) {
   using std::swap;
-  role_.Swap(&other->role_);
+  role_.Swap(&other->role_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleGetRequest::GetMetadata() const {
@@ -20042,22 +18840,19 @@ void AuthUserListRequest::InitAsDefaultInstance() {
 
 AuthUserListRequest::AuthUserListRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserListRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserListRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserListRequest)
 }
 AuthUserListRequest::AuthUserListRequest(const AuthUserListRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.AuthUserListRequest)
 }
 
 void AuthUserListRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 AuthUserListRequest::~AuthUserListRequest() {
@@ -20069,9 +18864,7 @@ void AuthUserListRequest::SharedDtor() {
 }
 
 void AuthUserListRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserListRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -20079,17 +18872,10 @@ const ::google::protobuf::Descriptor* AuthUserListRequest::descriptor() {
 }
 
 const AuthUserListRequest& AuthUserListRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserListRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserListRequest.base);
   return *internal_default_instance();
 }
 
-AuthUserListRequest* AuthUserListRequest::New(::google::protobuf::Arena* arena) const {
-  AuthUserListRequest* n = new AuthUserListRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserListRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserListRequest)
@@ -20106,7 +18892,7 @@ bool AuthUserListRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserListRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -20163,9 +18949,7 @@ size_t AuthUserListRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -20218,7 +19002,6 @@ void AuthUserListRequest::Swap(AuthUserListRequest* other) {
 void AuthUserListRequest::InternalSwap(AuthUserListRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserListRequest::GetMetadata() const {
@@ -20236,22 +19019,19 @@ void AuthRoleListRequest::InitAsDefaultInstance() {
 
 AuthRoleListRequest::AuthRoleListRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleListRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleListRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleListRequest)
 }
 AuthRoleListRequest::AuthRoleListRequest(const AuthRoleListRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:etcdserverpb.AuthRoleListRequest)
 }
 
 void AuthRoleListRequest::SharedCtor() {
-  _cached_size_ = 0;
 }
 
 AuthRoleListRequest::~AuthRoleListRequest() {
@@ -20263,9 +19043,7 @@ void AuthRoleListRequest::SharedDtor() {
 }
 
 void AuthRoleListRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleListRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -20273,17 +19051,10 @@ const ::google::protobuf::Descriptor* AuthRoleListRequest::descriptor() {
 }
 
 const AuthRoleListRequest& AuthRoleListRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleListRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleListRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleListRequest* AuthRoleListRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleListRequest* n = new AuthRoleListRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleListRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleListRequest)
@@ -20300,7 +19071,7 @@ bool AuthRoleListRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleListRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
@@ -20357,9 +19128,7 @@ size_t AuthRoleListRequest::ByteSizeLong() const {
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -20412,7 +19181,6 @@ void AuthRoleListRequest::Swap(AuthRoleListRequest* other) {
 void AuthRoleListRequest::InternalSwap(AuthRoleListRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleListRequest::GetMetadata() const {
@@ -20431,16 +19199,14 @@ const int AuthRoleDeleteRequest::kRoleFieldNumber;
 
 AuthRoleDeleteRequest::AuthRoleDeleteRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleDeleteRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleDeleteRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleDeleteRequest)
 }
 AuthRoleDeleteRequest::AuthRoleDeleteRequest(const AuthRoleDeleteRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.role().size() > 0) {
@@ -20451,7 +19217,6 @@ AuthRoleDeleteRequest::AuthRoleDeleteRequest(const AuthRoleDeleteRequest& from)
 
 void AuthRoleDeleteRequest::SharedCtor() {
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthRoleDeleteRequest::~AuthRoleDeleteRequest() {
@@ -20464,9 +19229,7 @@ void AuthRoleDeleteRequest::SharedDtor() {
 }
 
 void AuthRoleDeleteRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleDeleteRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -20474,17 +19237,10 @@ const ::google::protobuf::Descriptor* AuthRoleDeleteRequest::descriptor() {
 }
 
 const AuthRoleDeleteRequest& AuthRoleDeleteRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleDeleteRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleDeleteRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleDeleteRequest* AuthRoleDeleteRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleDeleteRequest* n = new AuthRoleDeleteRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleDeleteRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleDeleteRequest)
@@ -20502,7 +19258,7 @@ bool AuthRoleDeleteRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleDeleteRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -20608,9 +19364,7 @@ size_t AuthRoleDeleteRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -20666,9 +19420,9 @@ void AuthRoleDeleteRequest::Swap(AuthRoleDeleteRequest* other) {
 }
 void AuthRoleDeleteRequest::InternalSwap(AuthRoleDeleteRequest* other) {
   using std::swap;
-  role_.Swap(&other->role_);
+  role_.Swap(&other->role_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleDeleteRequest::GetMetadata() const {
@@ -20696,16 +19450,14 @@ const int AuthRoleGrantPermissionRequest::kPermFieldNumber;
 
 AuthRoleGrantPermissionRequest::AuthRoleGrantPermissionRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGrantPermissionRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleGrantPermissionRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleGrantPermissionRequest)
 }
 AuthRoleGrantPermissionRequest::AuthRoleGrantPermissionRequest(const AuthRoleGrantPermissionRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -20722,7 +19474,6 @@ AuthRoleGrantPermissionRequest::AuthRoleGrantPermissionRequest(const AuthRoleGra
 void AuthRoleGrantPermissionRequest::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   perm_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleGrantPermissionRequest::~AuthRoleGrantPermissionRequest() {
@@ -20736,9 +19487,7 @@ void AuthRoleGrantPermissionRequest::SharedDtor() {
 }
 
 void AuthRoleGrantPermissionRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleGrantPermissionRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -20746,17 +19495,10 @@ const ::google::protobuf::Descriptor* AuthRoleGrantPermissionRequest::descriptor
 }
 
 const AuthRoleGrantPermissionRequest& AuthRoleGrantPermissionRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGrantPermissionRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleGrantPermissionRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleGrantPermissionRequest* AuthRoleGrantPermissionRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleGrantPermissionRequest* n = new AuthRoleGrantPermissionRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleGrantPermissionRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleGrantPermissionRequest)
@@ -20778,7 +19520,7 @@ bool AuthRoleGrantPermissionRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleGrantPermissionRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -20849,7 +19591,7 @@ void AuthRoleGrantPermissionRequest::SerializeWithCachedSizes(
   // .authpb.Permission perm = 2;
   if (this->has_perm()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->perm_, output);
+      2, this->_internal_perm(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -20881,7 +19623,7 @@ void AuthRoleGrantPermissionRequest::SerializeWithCachedSizes(
   if (this->has_perm()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->perm_, deterministic, target);
+        2, this->_internal_perm(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -20912,13 +19654,11 @@ size_t AuthRoleGrantPermissionRequest::ByteSizeLong() const {
   if (this->has_perm()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->perm_);
+        *perm_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -20977,10 +19717,10 @@ void AuthRoleGrantPermissionRequest::Swap(AuthRoleGrantPermissionRequest* other)
 }
 void AuthRoleGrantPermissionRequest::InternalSwap(AuthRoleGrantPermissionRequest* other) {
   using std::swap;
-  name_.Swap(&other->name_);
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(perm_, other->perm_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleGrantPermissionRequest::GetMetadata() const {
@@ -21001,16 +19741,14 @@ const int AuthRoleRevokePermissionRequest::kRangeEndFieldNumber;
 
 AuthRoleRevokePermissionRequest::AuthRoleRevokePermissionRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleRevokePermissionRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleRevokePermissionRequest.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleRevokePermissionRequest)
 }
 AuthRoleRevokePermissionRequest::AuthRoleRevokePermissionRequest(const AuthRoleRevokePermissionRequest& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.role().size() > 0) {
@@ -21031,7 +19769,6 @@ void AuthRoleRevokePermissionRequest::SharedCtor() {
   role_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   range_end_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 AuthRoleRevokePermissionRequest::~AuthRoleRevokePermissionRequest() {
@@ -21046,9 +19783,7 @@ void AuthRoleRevokePermissionRequest::SharedDtor() {
 }
 
 void AuthRoleRevokePermissionRequest::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleRevokePermissionRequest::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -21056,17 +19791,10 @@ const ::google::protobuf::Descriptor* AuthRoleRevokePermissionRequest::descripto
 }
 
 const AuthRoleRevokePermissionRequest& AuthRoleRevokePermissionRequest::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleRevokePermissionRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleRevokePermissionRequest.base);
   return *internal_default_instance();
 }
 
-AuthRoleRevokePermissionRequest* AuthRoleRevokePermissionRequest::New(::google::protobuf::Arena* arena) const {
-  AuthRoleRevokePermissionRequest* n = new AuthRoleRevokePermissionRequest;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleRevokePermissionRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleRevokePermissionRequest)
@@ -21086,7 +19814,7 @@ bool AuthRoleRevokePermissionRequest::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleRevokePermissionRequest)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -21280,9 +20008,7 @@ size_t AuthRoleRevokePermissionRequest::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -21346,11 +20072,13 @@ void AuthRoleRevokePermissionRequest::Swap(AuthRoleRevokePermissionRequest* othe
 }
 void AuthRoleRevokePermissionRequest::InternalSwap(AuthRoleRevokePermissionRequest* other) {
   using std::swap;
-  role_.Swap(&other->role_);
-  key_.Swap(&other->key_);
-  range_end_.Swap(&other->range_end_);
+  role_.Swap(&other->role_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  range_end_.Swap(&other->range_end_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleRevokePermissionRequest::GetMetadata() const {
@@ -21371,16 +20099,14 @@ const int AuthEnableResponse::kHeaderFieldNumber;
 
 AuthEnableResponse::AuthEnableResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthEnableResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthEnableResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthEnableResponse)
 }
 AuthEnableResponse::AuthEnableResponse(const AuthEnableResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -21392,7 +20118,6 @@ AuthEnableResponse::AuthEnableResponse(const AuthEnableResponse& from)
 
 void AuthEnableResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthEnableResponse::~AuthEnableResponse() {
@@ -21405,9 +20130,7 @@ void AuthEnableResponse::SharedDtor() {
 }
 
 void AuthEnableResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthEnableResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -21415,17 +20138,10 @@ const ::google::protobuf::Descriptor* AuthEnableResponse::descriptor() {
 }
 
 const AuthEnableResponse& AuthEnableResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthEnableResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthEnableResponse.base);
   return *internal_default_instance();
 }
 
-AuthEnableResponse* AuthEnableResponse::New(::google::protobuf::Arena* arena) const {
-  AuthEnableResponse* n = new AuthEnableResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthEnableResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthEnableResponse)
@@ -21446,7 +20162,7 @@ bool AuthEnableResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthEnableResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -21491,7 +20207,7 @@ void AuthEnableResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -21512,7 +20228,7 @@ void AuthEnableResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -21536,13 +20252,11 @@ size_t AuthEnableResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -21599,7 +20313,6 @@ void AuthEnableResponse::InternalSwap(AuthEnableResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthEnableResponse::GetMetadata() const {
@@ -21620,16 +20333,14 @@ const int AuthDisableResponse::kHeaderFieldNumber;
 
 AuthDisableResponse::AuthDisableResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthDisableResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthDisableResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthDisableResponse)
 }
 AuthDisableResponse::AuthDisableResponse(const AuthDisableResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -21641,7 +20352,6 @@ AuthDisableResponse::AuthDisableResponse(const AuthDisableResponse& from)
 
 void AuthDisableResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthDisableResponse::~AuthDisableResponse() {
@@ -21654,9 +20364,7 @@ void AuthDisableResponse::SharedDtor() {
 }
 
 void AuthDisableResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthDisableResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -21664,17 +20372,10 @@ const ::google::protobuf::Descriptor* AuthDisableResponse::descriptor() {
 }
 
 const AuthDisableResponse& AuthDisableResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthDisableResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthDisableResponse.base);
   return *internal_default_instance();
 }
 
-AuthDisableResponse* AuthDisableResponse::New(::google::protobuf::Arena* arena) const {
-  AuthDisableResponse* n = new AuthDisableResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthDisableResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthDisableResponse)
@@ -21695,7 +20396,7 @@ bool AuthDisableResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthDisableResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -21740,7 +20441,7 @@ void AuthDisableResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -21761,7 +20462,7 @@ void AuthDisableResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -21785,13 +20486,11 @@ size_t AuthDisableResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -21848,7 +20547,6 @@ void AuthDisableResponse::InternalSwap(AuthDisableResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthDisableResponse::GetMetadata() const {
@@ -21870,16 +20568,14 @@ const int AuthenticateResponse::kTokenFieldNumber;
 
 AuthenticateResponse::AuthenticateResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthenticateResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthenticateResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthenticateResponse)
 }
 AuthenticateResponse::AuthenticateResponse(const AuthenticateResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.token().size() > 0) {
@@ -21896,7 +20592,6 @@ AuthenticateResponse::AuthenticateResponse(const AuthenticateResponse& from)
 void AuthenticateResponse::SharedCtor() {
   token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthenticateResponse::~AuthenticateResponse() {
@@ -21910,9 +20605,7 @@ void AuthenticateResponse::SharedDtor() {
 }
 
 void AuthenticateResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthenticateResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -21920,17 +20613,10 @@ const ::google::protobuf::Descriptor* AuthenticateResponse::descriptor() {
 }
 
 const AuthenticateResponse& AuthenticateResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthenticateResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthenticateResponse.base);
   return *internal_default_instance();
 }
 
-AuthenticateResponse* AuthenticateResponse::New(::google::protobuf::Arena* arena) const {
-  AuthenticateResponse* n = new AuthenticateResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthenticateResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthenticateResponse)
@@ -21952,7 +20638,7 @@ bool AuthenticateResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthenticateResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -22013,7 +20699,7 @@ void AuthenticateResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // string token = 2;
@@ -22044,7 +20730,7 @@ void AuthenticateResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // string token = 2;
@@ -22086,13 +20772,11 @@ size_t AuthenticateResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -22151,10 +20835,10 @@ void AuthenticateResponse::Swap(AuthenticateResponse* other) {
 }
 void AuthenticateResponse::InternalSwap(AuthenticateResponse* other) {
   using std::swap;
-  token_.Swap(&other->token_);
+  token_.Swap(&other->token_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthenticateResponse::GetMetadata() const {
@@ -22175,16 +20859,14 @@ const int AuthUserAddResponse::kHeaderFieldNumber;
 
 AuthUserAddResponse::AuthUserAddResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserAddResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserAddResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserAddResponse)
 }
 AuthUserAddResponse::AuthUserAddResponse(const AuthUserAddResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -22196,7 +20878,6 @@ AuthUserAddResponse::AuthUserAddResponse(const AuthUserAddResponse& from)
 
 void AuthUserAddResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserAddResponse::~AuthUserAddResponse() {
@@ -22209,9 +20890,7 @@ void AuthUserAddResponse::SharedDtor() {
 }
 
 void AuthUserAddResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserAddResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -22219,17 +20898,10 @@ const ::google::protobuf::Descriptor* AuthUserAddResponse::descriptor() {
 }
 
 const AuthUserAddResponse& AuthUserAddResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserAddResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserAddResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserAddResponse* AuthUserAddResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserAddResponse* n = new AuthUserAddResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserAddResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserAddResponse)
@@ -22250,7 +20922,7 @@ bool AuthUserAddResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserAddResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -22295,7 +20967,7 @@ void AuthUserAddResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -22316,7 +20988,7 @@ void AuthUserAddResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -22340,13 +21012,11 @@ size_t AuthUserAddResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -22403,7 +21073,6 @@ void AuthUserAddResponse::InternalSwap(AuthUserAddResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserAddResponse::GetMetadata() const {
@@ -22425,17 +21094,15 @@ const int AuthUserGetResponse::kRolesFieldNumber;
 
 AuthUserGetResponse::AuthUserGetResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserGetResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserGetResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserGetResponse)
 }
 AuthUserGetResponse::AuthUserGetResponse(const AuthUserGetResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      roles_(from.roles_),
-      _cached_size_(0) {
+      roles_(from.roles_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -22447,7 +21114,6 @@ AuthUserGetResponse::AuthUserGetResponse(const AuthUserGetResponse& from)
 
 void AuthUserGetResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserGetResponse::~AuthUserGetResponse() {
@@ -22460,9 +21126,7 @@ void AuthUserGetResponse::SharedDtor() {
 }
 
 void AuthUserGetResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserGetResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -22470,17 +21134,10 @@ const ::google::protobuf::Descriptor* AuthUserGetResponse::descriptor() {
 }
 
 const AuthUserGetResponse& AuthUserGetResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserGetResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserGetResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserGetResponse* AuthUserGetResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserGetResponse* n = new AuthUserGetResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserGetResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserGetResponse)
@@ -22502,7 +21159,7 @@ bool AuthUserGetResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserGetResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -22564,7 +21221,7 @@ void AuthUserGetResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated string roles = 2;
@@ -22595,7 +21252,7 @@ void AuthUserGetResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated string roles = 2;
@@ -22637,13 +21294,11 @@ size_t AuthUserGetResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -22699,10 +21354,9 @@ void AuthUserGetResponse::Swap(AuthUserGetResponse* other) {
 }
 void AuthUserGetResponse::InternalSwap(AuthUserGetResponse* other) {
   using std::swap;
-  roles_.InternalSwap(&other->roles_);
+  roles_.InternalSwap(CastToBase(&other->roles_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserGetResponse::GetMetadata() const {
@@ -22723,16 +21377,14 @@ const int AuthUserDeleteResponse::kHeaderFieldNumber;
 
 AuthUserDeleteResponse::AuthUserDeleteResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserDeleteResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserDeleteResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserDeleteResponse)
 }
 AuthUserDeleteResponse::AuthUserDeleteResponse(const AuthUserDeleteResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -22744,7 +21396,6 @@ AuthUserDeleteResponse::AuthUserDeleteResponse(const AuthUserDeleteResponse& fro
 
 void AuthUserDeleteResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserDeleteResponse::~AuthUserDeleteResponse() {
@@ -22757,9 +21408,7 @@ void AuthUserDeleteResponse::SharedDtor() {
 }
 
 void AuthUserDeleteResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserDeleteResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -22767,17 +21416,10 @@ const ::google::protobuf::Descriptor* AuthUserDeleteResponse::descriptor() {
 }
 
 const AuthUserDeleteResponse& AuthUserDeleteResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserDeleteResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserDeleteResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserDeleteResponse* AuthUserDeleteResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserDeleteResponse* n = new AuthUserDeleteResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserDeleteResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserDeleteResponse)
@@ -22798,7 +21440,7 @@ bool AuthUserDeleteResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserDeleteResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -22843,7 +21485,7 @@ void AuthUserDeleteResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -22864,7 +21506,7 @@ void AuthUserDeleteResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -22888,13 +21530,11 @@ size_t AuthUserDeleteResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -22951,7 +21591,6 @@ void AuthUserDeleteResponse::InternalSwap(AuthUserDeleteResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserDeleteResponse::GetMetadata() const {
@@ -22972,16 +21611,14 @@ const int AuthUserChangePasswordResponse::kHeaderFieldNumber;
 
 AuthUserChangePasswordResponse::AuthUserChangePasswordResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserChangePasswordResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserChangePasswordResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserChangePasswordResponse)
 }
 AuthUserChangePasswordResponse::AuthUserChangePasswordResponse(const AuthUserChangePasswordResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -22993,7 +21630,6 @@ AuthUserChangePasswordResponse::AuthUserChangePasswordResponse(const AuthUserCha
 
 void AuthUserChangePasswordResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserChangePasswordResponse::~AuthUserChangePasswordResponse() {
@@ -23006,9 +21642,7 @@ void AuthUserChangePasswordResponse::SharedDtor() {
 }
 
 void AuthUserChangePasswordResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserChangePasswordResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -23016,17 +21650,10 @@ const ::google::protobuf::Descriptor* AuthUserChangePasswordResponse::descriptor
 }
 
 const AuthUserChangePasswordResponse& AuthUserChangePasswordResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserChangePasswordResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserChangePasswordResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserChangePasswordResponse* AuthUserChangePasswordResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserChangePasswordResponse* n = new AuthUserChangePasswordResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserChangePasswordResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserChangePasswordResponse)
@@ -23047,7 +21674,7 @@ bool AuthUserChangePasswordResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserChangePasswordResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -23092,7 +21719,7 @@ void AuthUserChangePasswordResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23113,7 +21740,7 @@ void AuthUserChangePasswordResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23137,13 +21764,11 @@ size_t AuthUserChangePasswordResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -23200,7 +21825,6 @@ void AuthUserChangePasswordResponse::InternalSwap(AuthUserChangePasswordResponse
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserChangePasswordResponse::GetMetadata() const {
@@ -23221,16 +21845,14 @@ const int AuthUserGrantRoleResponse::kHeaderFieldNumber;
 
 AuthUserGrantRoleResponse::AuthUserGrantRoleResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserGrantRoleResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserGrantRoleResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserGrantRoleResponse)
 }
 AuthUserGrantRoleResponse::AuthUserGrantRoleResponse(const AuthUserGrantRoleResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -23242,7 +21864,6 @@ AuthUserGrantRoleResponse::AuthUserGrantRoleResponse(const AuthUserGrantRoleResp
 
 void AuthUserGrantRoleResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserGrantRoleResponse::~AuthUserGrantRoleResponse() {
@@ -23255,9 +21876,7 @@ void AuthUserGrantRoleResponse::SharedDtor() {
 }
 
 void AuthUserGrantRoleResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserGrantRoleResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -23265,17 +21884,10 @@ const ::google::protobuf::Descriptor* AuthUserGrantRoleResponse::descriptor() {
 }
 
 const AuthUserGrantRoleResponse& AuthUserGrantRoleResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserGrantRoleResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserGrantRoleResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserGrantRoleResponse* AuthUserGrantRoleResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserGrantRoleResponse* n = new AuthUserGrantRoleResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserGrantRoleResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserGrantRoleResponse)
@@ -23296,7 +21908,7 @@ bool AuthUserGrantRoleResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserGrantRoleResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -23341,7 +21953,7 @@ void AuthUserGrantRoleResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23362,7 +21974,7 @@ void AuthUserGrantRoleResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23386,13 +21998,11 @@ size_t AuthUserGrantRoleResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -23449,7 +22059,6 @@ void AuthUserGrantRoleResponse::InternalSwap(AuthUserGrantRoleResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserGrantRoleResponse::GetMetadata() const {
@@ -23470,16 +22079,14 @@ const int AuthUserRevokeRoleResponse::kHeaderFieldNumber;
 
 AuthUserRevokeRoleResponse::AuthUserRevokeRoleResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserRevokeRoleResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserRevokeRoleResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserRevokeRoleResponse)
 }
 AuthUserRevokeRoleResponse::AuthUserRevokeRoleResponse(const AuthUserRevokeRoleResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -23491,7 +22098,6 @@ AuthUserRevokeRoleResponse::AuthUserRevokeRoleResponse(const AuthUserRevokeRoleR
 
 void AuthUserRevokeRoleResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserRevokeRoleResponse::~AuthUserRevokeRoleResponse() {
@@ -23504,9 +22110,7 @@ void AuthUserRevokeRoleResponse::SharedDtor() {
 }
 
 void AuthUserRevokeRoleResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserRevokeRoleResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -23514,17 +22118,10 @@ const ::google::protobuf::Descriptor* AuthUserRevokeRoleResponse::descriptor() {
 }
 
 const AuthUserRevokeRoleResponse& AuthUserRevokeRoleResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserRevokeRoleResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserRevokeRoleResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserRevokeRoleResponse* AuthUserRevokeRoleResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserRevokeRoleResponse* n = new AuthUserRevokeRoleResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserRevokeRoleResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserRevokeRoleResponse)
@@ -23545,7 +22142,7 @@ bool AuthUserRevokeRoleResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserRevokeRoleResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -23590,7 +22187,7 @@ void AuthUserRevokeRoleResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23611,7 +22208,7 @@ void AuthUserRevokeRoleResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23635,13 +22232,11 @@ size_t AuthUserRevokeRoleResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -23698,7 +22293,6 @@ void AuthUserRevokeRoleResponse::InternalSwap(AuthUserRevokeRoleResponse* other)
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserRevokeRoleResponse::GetMetadata() const {
@@ -23719,16 +22313,14 @@ const int AuthRoleAddResponse::kHeaderFieldNumber;
 
 AuthRoleAddResponse::AuthRoleAddResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleAddResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleAddResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleAddResponse)
 }
 AuthRoleAddResponse::AuthRoleAddResponse(const AuthRoleAddResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -23740,7 +22332,6 @@ AuthRoleAddResponse::AuthRoleAddResponse(const AuthRoleAddResponse& from)
 
 void AuthRoleAddResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleAddResponse::~AuthRoleAddResponse() {
@@ -23753,9 +22344,7 @@ void AuthRoleAddResponse::SharedDtor() {
 }
 
 void AuthRoleAddResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleAddResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -23763,17 +22352,10 @@ const ::google::protobuf::Descriptor* AuthRoleAddResponse::descriptor() {
 }
 
 const AuthRoleAddResponse& AuthRoleAddResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleAddResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleAddResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleAddResponse* AuthRoleAddResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleAddResponse* n = new AuthRoleAddResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleAddResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleAddResponse)
@@ -23794,7 +22376,7 @@ bool AuthRoleAddResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleAddResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -23839,7 +22421,7 @@ void AuthRoleAddResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23860,7 +22442,7 @@ void AuthRoleAddResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -23884,13 +22466,11 @@ size_t AuthRoleAddResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -23947,7 +22527,6 @@ void AuthRoleAddResponse::InternalSwap(AuthRoleAddResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleAddResponse::GetMetadata() const {
@@ -23972,17 +22551,15 @@ const int AuthRoleGetResponse::kPermFieldNumber;
 
 AuthRoleGetResponse::AuthRoleGetResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGetResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleGetResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleGetResponse)
 }
 AuthRoleGetResponse::AuthRoleGetResponse(const AuthRoleGetResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      perm_(from.perm_),
-      _cached_size_(0) {
+      perm_(from.perm_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -23994,7 +22571,6 @@ AuthRoleGetResponse::AuthRoleGetResponse(const AuthRoleGetResponse& from)
 
 void AuthRoleGetResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleGetResponse::~AuthRoleGetResponse() {
@@ -24007,9 +22583,7 @@ void AuthRoleGetResponse::SharedDtor() {
 }
 
 void AuthRoleGetResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleGetResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -24017,17 +22591,10 @@ const ::google::protobuf::Descriptor* AuthRoleGetResponse::descriptor() {
 }
 
 const AuthRoleGetResponse& AuthRoleGetResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGetResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleGetResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleGetResponse* AuthRoleGetResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleGetResponse* n = new AuthRoleGetResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleGetResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleGetResponse)
@@ -24049,7 +22616,7 @@ bool AuthRoleGetResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleGetResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -24069,7 +22636,8 @@ bool AuthRoleGetResponse::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_perm()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_perm()));
         } else {
           goto handle_unusual;
         }
@@ -24105,14 +22673,16 @@ void AuthRoleGetResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated .authpb.Permission perm = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->perm_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->perm(static_cast<int>(i)), output);
+      2,
+      this->perm(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -24133,7 +22703,7 @@ void AuthRoleGetResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated .authpb.Permission perm = 2;
@@ -24176,13 +22746,11 @@ size_t AuthRoleGetResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -24238,10 +22806,9 @@ void AuthRoleGetResponse::Swap(AuthRoleGetResponse* other) {
 }
 void AuthRoleGetResponse::InternalSwap(AuthRoleGetResponse* other) {
   using std::swap;
-  perm_.InternalSwap(&other->perm_);
+  CastToBase(&perm_)->InternalSwap(CastToBase(&other->perm_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleGetResponse::GetMetadata() const {
@@ -24263,17 +22830,15 @@ const int AuthRoleListResponse::kRolesFieldNumber;
 
 AuthRoleListResponse::AuthRoleListResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleListResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleListResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleListResponse)
 }
 AuthRoleListResponse::AuthRoleListResponse(const AuthRoleListResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      roles_(from.roles_),
-      _cached_size_(0) {
+      roles_(from.roles_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -24285,7 +22850,6 @@ AuthRoleListResponse::AuthRoleListResponse(const AuthRoleListResponse& from)
 
 void AuthRoleListResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleListResponse::~AuthRoleListResponse() {
@@ -24298,9 +22862,7 @@ void AuthRoleListResponse::SharedDtor() {
 }
 
 void AuthRoleListResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleListResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -24308,17 +22870,10 @@ const ::google::protobuf::Descriptor* AuthRoleListResponse::descriptor() {
 }
 
 const AuthRoleListResponse& AuthRoleListResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleListResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleListResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleListResponse* AuthRoleListResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleListResponse* n = new AuthRoleListResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleListResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleListResponse)
@@ -24340,7 +22895,7 @@ bool AuthRoleListResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleListResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -24402,7 +22957,7 @@ void AuthRoleListResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated string roles = 2;
@@ -24433,7 +22988,7 @@ void AuthRoleListResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated string roles = 2;
@@ -24475,13 +23030,11 @@ size_t AuthRoleListResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -24537,10 +23090,9 @@ void AuthRoleListResponse::Swap(AuthRoleListResponse* other) {
 }
 void AuthRoleListResponse::InternalSwap(AuthRoleListResponse* other) {
   using std::swap;
-  roles_.InternalSwap(&other->roles_);
+  roles_.InternalSwap(CastToBase(&other->roles_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleListResponse::GetMetadata() const {
@@ -24562,17 +23114,15 @@ const int AuthUserListResponse::kUsersFieldNumber;
 
 AuthUserListResponse::AuthUserListResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthUserListResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthUserListResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthUserListResponse)
 }
 AuthUserListResponse::AuthUserListResponse(const AuthUserListResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      users_(from.users_),
-      _cached_size_(0) {
+      users_(from.users_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -24584,7 +23134,6 @@ AuthUserListResponse::AuthUserListResponse(const AuthUserListResponse& from)
 
 void AuthUserListResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthUserListResponse::~AuthUserListResponse() {
@@ -24597,9 +23146,7 @@ void AuthUserListResponse::SharedDtor() {
 }
 
 void AuthUserListResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthUserListResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -24607,17 +23154,10 @@ const ::google::protobuf::Descriptor* AuthUserListResponse::descriptor() {
 }
 
 const AuthUserListResponse& AuthUserListResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthUserListResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthUserListResponse.base);
   return *internal_default_instance();
 }
 
-AuthUserListResponse* AuthUserListResponse::New(::google::protobuf::Arena* arena) const {
-  AuthUserListResponse* n = new AuthUserListResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthUserListResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthUserListResponse)
@@ -24639,7 +23179,7 @@ bool AuthUserListResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthUserListResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -24701,7 +23241,7 @@ void AuthUserListResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   // repeated string users = 2;
@@ -24732,7 +23272,7 @@ void AuthUserListResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   // repeated string users = 2;
@@ -24774,13 +23314,11 @@ size_t AuthUserListResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -24836,10 +23374,9 @@ void AuthUserListResponse::Swap(AuthUserListResponse* other) {
 }
 void AuthUserListResponse::InternalSwap(AuthUserListResponse* other) {
   using std::swap;
-  users_.InternalSwap(&other->users_);
+  users_.InternalSwap(CastToBase(&other->users_));
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthUserListResponse::GetMetadata() const {
@@ -24860,16 +23397,14 @@ const int AuthRoleDeleteResponse::kHeaderFieldNumber;
 
 AuthRoleDeleteResponse::AuthRoleDeleteResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleDeleteResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleDeleteResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleDeleteResponse)
 }
 AuthRoleDeleteResponse::AuthRoleDeleteResponse(const AuthRoleDeleteResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -24881,7 +23416,6 @@ AuthRoleDeleteResponse::AuthRoleDeleteResponse(const AuthRoleDeleteResponse& fro
 
 void AuthRoleDeleteResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleDeleteResponse::~AuthRoleDeleteResponse() {
@@ -24894,9 +23428,7 @@ void AuthRoleDeleteResponse::SharedDtor() {
 }
 
 void AuthRoleDeleteResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleDeleteResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -24904,17 +23436,10 @@ const ::google::protobuf::Descriptor* AuthRoleDeleteResponse::descriptor() {
 }
 
 const AuthRoleDeleteResponse& AuthRoleDeleteResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleDeleteResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleDeleteResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleDeleteResponse* AuthRoleDeleteResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleDeleteResponse* n = new AuthRoleDeleteResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleDeleteResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleDeleteResponse)
@@ -24935,7 +23460,7 @@ bool AuthRoleDeleteResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleDeleteResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -24980,7 +23505,7 @@ void AuthRoleDeleteResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25001,7 +23526,7 @@ void AuthRoleDeleteResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25025,13 +23550,11 @@ size_t AuthRoleDeleteResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -25088,7 +23611,6 @@ void AuthRoleDeleteResponse::InternalSwap(AuthRoleDeleteResponse* other) {
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleDeleteResponse::GetMetadata() const {
@@ -25109,16 +23631,14 @@ const int AuthRoleGrantPermissionResponse::kHeaderFieldNumber;
 
 AuthRoleGrantPermissionResponse::AuthRoleGrantPermissionResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGrantPermissionResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleGrantPermissionResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleGrantPermissionResponse)
 }
 AuthRoleGrantPermissionResponse::AuthRoleGrantPermissionResponse(const AuthRoleGrantPermissionResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -25130,7 +23650,6 @@ AuthRoleGrantPermissionResponse::AuthRoleGrantPermissionResponse(const AuthRoleG
 
 void AuthRoleGrantPermissionResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleGrantPermissionResponse::~AuthRoleGrantPermissionResponse() {
@@ -25143,9 +23662,7 @@ void AuthRoleGrantPermissionResponse::SharedDtor() {
 }
 
 void AuthRoleGrantPermissionResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleGrantPermissionResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -25153,17 +23670,10 @@ const ::google::protobuf::Descriptor* AuthRoleGrantPermissionResponse::descripto
 }
 
 const AuthRoleGrantPermissionResponse& AuthRoleGrantPermissionResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleGrantPermissionResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleGrantPermissionResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleGrantPermissionResponse* AuthRoleGrantPermissionResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleGrantPermissionResponse* n = new AuthRoleGrantPermissionResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleGrantPermissionResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleGrantPermissionResponse)
@@ -25184,7 +23694,7 @@ bool AuthRoleGrantPermissionResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleGrantPermissionResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -25229,7 +23739,7 @@ void AuthRoleGrantPermissionResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25250,7 +23760,7 @@ void AuthRoleGrantPermissionResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25274,13 +23784,11 @@ size_t AuthRoleGrantPermissionResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -25337,7 +23845,6 @@ void AuthRoleGrantPermissionResponse::InternalSwap(AuthRoleGrantPermissionRespon
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleGrantPermissionResponse::GetMetadata() const {
@@ -25358,16 +23865,14 @@ const int AuthRoleRevokePermissionResponse::kHeaderFieldNumber;
 
 AuthRoleRevokePermissionResponse::AuthRoleRevokePermissionResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_rpc_2eproto::InitDefaultsAuthRoleRevokePermissionResponse();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_rpc_2eproto::scc_info_AuthRoleRevokePermissionResponse.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.AuthRoleRevokePermissionResponse)
 }
 AuthRoleRevokePermissionResponse::AuthRoleRevokePermissionResponse(const AuthRoleRevokePermissionResponse& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_header()) {
     header_ = new ::etcdserverpb::ResponseHeader(*from.header_);
@@ -25379,7 +23884,6 @@ AuthRoleRevokePermissionResponse::AuthRoleRevokePermissionResponse(const AuthRol
 
 void AuthRoleRevokePermissionResponse::SharedCtor() {
   header_ = NULL;
-  _cached_size_ = 0;
 }
 
 AuthRoleRevokePermissionResponse::~AuthRoleRevokePermissionResponse() {
@@ -25392,9 +23896,7 @@ void AuthRoleRevokePermissionResponse::SharedDtor() {
 }
 
 void AuthRoleRevokePermissionResponse::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* AuthRoleRevokePermissionResponse::descriptor() {
   ::protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
@@ -25402,17 +23904,10 @@ const ::google::protobuf::Descriptor* AuthRoleRevokePermissionResponse::descript
 }
 
 const AuthRoleRevokePermissionResponse& AuthRoleRevokePermissionResponse::default_instance() {
-  ::protobuf_rpc_2eproto::InitDefaultsAuthRoleRevokePermissionResponse();
+  ::google::protobuf::internal::InitSCC(&protobuf_rpc_2eproto::scc_info_AuthRoleRevokePermissionResponse.base);
   return *internal_default_instance();
 }
 
-AuthRoleRevokePermissionResponse* AuthRoleRevokePermissionResponse::New(::google::protobuf::Arena* arena) const {
-  AuthRoleRevokePermissionResponse* n = new AuthRoleRevokePermissionResponse;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void AuthRoleRevokePermissionResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.AuthRoleRevokePermissionResponse)
@@ -25433,7 +23928,7 @@ bool AuthRoleRevokePermissionResponse::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.AuthRoleRevokePermissionResponse)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -25478,7 +23973,7 @@ void AuthRoleRevokePermissionResponse::SerializeWithCachedSizes(
   // .etcdserverpb.ResponseHeader header = 1;
   if (this->has_header()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->header_, output);
+      1, this->_internal_header(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25499,7 +23994,7 @@ void AuthRoleRevokePermissionResponse::SerializeWithCachedSizes(
   if (this->has_header()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->header_, deterministic, target);
+        1, this->_internal_header(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -25523,13 +24018,11 @@ size_t AuthRoleRevokePermissionResponse::ByteSizeLong() const {
   if (this->has_header()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->header_);
+        *header_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -25586,7 +24079,6 @@ void AuthRoleRevokePermissionResponse::InternalSwap(AuthRoleRevokePermissionResp
   using std::swap;
   swap(header_, other->header_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata AuthRoleRevokePermissionResponse::GetMetadata() const {
@@ -25597,5 +24089,237 @@ void AuthRoleRevokePermissionResponse::InternalSwap(AuthRoleRevokePermissionResp
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace etcdserverpb
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::ResponseHeader* Arena::CreateMaybeMessage< ::etcdserverpb::ResponseHeader >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::ResponseHeader >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::RangeRequest* Arena::CreateMaybeMessage< ::etcdserverpb::RangeRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::RangeRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::RangeResponse* Arena::CreateMaybeMessage< ::etcdserverpb::RangeResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::RangeResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::PutRequest* Arena::CreateMaybeMessage< ::etcdserverpb::PutRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::PutRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::PutResponse* Arena::CreateMaybeMessage< ::etcdserverpb::PutResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::PutResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::DeleteRangeRequest* Arena::CreateMaybeMessage< ::etcdserverpb::DeleteRangeRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::DeleteRangeRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::DeleteRangeResponse* Arena::CreateMaybeMessage< ::etcdserverpb::DeleteRangeResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::DeleteRangeResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::RequestOp* Arena::CreateMaybeMessage< ::etcdserverpb::RequestOp >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::RequestOp >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::ResponseOp* Arena::CreateMaybeMessage< ::etcdserverpb::ResponseOp >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::ResponseOp >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::Compare* Arena::CreateMaybeMessage< ::etcdserverpb::Compare >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::Compare >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::TxnRequest* Arena::CreateMaybeMessage< ::etcdserverpb::TxnRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::TxnRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::TxnResponse* Arena::CreateMaybeMessage< ::etcdserverpb::TxnResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::TxnResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::CompactionRequest* Arena::CreateMaybeMessage< ::etcdserverpb::CompactionRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::CompactionRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::CompactionResponse* Arena::CreateMaybeMessage< ::etcdserverpb::CompactionResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::CompactionResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::HashRequest* Arena::CreateMaybeMessage< ::etcdserverpb::HashRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::HashRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::HashResponse* Arena::CreateMaybeMessage< ::etcdserverpb::HashResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::HashResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::SnapshotRequest* Arena::CreateMaybeMessage< ::etcdserverpb::SnapshotRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::SnapshotRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::SnapshotResponse* Arena::CreateMaybeMessage< ::etcdserverpb::SnapshotResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::SnapshotResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::WatchRequest* Arena::CreateMaybeMessage< ::etcdserverpb::WatchRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::WatchRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::WatchCreateRequest* Arena::CreateMaybeMessage< ::etcdserverpb::WatchCreateRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::WatchCreateRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::WatchCancelRequest* Arena::CreateMaybeMessage< ::etcdserverpb::WatchCancelRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::WatchCancelRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::WatchResponse* Arena::CreateMaybeMessage< ::etcdserverpb::WatchResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::WatchResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseGrantRequest* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseGrantRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseGrantRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseGrantResponse* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseGrantResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseGrantResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseRevokeRequest* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseRevokeRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseRevokeRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseRevokeResponse* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseRevokeResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseRevokeResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseKeepAliveRequest* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseKeepAliveRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseKeepAliveRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::LeaseKeepAliveResponse* Arena::CreateMaybeMessage< ::etcdserverpb::LeaseKeepAliveResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::LeaseKeepAliveResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::Member* Arena::CreateMaybeMessage< ::etcdserverpb::Member >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::Member >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberAddRequest* Arena::CreateMaybeMessage< ::etcdserverpb::MemberAddRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberAddRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberAddResponse* Arena::CreateMaybeMessage< ::etcdserverpb::MemberAddResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberAddResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberRemoveRequest* Arena::CreateMaybeMessage< ::etcdserverpb::MemberRemoveRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberRemoveRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberRemoveResponse* Arena::CreateMaybeMessage< ::etcdserverpb::MemberRemoveResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberRemoveResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberUpdateRequest* Arena::CreateMaybeMessage< ::etcdserverpb::MemberUpdateRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberUpdateRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberUpdateResponse* Arena::CreateMaybeMessage< ::etcdserverpb::MemberUpdateResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberUpdateResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberListRequest* Arena::CreateMaybeMessage< ::etcdserverpb::MemberListRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberListRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::MemberListResponse* Arena::CreateMaybeMessage< ::etcdserverpb::MemberListResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::MemberListResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::DefragmentRequest* Arena::CreateMaybeMessage< ::etcdserverpb::DefragmentRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::DefragmentRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::DefragmentResponse* Arena::CreateMaybeMessage< ::etcdserverpb::DefragmentResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::DefragmentResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AlarmRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AlarmRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AlarmRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AlarmMember* Arena::CreateMaybeMessage< ::etcdserverpb::AlarmMember >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AlarmMember >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AlarmResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AlarmResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AlarmResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::StatusRequest* Arena::CreateMaybeMessage< ::etcdserverpb::StatusRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::StatusRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::StatusResponse* Arena::CreateMaybeMessage< ::etcdserverpb::StatusResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::StatusResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthEnableRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthEnableRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthEnableRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthDisableRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthDisableRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthDisableRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthenticateRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthenticateRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthenticateRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserAddRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserAddRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserAddRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserGetRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserGetRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserGetRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserDeleteRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserDeleteRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserDeleteRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserChangePasswordRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserChangePasswordRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserChangePasswordRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserGrantRoleRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserGrantRoleRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserGrantRoleRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserRevokeRoleRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserRevokeRoleRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserRevokeRoleRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleAddRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleAddRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleAddRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleGetRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleGetRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleGetRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserListRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserListRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserListRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleListRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleListRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleListRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleDeleteRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleDeleteRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleDeleteRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleGrantPermissionRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleGrantPermissionRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleGrantPermissionRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleRevokePermissionRequest* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleRevokePermissionRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleRevokePermissionRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthEnableResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthEnableResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthEnableResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthDisableResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthDisableResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthDisableResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthenticateResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthenticateResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthenticateResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserAddResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserAddResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserAddResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserGetResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserGetResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserGetResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserDeleteResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserDeleteResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserDeleteResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserChangePasswordResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserChangePasswordResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserChangePasswordResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserGrantRoleResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserGrantRoleResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserGrantRoleResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserRevokeRoleResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserRevokeRoleResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserRevokeRoleResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleAddResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleAddResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleAddResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleGetResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleGetResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleGetResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleListResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleListResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleListResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthUserListResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthUserListResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthUserListResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleDeleteResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleDeleteResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleDeleteResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleGrantPermissionResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleGrantPermissionResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleGrantPermissionResponse >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::AuthRoleRevokePermissionResponse* Arena::CreateMaybeMessage< ::etcdserverpb::AuthRoleRevokePermissionResponse >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::AuthRoleRevokePermissionResponse >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)

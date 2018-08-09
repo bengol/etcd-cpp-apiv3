@@ -7,7 +7,6 @@
 
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
@@ -19,6 +18,10 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
+
+namespace protobuf_kv_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_kv_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_KeyValue;
+}  // namespace protobuf_kv_2eproto
 namespace mvccpb {
 class KeyValueDefaultTypeInternal {
  public:
@@ -32,14 +35,9 @@ class EventDefaultTypeInternal {
 } _Event_default_instance_;
 }  // namespace mvccpb
 namespace protobuf_kv_2eproto {
-void InitDefaultsKeyValueImpl() {
+static void InitDefaultsKeyValue() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::mvccpb::_KeyValue_default_instance_;
     new (ptr) ::mvccpb::KeyValue();
@@ -48,20 +46,12 @@ void InitDefaultsKeyValueImpl() {
   ::mvccpb::KeyValue::InitAsDefaultInstance();
 }
 
-void InitDefaultsKeyValue() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsKeyValueImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_KeyValue =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsKeyValue}, {}};
 
-void InitDefaultsEventImpl() {
+static void InitDefaultsEvent() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_kv_2eproto::InitDefaultsKeyValue();
   {
     void* ptr = &::mvccpb::_Event_default_instance_;
     new (ptr) ::mvccpb::Event();
@@ -70,9 +60,13 @@ void InitDefaultsEventImpl() {
   ::mvccpb::Event::InitAsDefaultInstance();
 }
 
-void InitDefaultsEvent() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsEventImpl);
+::google::protobuf::internal::SCCInfo<1> scc_info_Event =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsEvent}, {
+      &protobuf_kv_2eproto::scc_info_KeyValue.base,}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_KeyValue.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Event.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata[2];
@@ -111,15 +105,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 void protobuf_AssignDescriptors() {
   AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
-      "kv.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      "kv.proto", schemas, file_default_instances, TableStruct::offsets,
       file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
@@ -147,8 +140,8 @@ void AddDescriptorsImpl() {
 }
 
 void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
@@ -195,16 +188,14 @@ const int KeyValue::kLeaseFieldNumber;
 
 KeyValue::KeyValue()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_kv_2eproto::InitDefaultsKeyValue();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_kv_2eproto::scc_info_KeyValue.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:mvccpb.KeyValue)
 }
 KeyValue::KeyValue(const KeyValue& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -226,7 +217,6 @@ void KeyValue::SharedCtor() {
   ::memset(&create_revision_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&lease_) -
       reinterpret_cast<char*>(&create_revision_)) + sizeof(lease_));
-  _cached_size_ = 0;
 }
 
 KeyValue::~KeyValue() {
@@ -240,9 +230,7 @@ void KeyValue::SharedDtor() {
 }
 
 void KeyValue::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* KeyValue::descriptor() {
   ::protobuf_kv_2eproto::protobuf_AssignDescriptorsOnce();
@@ -250,17 +238,10 @@ const ::google::protobuf::Descriptor* KeyValue::descriptor() {
 }
 
 const KeyValue& KeyValue::default_instance() {
-  ::protobuf_kv_2eproto::InitDefaultsKeyValue();
+  ::google::protobuf::internal::InitSCC(&protobuf_kv_2eproto::scc_info_KeyValue.base);
   return *internal_default_instance();
 }
 
-KeyValue* KeyValue::New(::google::protobuf::Arena* arena) const {
-  KeyValue* n = new KeyValue;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void KeyValue::Clear() {
 // @@protoc_insertion_point(message_clear_start:mvccpb.KeyValue)
@@ -282,7 +263,7 @@ bool KeyValue::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:mvccpb.KeyValue)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -532,9 +513,7 @@ size_t KeyValue::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -606,14 +585,15 @@ void KeyValue::Swap(KeyValue* other) {
 }
 void KeyValue::InternalSwap(KeyValue* other) {
   using std::swap;
-  key_.Swap(&other->key_);
-  value_.Swap(&other->value_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  value_.Swap(&other->value_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(create_revision_, other->create_revision_);
   swap(mod_revision_, other->mod_revision_);
   swap(version_, other->version_);
   swap(lease_, other->lease_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata KeyValue::GetMetadata() const {
@@ -638,16 +618,14 @@ const int Event::kPrevKvFieldNumber;
 
 Event::Event()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_kv_2eproto::InitDefaultsEvent();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_kv_2eproto::scc_info_Event.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:mvccpb.Event)
 }
 Event::Event(const Event& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_kv()) {
     kv_ = new ::mvccpb::KeyValue(*from.kv_);
@@ -667,7 +645,6 @@ void Event::SharedCtor() {
   ::memset(&kv_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&type_) -
       reinterpret_cast<char*>(&kv_)) + sizeof(type_));
-  _cached_size_ = 0;
 }
 
 Event::~Event() {
@@ -681,9 +658,7 @@ void Event::SharedDtor() {
 }
 
 void Event::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Event::descriptor() {
   ::protobuf_kv_2eproto::protobuf_AssignDescriptorsOnce();
@@ -691,17 +666,10 @@ const ::google::protobuf::Descriptor* Event::descriptor() {
 }
 
 const Event& Event::default_instance() {
-  ::protobuf_kv_2eproto::InitDefaultsEvent();
+  ::google::protobuf::internal::InitSCC(&protobuf_kv_2eproto::scc_info_Event.base);
   return *internal_default_instance();
 }
 
-Event* Event::New(::google::protobuf::Arena* arena) const {
-  Event* n = new Event;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Event::Clear() {
 // @@protoc_insertion_point(message_clear_start:mvccpb.Event)
@@ -727,7 +695,7 @@ bool Event::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:mvccpb.Event)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -805,13 +773,13 @@ void Event::SerializeWithCachedSizes(
   // .mvccpb.KeyValue kv = 2;
   if (this->has_kv()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->kv_, output);
+      2, this->_internal_kv(), output);
   }
 
   // .mvccpb.KeyValue prev_kv = 3;
   if (this->has_prev_kv()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->prev_kv_, output);
+      3, this->_internal_prev_kv(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -838,14 +806,14 @@ void Event::SerializeWithCachedSizes(
   if (this->has_kv()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->kv_, deterministic, target);
+        2, this->_internal_kv(), deterministic, target);
   }
 
   // .mvccpb.KeyValue prev_kv = 3;
   if (this->has_prev_kv()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->prev_kv_, deterministic, target);
+        3, this->_internal_prev_kv(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -869,14 +837,14 @@ size_t Event::ByteSizeLong() const {
   if (this->has_kv()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->kv_);
+        *kv_);
   }
 
   // .mvccpb.KeyValue prev_kv = 3;
   if (this->has_prev_kv()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->prev_kv_);
+        *prev_kv_);
   }
 
   // .mvccpb.Event.EventType type = 1;
@@ -886,9 +854,7 @@ size_t Event::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -953,7 +919,6 @@ void Event::InternalSwap(Event* other) {
   swap(prev_kv_, other->prev_kv_);
   swap(type_, other->type_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Event::GetMetadata() const {
@@ -964,5 +929,15 @@ void Event::InternalSwap(Event* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace mvccpb
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvccpb::KeyValue* Arena::CreateMaybeMessage< ::mvccpb::KeyValue >(Arena* arena) {
+  return Arena::CreateInternal< ::mvccpb::KeyValue >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::mvccpb::Event* Arena::CreateMaybeMessage< ::mvccpb::Event >(Arena* arena) {
+  return Arena::CreateInternal< ::mvccpb::Event >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)

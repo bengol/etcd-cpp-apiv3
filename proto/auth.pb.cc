@@ -7,7 +7,6 @@
 
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
@@ -19,6 +18,10 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
+
+namespace protobuf_auth_2eproto {
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_auth_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Permission;
+}  // namespace protobuf_auth_2eproto
 namespace authpb {
 class UserDefaultTypeInternal {
  public:
@@ -37,14 +40,9 @@ class RoleDefaultTypeInternal {
 } _Role_default_instance_;
 }  // namespace authpb
 namespace protobuf_auth_2eproto {
-void InitDefaultsUserImpl() {
+static void InitDefaultsUser() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::authpb::_User_default_instance_;
     new (ptr) ::authpb::User();
@@ -53,19 +51,12 @@ void InitDefaultsUserImpl() {
   ::authpb::User::InitAsDefaultInstance();
 }
 
-void InitDefaultsUser() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsUserImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_User =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsUser}, {}};
 
-void InitDefaultsPermissionImpl() {
+static void InitDefaultsPermission() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::authpb::_Permission_default_instance_;
     new (ptr) ::authpb::Permission();
@@ -74,20 +65,12 @@ void InitDefaultsPermissionImpl() {
   ::authpb::Permission::InitAsDefaultInstance();
 }
 
-void InitDefaultsPermission() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPermissionImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_Permission =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPermission}, {}};
 
-void InitDefaultsRoleImpl() {
+static void InitDefaultsRole() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_auth_2eproto::InitDefaultsPermission();
   {
     void* ptr = &::authpb::_Role_default_instance_;
     new (ptr) ::authpb::Role();
@@ -96,9 +79,14 @@ void InitDefaultsRoleImpl() {
   ::authpb::Role::InitAsDefaultInstance();
 }
 
-void InitDefaultsRole() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRoleImpl);
+::google::protobuf::internal::SCCInfo<1> scc_info_Role =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsRole}, {
+      &protobuf_auth_2eproto::scc_info_Permission.base,}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_User.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Permission.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Role.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata[3];
@@ -142,15 +130,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 void protobuf_AssignDescriptors() {
   AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
-      "auth.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      "auth.proto", schemas, file_default_instances, TableStruct::offsets,
       file_level_metadata, file_level_enum_descriptors, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
@@ -177,8 +164,8 @@ void AddDescriptorsImpl() {
 }
 
 void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
@@ -224,17 +211,15 @@ const int User::kRolesFieldNumber;
 
 User::User()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_auth_2eproto::InitDefaultsUser();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_auth_2eproto::scc_info_User.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:authpb.User)
 }
 User::User(const User& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      roles_(from.roles_),
-      _cached_size_(0) {
+      roles_(from.roles_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -250,7 +235,6 @@ User::User(const User& from)
 void User::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 User::~User() {
@@ -264,9 +248,7 @@ void User::SharedDtor() {
 }
 
 void User::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* User::descriptor() {
   ::protobuf_auth_2eproto::protobuf_AssignDescriptorsOnce();
@@ -274,17 +256,10 @@ const ::google::protobuf::Descriptor* User::descriptor() {
 }
 
 const User& User::default_instance() {
-  ::protobuf_auth_2eproto::InitDefaultsUser();
+  ::google::protobuf::internal::InitSCC(&protobuf_auth_2eproto::scc_info_User.base);
   return *internal_default_instance();
 }
 
-User* User::New(::google::protobuf::Arena* arena) const {
-  User* n = new User;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void User::Clear() {
 // @@protoc_insertion_point(message_clear_start:authpb.User)
@@ -304,7 +279,7 @@ bool User::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:authpb.User)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -475,9 +450,7 @@ size_t User::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -538,11 +511,12 @@ void User::Swap(User* other) {
 }
 void User::InternalSwap(User* other) {
   using std::swap;
-  roles_.InternalSwap(&other->roles_);
-  name_.Swap(&other->name_);
-  password_.Swap(&other->password_);
+  roles_.InternalSwap(CastToBase(&other->roles_));
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  password_.Swap(&other->password_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata User::GetMetadata() const {
@@ -562,16 +536,14 @@ const int Permission::kPermTypeFieldNumber;
 
 Permission::Permission()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_auth_2eproto::InitDefaultsPermission();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_auth_2eproto::scc_info_Permission.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:authpb.Permission)
 }
 Permission::Permission(const Permission& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.key().size() > 0) {
@@ -584,7 +556,6 @@ Permission::Permission(const Permission& from)
 void Permission::SharedCtor() {
   key_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   permtype_ = 0;
-  _cached_size_ = 0;
 }
 
 Permission::~Permission() {
@@ -597,9 +568,7 @@ void Permission::SharedDtor() {
 }
 
 void Permission::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Permission::descriptor() {
   ::protobuf_auth_2eproto::protobuf_AssignDescriptorsOnce();
@@ -607,17 +576,10 @@ const ::google::protobuf::Descriptor* Permission::descriptor() {
 }
 
 const Permission& Permission::default_instance() {
-  ::protobuf_auth_2eproto::InitDefaultsPermission();
+  ::google::protobuf::internal::InitSCC(&protobuf_auth_2eproto::scc_info_Permission.base);
   return *internal_default_instance();
 }
 
-Permission* Permission::New(::google::protobuf::Arena* arena) const {
-  Permission* n = new Permission;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Permission::Clear() {
 // @@protoc_insertion_point(message_clear_start:authpb.Permission)
@@ -636,7 +598,7 @@ bool Permission::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:authpb.Permission)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -763,9 +725,7 @@ size_t Permission::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -824,10 +784,10 @@ void Permission::Swap(Permission* other) {
 }
 void Permission::InternalSwap(Permission* other) {
   using std::swap;
-  key_.Swap(&other->key_);
+  key_.Swap(&other->key_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(permtype_, other->permtype_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Permission::GetMetadata() const {
@@ -847,17 +807,15 @@ const int Role::kKeyPermissionFieldNumber;
 
 Role::Role()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_auth_2eproto::InitDefaultsRole();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_auth_2eproto::scc_info_Role.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:authpb.Role)
 }
 Role::Role(const Role& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      keypermission_(from.keypermission_),
-      _cached_size_(0) {
+      keypermission_(from.keypermission_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
@@ -868,7 +826,6 @@ Role::Role(const Role& from)
 
 void Role::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 Role::~Role() {
@@ -881,9 +838,7 @@ void Role::SharedDtor() {
 }
 
 void Role::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Role::descriptor() {
   ::protobuf_auth_2eproto::protobuf_AssignDescriptorsOnce();
@@ -891,17 +846,10 @@ const ::google::protobuf::Descriptor* Role::descriptor() {
 }
 
 const Role& Role::default_instance() {
-  ::protobuf_auth_2eproto::InitDefaultsRole();
+  ::google::protobuf::internal::InitSCC(&protobuf_auth_2eproto::scc_info_Role.base);
   return *internal_default_instance();
 }
 
-Role* Role::New(::google::protobuf::Arena* arena) const {
-  Role* n = new Role;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Role::Clear() {
 // @@protoc_insertion_point(message_clear_start:authpb.Role)
@@ -920,7 +868,7 @@ bool Role::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:authpb.Role)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -940,7 +888,8 @@ bool Role::MergePartialFromCodedStream(
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_keypermission()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_keypermission()));
         } else {
           goto handle_unusual;
         }
@@ -983,7 +932,9 @@ void Role::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->keypermission_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->keypermission(static_cast<int>(i)), output);
+      2,
+      this->keypermission(static_cast<int>(i)),
+      output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1051,9 +1002,7 @@ size_t Role::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1110,10 +1059,10 @@ void Role::Swap(Role* other) {
 }
 void Role::InternalSwap(Role* other) {
   using std::swap;
-  keypermission_.InternalSwap(&other->keypermission_);
-  name_.Swap(&other->name_);
+  CastToBase(&keypermission_)->InternalSwap(CastToBase(&other->keypermission_));
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Role::GetMetadata() const {
@@ -1124,5 +1073,18 @@ void Role::InternalSwap(Role* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace authpb
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::authpb::User* Arena::CreateMaybeMessage< ::authpb::User >(Arena* arena) {
+  return Arena::CreateInternal< ::authpb::User >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::authpb::Permission* Arena::CreateMaybeMessage< ::authpb::Permission >(Arena* arena) {
+  return Arena::CreateInternal< ::authpb::Permission >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::authpb::Role* Arena::CreateMaybeMessage< ::authpb::Role >(Arena* arena) {
+  return Arena::CreateInternal< ::authpb::Role >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)

@@ -7,7 +7,6 @@
 
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
@@ -19,6 +18,7 @@
 #include "third_party/protobuf/version.h"
 #endif
 // @@protoc_insertion_point(includes)
+
 namespace etcdserverpb {
 class RequestDefaultTypeInternal {
  public:
@@ -32,14 +32,9 @@ class MetadataDefaultTypeInternal {
 } _Metadata_default_instance_;
 }  // namespace etcdserverpb
 namespace protobuf_etcdserver_2eproto {
-void InitDefaultsRequestImpl() {
+static void InitDefaultsRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_Request_default_instance_;
     new (ptr) ::etcdserverpb::Request();
@@ -48,19 +43,12 @@ void InitDefaultsRequestImpl() {
   ::etcdserverpb::Request::InitAsDefaultInstance();
 }
 
-void InitDefaultsRequest() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsRequestImpl);
-}
+::google::protobuf::internal::SCCInfo<0> scc_info_Request =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRequest}, {}};
 
-void InitDefaultsMetadataImpl() {
+static void InitDefaultsMetadata() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::etcdserverpb::_Metadata_default_instance_;
     new (ptr) ::etcdserverpb::Metadata();
@@ -69,9 +57,12 @@ void InitDefaultsMetadataImpl() {
   ::etcdserverpb::Metadata::InitAsDefaultInstance();
 }
 
-void InitDefaultsMetadata() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsMetadataImpl);
+::google::protobuf::internal::SCCInfo<0> scc_info_Metadata =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMetadata}, {}};
+
+void InitDefaults() {
+  ::google::protobuf::internal::InitSCC(&scc_info_Request.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Metadata.base);
 }
 
 ::google::protobuf::Metadata file_level_metadata[2];
@@ -138,15 +129,14 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
 
 void protobuf_AssignDescriptors() {
   AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
-      "etcdserver.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      "etcdserver.proto", schemas, file_default_instances, TableStruct::offsets,
       file_level_metadata, NULL, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
 }
 
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
@@ -176,8 +166,8 @@ void AddDescriptorsImpl() {
 }
 
 void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+  static ::google::protobuf::internal::once_flag once;
+  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
 }
 // Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
@@ -214,17 +204,15 @@ const int Request::kRefreshFieldNumber;
 
 Request::Request()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_etcdserver_2eproto::InitDefaultsRequest();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_etcdserver_2eproto::scc_info_Request.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.Request)
 }
 Request::Request(const Request& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   method_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.has_method()) {
@@ -249,7 +237,6 @@ Request::Request(const Request& from)
 }
 
 void Request::SharedCtor() {
-  _cached_size_ = 0;
   method_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   path_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   val_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -272,9 +259,7 @@ void Request::SharedDtor() {
 }
 
 void Request::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Request::descriptor() {
   ::protobuf_etcdserver_2eproto::protobuf_AssignDescriptorsOnce();
@@ -282,17 +267,10 @@ const ::google::protobuf::Descriptor* Request::descriptor() {
 }
 
 const Request& Request::default_instance() {
-  ::protobuf_etcdserver_2eproto::InitDefaultsRequest();
+  ::google::protobuf::internal::InitSCC(&protobuf_etcdserver_2eproto::scc_info_Request.base);
   return *internal_default_instance();
 }
 
-Request* Request::New(::google::protobuf::Arena* arena) const {
-  Request* n = new Request;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Request::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.Request)
@@ -303,20 +281,16 @@ void Request::Clear() {
   cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 15u) {
     if (cached_has_bits & 0x00000001u) {
-      GOOGLE_DCHECK(!method_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*method_.UnsafeRawStringPointer())->clear();
+      method_.ClearNonDefaultToEmptyNoArena();
     }
     if (cached_has_bits & 0x00000002u) {
-      GOOGLE_DCHECK(!path_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*path_.UnsafeRawStringPointer())->clear();
+      path_.ClearNonDefaultToEmptyNoArena();
     }
     if (cached_has_bits & 0x00000004u) {
-      GOOGLE_DCHECK(!val_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*val_.UnsafeRawStringPointer())->clear();
+      val_.ClearNonDefaultToEmptyNoArena();
     }
     if (cached_has_bits & 0x00000008u) {
-      GOOGLE_DCHECK(!prevvalue_.IsDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited()));
-      (*prevvalue_.UnsafeRawStringPointer())->clear();
+      prevvalue_.ClearNonDefaultToEmptyNoArena();
     }
   }
   if (cached_has_bits & 240u) {
@@ -340,7 +314,7 @@ bool Request::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.Request)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -971,9 +945,7 @@ size_t Request::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1087,10 +1059,14 @@ void Request::Swap(Request* other) {
 }
 void Request::InternalSwap(Request* other) {
   using std::swap;
-  method_.Swap(&other->method_);
-  path_.Swap(&other->path_);
-  val_.Swap(&other->val_);
-  prevvalue_.Swap(&other->prevvalue_);
+  method_.Swap(&other->method_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  path_.Swap(&other->path_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  val_.Swap(&other->val_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  prevvalue_.Swap(&other->prevvalue_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(id_, other->id_);
   swap(previndex_, other->previndex_);
   swap(expiration_, other->expiration_);
@@ -1106,7 +1082,6 @@ void Request::InternalSwap(Request* other) {
   swap(time_, other->time_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Request::GetMetadata() const {
@@ -1126,17 +1101,15 @@ const int Metadata::kClusterIDFieldNumber;
 
 Metadata::Metadata()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_etcdserver_2eproto::InitDefaultsMetadata();
-  }
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_etcdserver_2eproto::scc_info_Metadata.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:etcdserverpb.Metadata)
 }
 Metadata::Metadata(const Metadata& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      _has_bits_(from._has_bits_),
-      _cached_size_(0) {
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&nodeid_, &from.nodeid_,
     static_cast<size_t>(reinterpret_cast<char*>(&clusterid_) -
@@ -1145,7 +1118,6 @@ Metadata::Metadata(const Metadata& from)
 }
 
 void Metadata::SharedCtor() {
-  _cached_size_ = 0;
   ::memset(&nodeid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&clusterid_) -
       reinterpret_cast<char*>(&nodeid_)) + sizeof(clusterid_));
@@ -1160,9 +1132,7 @@ void Metadata::SharedDtor() {
 }
 
 void Metadata::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
 const ::google::protobuf::Descriptor* Metadata::descriptor() {
   ::protobuf_etcdserver_2eproto::protobuf_AssignDescriptorsOnce();
@@ -1170,17 +1140,10 @@ const ::google::protobuf::Descriptor* Metadata::descriptor() {
 }
 
 const Metadata& Metadata::default_instance() {
-  ::protobuf_etcdserver_2eproto::InitDefaultsMetadata();
+  ::google::protobuf::internal::InitSCC(&protobuf_etcdserver_2eproto::scc_info_Metadata.base);
   return *internal_default_instance();
 }
 
-Metadata* Metadata::New(::google::protobuf::Arena* arena) const {
-  Metadata* n = new Metadata;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Metadata::Clear() {
 // @@protoc_insertion_point(message_clear_start:etcdserverpb.Metadata)
@@ -1204,7 +1167,7 @@ bool Metadata::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:etcdserverpb.Metadata)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -1332,9 +1295,7 @@ size_t Metadata::ByteSizeLong() const {
 
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1400,7 +1361,6 @@ void Metadata::InternalSwap(Metadata* other) {
   swap(clusterid_, other->clusterid_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Metadata::GetMetadata() const {
@@ -1411,5 +1371,15 @@ void Metadata::InternalSwap(Metadata* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace etcdserverpb
+namespace google {
+namespace protobuf {
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::Request* Arena::CreateMaybeMessage< ::etcdserverpb::Request >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::Request >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::etcdserverpb::Metadata* Arena::CreateMaybeMessage< ::etcdserverpb::Metadata >(Arena* arena) {
+  return Arena::CreateInternal< ::etcdserverpb::Metadata >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
